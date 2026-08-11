@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seeds - Bounty Seed | Excel Crop Group, Multan, Pakistan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --g1:#1b6e1b;--g2:#2d8a2d;--g3:#e8f5e9;
+  --o1:#e65100;--o2:#f57c00;--o3:#ff9800;
+  --r1:#c62828;
+  --txt:#1a1a1a;--txt2:#555;--txt3:#888;
+  --border:#e0e0e0;--bg:#f5f5f5;
+  --sh:0 2px 12px rgba(0,0,0,.1);--sh2:0 6px 24px rgba(0,0,0,.15);
+  --rad:8px;--rad2:14px;
+}
+body{font-family:'Poppins',sans-serif;color:var(--txt);background:var(--bg);font-size:14px;line-height:1.5}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;font-family:inherit}
+img{max-width:100%;display:block}
+.container{max-width:1240px;margin:0 auto;padding:0 16px}
+.urdu{font-family:'Noto Nastaliq Urdu',serif;direction:rtl}
+::-webkit-scrollbar{width:10px;height:8px}
+::-webkit-scrollbar-thumb{background:#bcd9bc;border-radius:10px}
+
+/* ============ MOVING TEXT BAR (right-to-left marquee) ============ */
+.ann{background:var(--g1);color:#fff;padding:7px 0;overflow:hidden}
+.ann-inner{display:flex;gap:60px;animation:scrollRtl 26s linear infinite;white-space:nowrap;width:max-content}
+.ann-inner span{font-size:12px;padding:0 10px}
+@keyframes scrollRtl{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ============ TOP BAR ============ */
+.top{background:#f0f7f0;border-bottom:1px solid #d4ebd4;padding:6px 0}
+.top .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.tlinks{display:flex;gap:16px;font-size:12px;flex-wrap:wrap}
+.tlinks a{color:var(--g1);font-weight:500}
+.tlinks a:hover{color:var(--o1)}
+.lang-sw{display:flex;gap:4px}
+.lb{padding:3px 10px;border:1px solid var(--border);border-radius:20px;font-size:11px;background:#fff;cursor:pointer;transition:.2s}
+.lb.on{background:var(--g1);color:#fff;border-color:var(--g1)}
+
+/* ============ HEADER ============ */
+header{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08);position:sticky;top:0;z-index:500}
+.hdr{padding:12px 0}
+.hdr .container{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo-a{display:flex;align-items:center;gap:10px;flex-shrink:0;cursor:pointer}
+.logo-a img{height:56px;width:auto;object-fit:contain;border-radius:8px}
+.logo-t h1{font-size:19px;font-weight:800;color:var(--g1);letter-spacing:-.5px;line-height:1.1}
+.logo-t .lu{font-size:12px;color:var(--o1)}
+.logo-t p{font-size:10px;color:var(--txt3)}
+.srch{flex:1;min-width:200px}
+.sf{display:flex;border:2px solid var(--g2);border-radius:var(--rad);overflow:hidden;box-shadow:0 2px 8px rgba(45,138,45,.1)}
+.sf select{padding:0 8px;border:none;border-right:1px solid #cde8cd;background:#f0f7f0;font-size:12px;outline:none;min-width:110px}
+.sf input{flex:1;padding:10px 12px;border:none;outline:none;font-size:13px;font-family:inherit}
+.sf button{background:var(--g2);color:#fff;border:none;padding:10px 18px;font-size:14px;font-weight:700;transition:.2s}
+.sf button:hover{background:var(--g1)}
+.hdr-r{display:flex;align-items:center;gap:10px;margin-left:auto;flex-shrink:0}
+.partner-logo{height:64px;width:auto;object-fit:contain}
+.hdr-wordmark{font-size:20px;font-weight:800;letter-spacing:.3px;background:linear-gradient(90deg,var(--g1),#2f9e5f);-webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap;font-style:italic}
+
+/* ============ NAV ============ */
+.mnav{background:var(--g2);overflow-x:auto;-ms-overflow-style:none;scrollbar-width:none}
+.mnav::-webkit-scrollbar{display:none}
+.mnav .container{display:flex}
+.ni{position:relative}
+.ni>a,.ni>button{color:#fff;padding:11px 15px;font-size:13px;font-weight:500;display:flex;align-items:center;gap:5px;border-right:1px solid rgba(255,255,255,.15);white-space:nowrap;transition:.15s;background:transparent;border-top:none;border-bottom:none;border-left:none;cursor:pointer;font-family:inherit}
+.ni>a:hover,.ni>button:hover{background:rgba(0,0,0,.18)}
+
+/* ============ HERO + SIDEBAR PORTFOLIO LAYOUT ============ */
+.hero-sec{background:#f4faf5;padding:18px 0 26px;border-bottom:1px solid #e3f0e4}
+.shop-layout{display:grid;grid-template-columns:250px 1fr 220px;gap:18px;align-items:stretch}
+.side-cats{background:#fff;border:1px solid #e6eee7;border-radius:var(--rad2);box-shadow:var(--sh);overflow:hidden;height:fit-content}
+.side-head{background:var(--g1);color:#fff;font-weight:800;padding:14px 16px;display:flex;align-items:center;gap:8px;font-size:14px}
+.side-cats .scl{display:block;width:100%;text-align:left;border:0;background:#fff;padding:12px 16px;font-weight:600;font-size:12.5px;color:var(--txt);border-bottom:1px solid #f1f4f1;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:.15s}
+.side-cats .scl:hover{background:var(--g3);color:var(--g1);padding-left:20px}
+.side-cats .scl span.n{color:var(--txt3);font-size:11px;font-weight:400}
+.side-cats .scl-all{background:var(--o1);color:#fff;font-weight:700;justify-content:center}
+.side-cats .scl-all:hover{background:#c84400;padding-left:16px}
+
+.slider{position:relative;overflow:hidden;border-radius:var(--rad2);min-height:380px;box-shadow:var(--sh2)}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity .65s ease;display:flex;align-items:center}
+.slide.on{opacity:1;z-index:1}
+.slide .sbg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.5)}
+.slide .sov{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,40,15,.82) 0%,rgba(6,40,15,.28) 65%,transparent 100%)}
+.sc{position:relative;z-index:2;padding:0 40px;max-width:520px;color:#fff}
+.sbadge{display:inline-block;background:var(--o1);color:#fff;padding:5px 14px;border-radius:20px;font-size:11px;font-weight:700;margin-bottom:12px;text-transform:uppercase;letter-spacing:.8px}
+.sc h2{font-size:32px;font-weight:900;line-height:1.15;margin-bottom:8px;text-shadow:0 2px 8px rgba(0,0,0,.4)}
+.sc .su{font-size:18px;color:#ffd54f;margin-bottom:10px;display:block}
+.sc p{font-size:14px;opacity:.92;margin-bottom:18px;line-height:1.6}
+.sbtns{display:flex;gap:10px;flex-wrap:wrap}
+.sbtn1{background:#fff;color:var(--g1);padding:11px 22px;border-radius:var(--rad);font-weight:700;font-size:13px;transition:.2s;border:2px solid #fff;cursor:pointer}
+.sbtn1:hover{background:var(--o1);color:#fff;border-color:var(--o1)}
+.sbtn2{background:transparent;color:#fff;padding:11px 22px;border-radius:var(--rad);font-weight:600;font-size:13px;border:2px solid rgba(255,255,255,.7);transition:.2s;cursor:pointer}
+.sbtn2:hover{background:rgba(255,255,255,.15)}
+.sarrows{position:absolute;bottom:16px;right:20px;display:flex;gap:8px;z-index:5}
+.sarr{width:34px;height:34px;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.5);border-radius:50%;color:#fff;font-size:15px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.2s}
+.sarr:hover{background:var(--g2)}
+.sdots{position:absolute;bottom:22px;left:40px;display:flex;gap:8px;z-index:5}
+.sdot{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.4);cursor:pointer;transition:.3s;border:1px solid rgba(255,255,255,.6)}
+.sdot.on{background:#fff;transform:scale(1.2)}
+
+.side-support{background:#fff;border:1px solid #e6eee7;border-radius:var(--rad2);box-shadow:var(--sh);padding:16px;display:flex;flex-direction:column;gap:10px}
+.side-support h3{color:var(--g1);font-size:14px;margin-bottom:2px}
+.side-support p{font-size:11.5px;color:var(--txt2);line-height:1.5}
+.side-support .ss-item{display:flex;gap:8px;align-items:flex-start;padding:8px 0;border-top:1px dashed #e5eee5;font-size:12px}
+.side-support .ss-item .ic{font-size:15px}
+.side-support a.btn-wa{background:var(--g1);color:#fff;text-align:center;padding:10px;border-radius:var(--rad);font-weight:700;font-size:12.5px;margin-top:4px}
+.side-support a.btn-out{border:1.5px solid var(--g2);color:var(--g1);text-align:center;padding:9px;border-radius:var(--rad);font-weight:700;font-size:12.5px}
+
+.lead-card{background:linear-gradient(180deg,#fbfdfb,#fff);border-bottom:1px solid #eef3ee;padding:18px 16px 16px;text-align:center}
+.lead-card .lc-photo{width:84px;height:84px;border-radius:50%;overflow:hidden;margin:0 auto 10px;border:3px solid var(--g3);box-shadow:var(--sh)}
+.lead-card .lc-photo img{width:100%;height:100%;object-fit:cover}
+.lead-card .lc-name{font-size:13.5px;font-weight:800;color:var(--txt);margin-bottom:1px}
+.lead-card .lc-role{font-size:10.5px;color:var(--g1);font-weight:700;text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.lead-card .lc-label{font-size:9.5px;color:var(--txt3);text-transform:uppercase;letter-spacing:.6px;font-weight:700;margin-bottom:4px}
+.lead-card .lc-quote{font-size:11.5px;color:var(--txt2);line-height:1.6;font-style:italic;position:relative;padding:0 4px}
+.side-support .lead-card{border:1px solid #eef3ee;border-radius:var(--rad);margin-bottom:2px}
+@media(max-width:980px){.shop-layout{grid-template-columns:1fr}.side-cats{order:2}.side-support{order:3}.slider{min-height:300px}}
+
+/* ============ IMAGE AD MARQUEE (replaces highlight boxes) ============ */
+.ad-marquee-wrap{background:#fff;padding:18px 0;border-bottom:1px solid var(--border);overflow:hidden}
+.ad-marquee-label{text-align:center;font-size:11px;font-weight:700;color:var(--txt3);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+.ad-marquee-track{display:flex;gap:76px;width:max-content;animation:adScroll 110s linear infinite}
+.ad-marquee-wrap:hover .ad-marquee-track{animation-play-state:paused}
+.ad-card{flex-shrink:0;height:190px;width:auto;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.12);border:1px solid #eee}
+.ad-card img{height:100%;width:auto;display:block;object-fit:cover}
+@keyframes adScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@media(max-width:640px){.ad-card{height:140px}}
+
+/* ============ SECTION GENERIC ============ */
+.sec{padding:34px 0}
+.sec.alt{background:#fff}
+.sch{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:20px;flex-wrap:wrap;gap:10px}
+.brands-sec{padding-top:6px}
+.brands-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.brand-card{background:#fff;border:1px solid #e6eee7;border-radius:var(--rad2);box-shadow:var(--sh);padding:24px 16px;text-align:center;transition:.25s ease;cursor:default}
+.brand-card:hover{transform:translateY(-6px);box-shadow:var(--sh2);border-color:var(--g2)}
+.brand-logo{height:72px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.brand-logo img{max-height:72px;max-width:100%;object-fit:contain}
+.brand-card h4{font-size:14px;font-weight:800;color:var(--txt);letter-spacing:.2px}
+@media(max-width:860px){.brands-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.brands-grid{grid-template-columns:1fr}}
+.stitle{font-size:22px;font-weight:800;color:var(--g1);padding-left:14px;position:relative;line-height:1.2}
+.stitle::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:5px;height:24px;background:var(--o1);border-radius:2px}
+.stitle .su{display:block;font-size:13px;color:var(--o1);font-weight:600;margin-top:3px}
+.vabtn{color:var(--g1);font-size:12px;font-weight:700;border:1.5px solid var(--g2);padding:7px 16px;border-radius:20px;transition:.2s;background:#fff;cursor:pointer;font-family:inherit}
+.vabtn:hover{background:var(--g2);color:#fff}
+
+/* ============ INTRODUCTION ============ */
+/* ============ MINI SLIDER (section side pictures, cycle one at a time) ============ */
+.mini-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.1s ease}
+.mini-slide.on{opacity:1;z-index:1}
+.mini-slide img{width:100%;height:100%;object-fit:cover}
+.mini-dots{position:absolute;bottom:14px;left:14px;display:flex;gap:6px;z-index:3}
+.mini-dot{width:20px;height:3px;border-radius:3px;background:rgba(255,255,255,.6);cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,.3);transition:.2s}
+.mini-dot.on{background:var(--o1)}
+
+.intro-wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.intro-img{position:relative;border-radius:var(--rad2);overflow:hidden;box-shadow:var(--sh2);height:340px}
+.intro-txt .eyebrow{color:var(--o1);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.8px}
+.intro-txt h2{font-size:26px;font-weight:900;color:var(--g1);margin:8px 0 12px;line-height:1.25}
+.intro-txt p{color:var(--txt2);font-size:13.5px;line-height:1.8;margin-bottom:12px}
+.intro-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px;max-width:340px}
+.astat{text-align:center;background:var(--g3);border-radius:var(--rad2);padding:14px 6px}
+.astat b{display:block;font-size:22px;color:var(--g1);font-weight:900}
+.astat span{font-size:10.5px;color:var(--txt2);font-weight:600}
+@media(max-width:880px){.intro-wrap{grid-template-columns:1fr}}
+
+/* ============ REACH SECTION (customers boxes) ============ */
+.reach-sec{background:linear-gradient(180deg,#f4faf5,#fff)}
+.reach-wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.reach-img{position:relative;border-radius:var(--rad2);overflow:hidden;box-shadow:var(--sh2);height:400px}
+.reach-txt p{color:var(--txt2);font-size:13.5px;line-height:1.8;margin-bottom:16px}
+.reach-boxes{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.reach-box{border-radius:var(--rad2);padding:24px 18px;color:#fff;text-align:center}
+.reach-box.pk{background:linear-gradient(135deg,var(--g1),#3da03d)}
+.reach-box.pb{background:linear-gradient(135deg,var(--o1),var(--o3))}
+.reach-box b{display:block;font-size:26px;font-weight:900;margin-bottom:4px}
+.reach-box .rb-title{display:block;font-size:14px;font-weight:700;margin-bottom:8px}
+.reach-box span.rb-sub{font-size:11px;opacity:.9;display:block}
+@media(max-width:880px){.reach-wrap{grid-template-columns:1fr}.reach-img{height:280px}}
+@media(max-width:520px){.reach-boxes{grid-template-columns:1fr}}
+.reach-boxes-single{grid-template-columns:1fr}
+.reach-boxes-single .reach-box{padding:34px 26px}
+.reach-boxes-single .reach-box b{font-size:44px}
+
+/* ============ ABOUT US ============ */
+.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.about-collage{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.about-collage img{border-radius:var(--rad2);object-fit:cover;height:150px;width:100%}
+.about-collage img:first-child{grid-row:1/3;height:310px}
+.about-txt .eyebrow{color:var(--o1);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.8px}
+.about-txt h2{font-size:26px;font-weight:900;color:var(--g1);margin:8px 0 12px;line-height:1.25}
+.about-txt p{color:var(--txt2);font-size:13.5px;line-height:1.8;margin-bottom:12px}
+.about-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+@media(max-width:880px){.about-wrap{grid-template-columns:1fr}.about-collage img:first-child{height:180px}.about-stats{grid-template-columns:repeat(2,1fr)}}
+
+.portfolio-cta{background:linear-gradient(135deg,var(--g1),#3da03d);border-radius:var(--rad2);padding:44px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;box-shadow:var(--sh2)}
+.portfolio-cta-txt{max-width:640px}
+.portfolio-cta-txt .eyebrow{color:#d9f2dc;font-weight:700;font-size:11.5px;text-transform:uppercase;letter-spacing:2px;display:inline-block;margin-bottom:8px}
+.portfolio-cta-txt h2{color:#fff;font-size:24px;font-weight:800;margin-bottom:10px;line-height:1.3}
+.portfolio-cta-txt p{color:#e3f3e5;font-size:13.5px;line-height:1.7}
+.portfolio-cta-btn{background:#fff;color:var(--g1);border-color:#fff;flex-shrink:0;font-size:13.5px;padding:13px 26px}
+.portfolio-cta-btn:hover{background:var(--o1);color:#fff;border-color:var(--o1)}
+@media(max-width:700px){.portfolio-cta{flex-direction:column;align-items:flex-start}}
+
+.story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px}
+.story-card{background:#fff;border:1px solid var(--border);border-top:3px solid var(--o1);border-radius:var(--rad2);padding:34px 28px}
+.story-card h4{font-size:18px;font-weight:800;color:var(--g1);margin-bottom:12px}
+.story-card p{font-size:13.5px;color:var(--txt2);line-height:1.8}
+@media(max-width:880px){.story-grid{grid-template-columns:1fr}}
+
+.story-banner{position:relative;overflow:hidden;border-radius:var(--rad2);min-height:420px;box-shadow:var(--sh2)}
+.story-slide{position:absolute;inset:0;opacity:0;transition:opacity .8s ease;display:flex;align-items:center}
+.story-slide.on{opacity:1;z-index:1}
+.story-slide .sbg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.5)}
+.story-slide .sov{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,26,17,.85) 0%,rgba(10,26,17,.45) 60%,rgba(10,26,17,.2) 100%)}
+.story-content{position:relative;z-index:2;padding:44px 48px;max-width:640px;color:#fff}
+.story-content p{font-size:15px;line-height:1.85;opacity:.95}
+.story-dots{position:absolute;bottom:20px;left:48px;display:flex;gap:8px;z-index:5}
+@media(max-width:768px){.story-banner{min-height:520px}.story-content{padding:30px 26px}.story-content p{font-size:13.5px}.story-dots{left:26px}}
+
+/* ============ FEATURES / WHY US ============ */
+.feats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.featc{background:#fff;border:1px solid var(--border);border-radius:var(--rad2);padding:20px 16px;text-align:center;transition:.2s}
+.featc:hover{border-color:var(--g2);box-shadow:var(--sh)}
+.featc .fi{width:52px;height:52px;background:var(--g3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;margin:0 auto 12px;color:var(--g1)}
+.featc h4{font-size:14px;font-weight:700;margin-bottom:6px;color:var(--txt)}
+.featc p{font-size:11.5px;color:var(--txt3);line-height:1.5}
+/* Photo-backed quality boxes: background picture + green overlay, same treatment as the page header */
+.featc-photo{position:relative;background-size:cover;background-position:center;border:3px solid #fff;overflow:hidden;isolation:isolate}
+.featc-photo::before{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(8,42,14,.88),rgba(27,110,27,.74) 55%,rgba(8,42,14,.82));z-index:0}
+.featc-photo:hover{border-color:#fff;box-shadow:0 10px 26px -8px rgba(8,42,14,.4)}
+.featc-photo .fi{background:rgba(255,255,255,.16);color:#fff;position:relative;z-index:1;animation:iconPulse 2.6s ease-in-out infinite}
+.featc-photo:hover .fi{animation-play-state:paused;transform:scale(1.15)}
+.featc-photo h4{color:#fff;position:relative;z-index:1;text-shadow:0 1px 6px rgba(0,0,0,.4)}
+.featc-photo p{color:rgba(255,255,255,.88);position:relative;z-index:1}
+@keyframes iconPulse{0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(255,255,255,.35)}50%{transform:scale(1.1);box-shadow:0 0 0 9px rgba(255,255,255,0)}}
+@media(prefers-reduced-motion:reduce){.featc-photo .fi{animation:none}}
+@media(max-width:880px){.feats-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ============ MANUFACTURING / QUALITY (paragraph + image blocks) ============ */
+.mf-wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.mf-wrap.rev .mf-img{order:2}
+.mf-wrap.rev .mf-txt{order:1}
+.mf-img{position:relative;border-radius:var(--rad2);overflow:hidden;box-shadow:var(--sh2);height:320px}
+.mf-txt .eyebrow{color:var(--o1);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.8px}
+.mf-txt h2{font-size:24px;font-weight:900;color:var(--g1);margin:8px 0 12px;line-height:1.25}
+.mf-txt p{color:var(--txt2);font-size:13.5px;line-height:1.8;margin-bottom:10px}
+.mf-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.mf-tag{background:var(--g3);color:var(--g1);font-size:11px;font-weight:700;padding:6px 12px;border-radius:20px}
+@media(max-width:880px){.mf-wrap,.mf-wrap.rev{grid-template-columns:1fr}.mf-wrap.rev .mf-img,.mf-wrap.rev .mf-txt{order:0}}
+.qc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:22px}
+@media(max-width:880px){.qc-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ============ WEATHER BAR ============ */
+.wthr{background:linear-gradient(135deg,#e8f5e9,#fff,#fff8e1);border-top:1px solid #c8e6c9;border-bottom:1px solid #c8e6c9;padding:16px 0}
+.wcard{max-width:1240px;margin:0 auto;background:#fff;border:1px solid #c8e6c9;border-radius:16px;box-shadow:0 5px 20px rgba(27,110,27,.10);padding:14px 18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.wloc{font-size:13px;font-weight:900;color:var(--g1);min-width:190px;display:flex;align-items:center;gap:6px}
+.wnow{display:flex;align-items:center;gap:10px;border-left:1px solid #e1e7e1;padding-left:16px}
+.wnow .wicon{font-size:30px}
+.wnow strong{font-size:30px;color:#0f5132;line-height:1}
+.wnow small{display:block;font-size:11px;color:#666}
+.wctrl{display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+.wctrl select,.wctrl input{height:36px;border:1.5px solid #c8e6c9;border-radius:10px;padding:0 10px;font-family:inherit;font-size:12px;outline:none;background:#fbfffb}
+.wctrl button{height:36px;border:none;border-radius:10px;background:var(--g1);color:#fff;padding:0 14px;font-size:12px;font-weight:900}
+.wdays{display:flex;gap:8px;flex:1;min-width:300px;overflow-x:auto}
+.wday{min-width:82px;background:#f7faf7;border:1px solid #e4efe4;border-radius:12px;padding:7px 8px;text-align:center}
+.wday b{display:block;font-size:10px;color:#0f5132}
+.wday span{display:block;font-size:17px;line-height:1.2}
+.wday small{display:block;font-size:9px;color:#666;line-height:1.3}
+.wadvice{background:#0f5132;color:#fff;border-radius:10px;padding:8px 12px;font-size:11.5px;font-weight:700;line-height:1.4;max-width:320px}
+
+/* ============ CATEGORY GRID ============ */
+.catgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.catcard{background:#fff;border:1px solid var(--border);border-radius:var(--rad2);overflow:hidden;cursor:pointer;transition:.25s;text-align:center}
+.catcard:hover{border-color:var(--g2);box-shadow:var(--sh2);transform:translateY(-4px)}
+.catcard .ci{height:110px;overflow:hidden}
+.catcard .ci img{height:100%;width:100%;object-fit:cover}
+.catcard-body{padding:12px 8px}
+.catcard h3{font-size:13px;font-weight:700;color:var(--txt)}
+.catcard .cu{display:block;font-size:11px;color:var(--g1);margin-top:2px}
+.catcard .cc{font-size:10.5px;color:var(--txt3);margin-top:2px}
+@media(max-width:880px){.catgrid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){.catgrid{grid-template-columns:repeat(2,1fr)}}
+
+/* ============ PRODUCT GRID / CARDS (no price) ============ */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+.pcard{background:#fff;border:1px solid var(--border);border-radius:var(--rad2);overflow:hidden;transition:.2s;cursor:pointer;display:flex;flex-direction:column;position:relative}
+.pcard:hover{box-shadow:var(--sh2);transform:translateY(-3px);border-color:#cde8cd}
+.pcard .pimg{height:150px;background:#fafcfa;display:flex;align-items:center;justify-content:center;padding:10px;position:relative}
+.pcard .pimg img{max-height:130px;object-fit:contain}
+.pbadge{position:absolute;top:8px;left:8px;background:var(--o1);color:#fff;font-size:10px;font-weight:800;padding:3px 8px;border-radius:20px}
+.pbody{padding:10px 12px 12px;display:flex;flex-direction:column;gap:4px;flex:1}
+.pbody .pcat{font-size:10px;color:var(--g2);font-weight:700;text-transform:uppercase;letter-spacing:.4px}
+.pbody h4{font-size:13px;font-weight:700;line-height:1.3;color:var(--txt)}
+.pbody .purdu{font-size:12px;color:var(--txt3)}
+.pbody .pcomp{font-size:10.5px;color:var(--txt3);line-height:1.4;min-height:28px}
+.pviewrow{margin-top:4px}
+.pviewbtn{background:var(--g3);color:var(--g1);border:none;border-radius:20px;padding:7px 14px;font-size:11px;font-weight:700;width:100%}
+.pviewbtn:hover{background:var(--g2);color:#fff}
+
+/* filter tabs */
+.ftabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.ftab{border:1.5px solid var(--border);background:#fff;padding:8px 16px;border-radius:20px;font-size:12px;font-weight:600;color:var(--txt2)}
+.ftab.on{background:var(--g1);border-color:var(--g1);color:#fff}
+.searchrow{display:flex;gap:10px;margin-bottom:18px;flex-wrap:wrap}
+.searchrow input{flex:1;min-width:200px;padding:10px 14px;border:1.5px solid var(--border);border-radius:var(--rad);font-family:inherit;font-size:13px;outline:none}
+.searchrow input:focus{border-color:var(--g2)}
+
+/* ============ CROP DOCTOR ============ */
+.doctor-grid{display:grid;grid-template-columns:1.1fr repeat(4,1fr);gap:16px}
+.doc-finder{background:#fff;border:1px solid #dcefe0;border-radius:var(--rad2);padding:18px;box-shadow:var(--sh)}
+.doc-finder h3{color:var(--g1);margin-bottom:6px;font-size:15px}
+.doc-finder p.hint{font-size:11.5px;color:var(--txt3);margin-bottom:12px}
+.doc-finder select{width:100%;padding:12px;border:1px solid #cae2cf;border-radius:12px;color:var(--g1);font-weight:700;font-family:inherit;margin-bottom:8px}
+.doc-note{font-size:11px;color:var(--txt3);margin-top:8px}
+.doc-card{background:#fff;border:1px solid #dcefe0;border-radius:var(--rad2);overflow:hidden;cursor:pointer;box-shadow:var(--sh);transition:.2s}
+.doc-card:hover{transform:translateY(-3px);box-shadow:var(--sh2)}
+.doc-card img{width:100%;height:130px;object-fit:cover}
+.doc-card b{display:block;color:var(--g1);font-size:14px;padding:10px 12px 2px}
+.doc-card span{display:block;color:var(--o1);font-weight:800;font-size:12px;padding:0 12px 12px}
+@media(max-width:980px){.doctor-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.doctor-grid{grid-template-columns:1fr}}
+
+/* ============ TESTIMONIALS ============ */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.testi{background:#fff;border:1px solid var(--border);border-radius:var(--rad2);padding:20px;position:relative}
+.testi .stars{color:#ffb300;font-size:13px;margin-bottom:8px}
+.testi p{font-size:12.5px;color:var(--txt2);line-height:1.6;margin-bottom:14px;font-style:italic}
+.testi .who{display:flex;align-items:center;gap:10px}
+.testi .who .av{width:38px;height:38px;border-radius:50%;background:var(--g3);color:var(--g1);display:flex;align-items:center;justify-content:center;font-weight:800}
+.testi .who b{display:block;font-size:12.5px}
+.testi .who span{font-size:11px;color:var(--txt3)}
+@media(max-width:880px){.testi-grid{grid-template-columns:1fr}}
+.feedback-marquee-wrap{padding:8px 0 4px;overflow:hidden}
+.feedback-marquee-track{display:flex;gap:18px;width:max-content;animation:feedbackScroll 90s linear infinite;padding:0 4px}
+.feedback-marquee-wrap:hover .feedback-marquee-track{animation-play-state:paused}
+.testi.fcard{width:320px;flex-shrink:0}
+@keyframes feedbackScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ============ FOOTER ============ */
+footer{background:#123a1e;color:#dff0e2;margin-top:20px}
+.fcols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:24px;padding:36px 0 24px}
+.fcol h4{color:#fff;font-size:14px;margin-bottom:14px;font-weight:800}
+.fcol p,.fcol li{font-size:12px;color:#b8d6c0;line-height:2}
+.fcol ul{list-style:none}
+.fcol a{color:#b8d6c0}
+.fcol a:hover{color:#fff}
+.flogo{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.flogo .flogo-chip{background:#fff;border-radius:8px;padding:7px 9px;display:inline-flex;align-items:center;justify-content:center}
+.flogo img{height:30px;width:auto;display:block}
+.flogo b{color:#fff;font-size:16px}
+.fsocials{display:flex;gap:10px;margin-top:12px}
+.fsocials a{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:14px}
+.fsocials a:hover{background:var(--g2)}
+.fbottom{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:14px 0;font-size:11.5px;color:#9dc2a6}
+@media(max-width:880px){.fcols{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.fcols{grid-template-columns:1fr}}
+
+/* ============ PRODUCT INFO MODAL (no price) ============ */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:2000;display:none;align-items:center;justify-content:center;padding:16px}
+.overlay.on{display:flex}
+.pmodal{background:#fff;border-radius:var(--rad2);max-width:760px;width:100%;max-height:90vh;overflow-y:auto;position:relative;box-shadow:var(--sh2)}
+.pmodal .mclose{position:absolute;top:10px;right:10px;width:34px;height:34px;border-radius:50%;background:#fff;border:1px solid var(--border);font-size:16px;z-index:5;box-shadow:var(--sh)}
+.pmodal .mgrid{display:grid;grid-template-columns:1fr 1fr}
+.pmodal .mimg{background:#fafcfa;display:flex;align-items:center;justify-content:center;padding:24px;min-height:280px}
+.pmodal .mimg img{max-height:280px;object-fit:contain}
+.pmodal .minfo{padding:24px}
+.pmodal .mcat{font-size:11px;color:var(--g2);font-weight:800;text-transform:uppercase;letter-spacing:.5px}
+.pmodal h2{font-size:20px;font-weight:800;margin:6px 0 2px;color:var(--txt)}
+.pmodal .murdu{font-size:15px;color:var(--txt3);margin-bottom:10px}
+.pmodal .mtable{width:100%;margin:12px 0;border-collapse:collapse}
+.pmodal .mtable td{padding:7px 0;font-size:12.5px;border-bottom:1px solid #f0f0f0;vertical-align:top}
+.pmodal .mtable td:first-child{color:var(--txt3);width:110px;font-weight:600}
+@media(max-width:640px){.pmodal .mgrid{grid-template-columns:1fr}.pmodal .mimg{min-height:200px}}
+
+/* ============ PREMIUM PAGE HEADER (rotating background) ============ */
+.pg-header{position:relative;overflow:hidden;padding:70px 0 50px;isolation:isolate}
+.pg-header-bg{position:absolute;inset:0;z-index:0}
+.pg-header-bg .phb-slide{position:absolute;inset:0;opacity:0;background-size:cover;background-position:center;transform:scale(1.08);transition:opacity 1.8s ease,transform 9s linear}
+.pg-header-bg .phb-slide.on{opacity:1;transform:scale(1)}
+.pg-header::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(8,42,14,.9),rgba(27,110,27,.72) 55%,rgba(8,42,14,.85));z-index:1}
+.pg-header::after{content:'';position:absolute;left:0;right:0;bottom:0;height:70px;background:linear-gradient(180deg,transparent,#fff);z-index:1}
+.pg-header .container{position:relative;z-index:2}
+.pg-header span.eyebrow{display:inline-block;color:#ffd54f;font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);padding:5px 16px;border-radius:20px;backdrop-filter:blur(4px)}
+.pg-header h1{font-family:'Poppins',sans-serif;font-size:38px;font-weight:900;color:#fff;margin:16px 0 12px;letter-spacing:-.8px;text-shadow:0 4px 18px rgba(0,0,0,.35)}
+.pg-header p{color:rgba(255,255,255,.92);font-size:14.5px;line-height:1.7}
+@media(max-width:640px){.pg-header h1{font-size:27px}}
+
+/* scroll reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* ============ SEEDS PAGE ============ */
+.seeds-hero.pg-header .container{display:flex;align-items:center;gap:40px;flex-wrap:wrap;text-align:left}
+.seeds-hero-logo{background:#fff;border-radius:var(--rad2);box-shadow:var(--sh2);padding:14px 18px;flex-shrink:0}
+.seeds-hero-logo img{height:104px;width:auto}
+.seeds-hero-text{flex:1;min-width:260px}
+.seeds-hero-text h1{text-align:left}
+.seeds-hero-text p{max-width:640px}
+
+/* ============ SEEDS EXPANDED SECTIONS ============ */
+.seed-sec-head{text-align:center;max-width:680px;margin:0 auto 30px}
+.seed-sec-head span.eyebrow{color:var(--o1);font-weight:800;font-size:12px;letter-spacing:1px;text-transform:uppercase}
+.seed-sec-head h2{font-size:26px;font-weight:900;color:var(--g1);margin:8px 0 10px}
+.seed-sec-head p{color:var(--txt2);font-size:13.5px;line-height:1.7}
+.seed-why-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+@media(max-width:980px){.seed-why-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:640px){.seed-why-grid{grid-template-columns:repeat(2,1fr)}}
+.seed-commit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:880px){.seed-commit-grid{grid-template-columns:1fr}}
+.seed-commit-card{background:#fff;border:1px solid var(--border);border-top:3px solid var(--g1);border-radius:var(--rad2);padding:26px 22px;transition:.25s}
+.seed-commit-card:hover{box-shadow:var(--sh2);transform:translateY(-4px)}
+.seed-commit-card .ci{width:46px;height:46px;background:var(--g3);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--g1);margin-bottom:12px}
+.seed-commit-card h4{font-size:15px;font-weight:800;color:var(--txt);margin-bottom:8px}
+.seed-commit-card p{font-size:12.5px;color:var(--txt2);line-height:1.7}
+.seed-commit-card.has-photo{padding:0;overflow:hidden}
+.seed-commit-card.has-photo .scc-photo{height:150px;background-size:cover;background-position:center}
+.seed-commit-card.has-photo .scc-body{padding:22px 22px 26px}
+.seed-commit-card.has-photo .ci{margin-top:-35px;background:#fff;box-shadow:var(--sh2);position:relative;z-index:1}
+
+.seeds-intro{padding:48px 0}
+.seeds-intro .container{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.seeds-intro h2{font-size:24px;color:var(--txt);margin-bottom:12px}
+.seeds-intro p{color:var(--txt2);margin-bottom:12px}
+.seeds-gallery-wrap{border-radius:var(--rad2);overflow:hidden;box-shadow:var(--sh2);position:relative;aspect-ratio:4/3}
+@media(max-width:800px){.seeds-intro .container{grid-template-columns:1fr}}
+
+.seeds-products{padding:20px 0 60px;background:#fff}
+.seeds-products .sec-head{text-align:center;margin-bottom:28px}
+.seeds-products .sec-head h2{font-size:26px;color:var(--g1)}
+.seeds-products .sec-head p{color:var(--txt3);font-size:13px;margin-top:6px}
+.seeds-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px}
+
+</style>
+</head>
+<body>
+
+<!-- MOVING TEXT BAR -->
+<div class="ann"><div class="ann-inner">
+  <span>Plot No.228-229, Phase-II, Industrial Estate, Multan. Phone: 061-6537203</span>
+  <span class="urdu">پاکستان بھر میں خدمات دستیاب</span>
+  <span>100 percent Genuine Registered Agrochemicals</span>
+  <span>Insecticides. Fungicides. Herbicides. Fertilizers. Micronutrients. Seeds.</span>
+  <span>Plot No.228-229, Phase-II, Industrial Estate, Multan. Phone: 061-6537203</span>
+  <span class="urdu">پاکستان بھر میں خدمات دستیاب</span>
+  <span>100 percent Genuine Registered Agrochemicals</span>
+  <span>Insecticides. Fungicides. Herbicides. Fertilizers. Micronutrients. Seeds.</span>
+</div></div>
+
+
+
+<!-- HEADER -->
+<header>
+  <div class="hdr"><div class="container">
+    <a href="index.html" class="logo-a">
+      <img src="assets/ecc-custom/excel-crop-group-logo-cropped.png" alt="Excel Crop Group logo">
+    </a>
+    <div class="srch">
+      <div class="sf">
+        <select id="searchCatSel">
+          <option value="">All Categories</option>
+          <option>Insecticides</option><option>Fungicides</option><option>Herbicides</option>
+          <option>Fertilizers</option><option>Micronutrients</option>
+        </select>
+        <input id="searchBox" type="search" placeholder="Search our product range, e.g. Acelam, Urea, Cotton seed...">
+        <button onclick="runHeaderSearch()">Search</button>
+      </div>
+    </div>
+    <div class="hdr-r">
+      <div class="logo-t">
+        <h1>Excel Crop Group</h1>
+        <span class="lu urdu">ایکسل اور کسان، خوشحال پاکستان</span>
+      </div>
+    </div>
+  </div></div>
+  <nav class="mnav"><div class="container">
+    <div class="ni"><a href="index.html#about"> About Us </a></div>
+    <div class="ni"><a href="index.html#introduction">  Introduction  </a></div>
+    <div class="ni"><a href="index.html#quality"> Quality Control  </a></div>
+    <div class="ni"><a href="index.html#manufacturing"> Manufacturing &amp; Formulations </a></div>
+    <div class="ni"><a href="our-team.html">Our Team</a></div>
+    <div class="ni"><a href="#" onclick="goToProducts('Insecticides');return false">Insecticides</a></div>
+    <div class="ni"><a href="#" onclick="goToProducts('Fungicides');return false">Fungicides</a></div>
+    <div class="ni"><a href="#" onclick="goToProducts('Herbicides');return false">Herbicides</a></div>
+    <div class="ni"><a href="#" onclick="goToProducts('Fertilizers');return false">Fertilizers</a></div>
+    <div class="ni"><a href="#" onclick="goToProducts('Micronutrients');return false">Micronutrients</a></div>
+    <div class="ni"><a href="seeds.html">Seeds</a></div>
+  </div></nav>
+</header>
+
+<!-- ============ SEEDS HERO ============ -->
+<section class="seeds-hero pg-header">
+  <div class="pg-header-bg" data-images="[&quot;assets/seeds/bounty-seed-gallery-2.jpg&quot;, &quot;assets/seeds/bounty-seed-gallery-4.jpg&quot;, &quot;assets/stock2/seed-breeding-research.jpg&quot;, &quot;assets/seeds/bounty-seed-gallery-6.jpg&quot;]"></div>
+  <div class="container">
+    <div class="seeds-hero-logo"><img src="assets/ecc-new/bonti-seed-logo-cropped.png" alt="Bounty Seed logo"></div>
+    <div class="seeds-hero-text">
+      <span class="eyebrow">A Brand of Excel Crop Group</span>
+      <h1>Bounty Seed</h1>
+      <p>Quality hybrid and certified seeds bred and selected for Pakistani growing conditions, backed by the same standards of genuine, registered agri inputs that Excel Crop Group is known for across Punjab.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SEEDS INTRODUCTION ============ -->
+<section class="seeds-intro">
+  <div class="container">
+    <div>
+      <span class="eyebrow" style="color:var(--o1);font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase">Our Seed Brand</span>
+      <h2>Seed Quality Starts Every Season Right</h2>
+      <p>Bounty Seed brings hybrid corn, millet, basmati rice, maize fodder, sesame and mustard varieties to farmers who need reliable germination and consistent yield from the very first sowing.</p>
+      <p>Every seed lot is sourced and handled with the same discipline Excel Crop Group applies across its insecticide, fungicide and fertilizer lines, so dealers and farmers can trust the Bounty Seed name as much as the rest of the Excel Crop Group portfolio.</p>
+      <p class="urdu" style="color:var(--txt2)">باؤنٹی سیڈ، ایکسل کراپ گروپ کا معتبر بیج برانڈ ہے، کسانوں کے لیے بہترین معیار کے بیج فراہم کرتا ہے۔</p>
+    </div>
+    <div class="seeds-gallery-wrap">
+      <div class="mini-slider" data-images="[&quot;assets/seeds/bounty-seed-gallery-1.jpg&quot;, &quot;assets/seeds/bounty-seed-gallery-2.jpg&quot;, &quot;assets/seeds/bounty-seed-gallery-3.jpg&quot;, &quot;assets/seeds/bounty-seed-gallery-5.jpg&quot;, &quot;assets/seeds/bounty-seed-gallery-6.jpg&quot;]" data-alt="Bounty Seed gallery"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT BOUNTY SEED ============ -->
+<section class="sec alt reveal"><div class="container">
+  <div class="mf-wrap">
+    <div class="mf-img mini-slider" data-images="[&quot;assets/seeds/bounty-seed-gallery-1.jpg&quot;, &quot;assets/seeds/bounty-seed-gallery-3.jpg&quot;, &quot;assets/seeds/bounty-seed-gallery-5.jpg&quot;]" data-alt="About Bounty Seed"></div>
+    <div class="mf-txt">
+      <span class="eyebrow">About Bounty Seed</span>
+      <h2>A Seed Brand Built On Excel Crop Group's Standards</h2>
+      <p>Bounty Seed was established to bring the same discipline Excel Crop Group applies to its insecticides, fungicides and fertilizers into the seed business. Every variety we offer, from hybrid corn and millet to basmati rice, maize fodder, sesame and mustard, is selected and handled with germination and field performance in mind.</p>
+      <p>Our seed lots move through sourcing, cleaning, grading and packing under close supervision, so what a farmer opens at sowing time is what was promised on the pack, in both quality and quantity.</p>
+      <p class="urdu" style="color:var(--txt2)">باؤنٹی سیڈ، ایکسل کراپ گروپ کے اسی معیار پر قائم ایک بیج برانڈ ہے جس پر کسان بھروسہ کرتے ہیں۔</p>
+      <div class="mf-tags">
+        <span class="mf-tag">Hybrid &amp; Certified Seed</span>
+        <span class="mf-tag">Graded &amp; Cleaned</span>
+        <span class="mf-tag">Consistent Germination</span>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ WHY CHOOSE BOUNTY SEED ============ -->
+<section class="sec reveal"><div class="container">
+  <div class="seed-sec-head">
+    <span class="eyebrow">Why Choose Bounty Seed</span>
+    <h2>Five Reasons Dealers and Farmers Trust the Name</h2>
+    <p>Every Bounty Seed product is chosen for what it delivers in the field, not just on the shelf.</p>
+  </div>
+  <div class="seed-why-grid">
+    <div class="featc featc-photo" style="background-image:url('assets/seeds/bounty-seed-gallery-2.jpg')"><div class="fi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l7 3v5.3c0 4.6-3 8.3-7 9.7-4-1.4-7-5.1-7-9.7V5.5l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div><h4>Verified Purity</h4><p>Seed lots checked for varietal purity before packing.</p></div>
+    <div class="featc featc-photo" style="background-image:url('assets/seeds/seed-germination-soil.jpg')"><div class="fi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c3 3.6 6 7.6 6 11a6 6 0 1 1-12 0c0-3.4 3-7.4 6-11z"/></svg></div><h4>Strong Germination</h4><p>Selected for reliable, even emergence in the field.</p></div>
+    <div class="featc featc-photo" style="background-image:url('assets/seeds/bounty-seed-gallery-3.jpg')"><div class="fi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6.2L4.5 17.5A2 2 0 0 0 6.3 20.5h11.4a2 2 0 0 0 1.8-3L15 8.2V2"/><path d="M9 2h6"/><path d="M8 15h8"/></svg></div><h4>Consistent Packing</h4><p>Accurate weights and secure, moisture-safe packaging.</p></div>
+    <div class="featc featc-photo" style="background-image:url('assets/seeds/bounty-seed-gallery-5.jpg')"><div class="fi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.6-4.6"/><path d="M11 8.2v5.6M8.2 11h5.6"/></svg></div><h4>Field-Tested Varieties</h4><p>Bred and trialled for Pakistan's growing conditions.</p></div>
+    <div class="featc featc-photo" style="background-image:url('assets/stock2/farmland-wide-view.jpg')"><div class="fi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l5 3V10l5 3V10l5 3v8H3z"/><path d="M3 21h18"/></svg></div><h4>Backed by ECG</h4><p>Supported by Excel Crop Group's nationwide dealer network.</p></div>
+  </div>
+</div></section>
+
+<!-- ============ RESEARCH & DEVELOPMENT ============ -->
+<section class="sec alt reveal"><div class="container">
+  <div class="mf-wrap rev">
+    <div class="mf-img mini-slider" data-images="[&quot;assets/seeds/germination-energy-analysis.jpg&quot;, &quot;assets/seeds/seed-tissue-culture-lab.jpg&quot;, &quot;assets/seeds/seed-quality-lab-check.jpg&quot;]" data-alt="Bounty Seed research and development"></div>
+    <div class="mf-txt">
+      <span class="eyebrow">Research &amp; Development</span>
+      <h2>Selecting Varieties For Pakistan's Fields</h2>
+      <p>Every variety carrying the Bounty Seed name is evaluated with local growing conditions in mind, soil types, sowing windows and the pressures of heat, water availability and pests that Pakistani farmers deal with season after season.</p>
+      <p>We track how each variety performs across regions before it is offered widely, and we keep listening to feedback from dealers and farmers once it is in the field, feeding that experience back into how future seed lots are selected and prepared.</p>
+    </div>
+  </div>
+  <div class="qc-grid">
+    <div class="featc featc-photo" style="background-image:url('assets/seeds/germination-energy-analysis.jpg')"><div class="fi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6.2L4.5 17.5A2 2 0 0 0 6.3 20.5h11.4a2 2 0 0 0 1.8-3L15 8.2V2"/><path d="M9 2h6"/><path d="M8 15h8"/></svg></div><h4>Variety Evaluation</h4><p>Candidate varieties tested against local soil and climate.</p></div>
+    <div class="featc featc-photo" style="background-image:url('assets/stock2/field-crop-closeup.jpg')"><div class="fi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.6-4.6"/><path d="M11 8.2v5.6M8.2 11h5.6"/></svg></div><h4>Field Trials</h4><p>Regional performance tracked before wide release.</p></div>
+    <div class="featc featc-photo" style="background-image:url('assets/seeds/seed-tissue-culture-lab.jpg')"><div class="fi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l7 3v5.3c0 4.6-3 8.3-7 9.7-4-1.4-7-5.1-7-9.7V5.5l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div><h4>Continuous Improvement</h4><p>Field feedback shapes future seed selection.</p></div>
+    <div class="featc featc-photo" style="background-image:url('assets/seeds/seed-quality-lab-check.jpg')"><div class="fi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v5.5L4.8 17a1.8 1.8 0 0 0 1.6 2.7h11.2A1.8 1.8 0 0 0 19.2 17L14 7.5V2"/><path d="M10 2h4"/><path d="M7.5 15h9"/></svg></div><h4>Lab Analysis</h4><p>Purity and moisture checks before any lot is packed.</p></div>
+  </div>
+</div></section>
+
+<!-- ============ SEED QUALITY ASSURANCE ============ -->
+<section class="sec reveal"><div class="container">
+  <div class="seed-sec-head">
+    <span class="eyebrow">Seed Quality Assurance</span>
+    <h2>Every Bag Checked Before It Leaves Our Facility</h2>
+    <p class="urdu" style="max-width:640px;margin:0 auto">ہر بیگ فیکٹری سے نکلنے سے پہلے مکمل معیار کی جانچ سے گزرتا ہے۔</p>
+  </div>
+  <div class="qc-grid">
+    <div class="featc featc-photo" style="background-image:url('assets/seeds/seed-germination-soil.jpg')"><div class="fi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.6-4.6"/><path d="M11 8.2v5.6M8.2 11h5.6"/></svg></div><h4>Germination Testing</h4><p>Sample lots tested for germination rate before packing.</p></div>
+    <div class="featc featc-photo" style="background-image:url('assets/seeds/seed-sample-quality-check.jpg')"><div class="fi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6.2L4.5 17.5A2 2 0 0 0 6.3 20.5h11.4a2 2 0 0 0 1.8-3L15 8.2V2"/><path d="M9 2h6"/><path d="M8 15h8"/></svg></div><h4>Purity &amp; Cleaning</h4><p>Seed cleaned and screened to remove foreign material.</p></div>
+    <div class="featc featc-photo" style="background-image:url('assets/seeds/seed-quality-lab-check.jpg')"><div class="fi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c3 3.6 6 7.6 6 11a6 6 0 1 1-12 0c0-3.4 3-7.4 6-11z"/></svg></div><h4>Moisture Control</h4><p>Moisture levels checked to protect shelf life and vigour.</p></div>
+    <div class="featc featc-photo" style="background-image:url('assets/seeds/seed-tissue-culture-jars.jpg')"><div class="fi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l5 3V10l5 3V10l5 3v8H3z"/><path d="M3 21h18"/></svg></div><h4>Batch Traceability</h4><p>Every pack carries a batch number back to its source lot.</p></div>
+  </div>
+</div></section>
+
+<!-- ============ OUR COMMITMENT TO FARMERS ============ -->
+<section class="sec alt reveal"><div class="container">
+  <div class="seed-sec-head">
+    <span class="eyebrow">Our Commitment to Farmers</span>
+    <h2>Standing Behind Every Season's Sowing</h2>
+    <p>Bounty Seed exists to give farmers one less thing to worry about at sowing time.</p>
+  </div>
+  <div class="seed-commit-grid">
+    <div class="seed-commit-card has-photo">
+      <div class="scc-photo" style="background-image:url('assets/seeds/bounty-seed-gallery-1.jpg')"></div>
+      <div class="scc-body">
+      <div class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6.2L4.5 17.5A2 2 0 0 0 6.3 20.5h11.4a2 2 0 0 0 1.8-3L15 8.2V2"/><path d="M9 2h6"/><path d="M8 15h8"/></svg></div>
+      <h4>Genuine Seed, Every Time</h4>
+      <p>No mixed lots, no shortcuts. What is printed on the pack is what farmers receive, backed by the same integrity Excel Crop Group applies across its full portfolio.</p>
+      </div>
+    </div>
+    <div class="seed-commit-card has-photo">
+      <div class="scc-photo" style="background-image:url('assets/stock2/team-training-session.jpg')"></div>
+      <div class="scc-body">
+      <div class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5s-7-4.2-9.3-8.3C1.2 9 2.6 5.6 6 5.1c2-.3 3.5.9 4.5 2.2 1-1.3 2.5-2.5 4.5-2.2 3.4.5 4.8 3.9 3.3 7.1-2.3 4.1-9.3 8.3-9.3 8.3z"/></svg></div>
+      <h4>Support Beyond the Sale</h4>
+      <p>Our dealer network and technical team are reachable for sowing guidance, so farmers are never left without support once a bag leaves the shop.</p>
+      </div>
+    </div>
+    <div class="seed-commit-card has-photo">
+      <div class="scc-photo" style="background-image:url('assets/seeds/seed-tissue-culture-lab.jpg')"></div>
+      <div class="scc-body">
+      <div class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-8"/><path d="M15 7h5v5"/></svg></div>
+      <h4>Investing in Better Yields</h4>
+      <p>Continued research into varieties suited to local conditions means the seed farmers plant today keeps improving in the seasons ahead.</p>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ SEEDS PRODUCTS ============ -->
+<section class="seeds-products">
+  <div class="container">
+    <div class="sec-head">
+      <h2>Bounty Seed Products</h2>
+      <p>Every seed product under the Bounty Seed brand</p>
+    </div>
+    <div class="seeds-grid">
+  <a class="pcard" href="products.html?cat=Seeds" style="cursor:pointer">
+    <span class="pbadge">Popular</span>
+    <div class="pimg"><img src="assets/ecc-new/hybrid-corn-seed-ks-64.jpg" alt="HYBRID CORN SEED KS-64 (9kg)" loading="lazy"></div>
+    <div class="pbody">
+      <span class="pcat">Seeds</span>
+      <h4>HYBRID CORN SEED KS-64 (9kg)</h4>
+      <span class="purdu urdu">ہائبرڈ مکئی بیج KS-64</span>
+      <span class="pcomp">(F1 Hybrid)</span>
+      <div class="pviewrow"><span class="pviewbtn">View Details</span></div>
+    </div>
+  </a>
+  <a class="pcard" href="products.html?cat=Seeds" style="cursor:pointer">
+    
+    <div class="pimg"><img src="assets/product-images/king-victor-millet.jpg" alt="KING VICTOR (MILLET) (2kg)" loading="lazy"></div>
+    <div class="pbody">
+      <span class="pcat">Seeds</span>
+      <h4>KING VICTOR (MILLET) (2kg)</h4>
+      <span class="purdu urdu">کنگ وکٹر باجرہ</span>
+      <span class="pcomp">(Hybrid Millet)</span>
+      <div class="pviewrow"><span class="pviewbtn">View Details</span></div>
+    </div>
+  </a>
+  <a class="pcard" href="products.html?cat=Seeds" style="cursor:pointer">
+    
+    <div class="pimg"><img src="assets/product-images/kissan-basmati-1509.jpg" alt="KISSAN BASMATI (1509) (20kg)" loading="lazy"></div>
+    <div class="pbody">
+      <span class="pcat">Seeds</span>
+      <h4>KISSAN BASMATI (1509) (20kg)</h4>
+      <span class="purdu urdu">کسان بسمتی 1509</span>
+      <span class="pcomp">(Basmati Rice 1509)</span>
+      <div class="pviewrow"><span class="pviewbtn">View Details</span></div>
+    </div>
+  </a>
+  <a class="pcard" href="products.html?cat=Seeds" style="cursor:pointer">
+    
+    <div class="pimg"><img src="assets/product-images/pak-afgoi-sg-2002-maize-fodder.jpg" alt="PAK AFGOI (SG-2002) (MAIZE FODDER) (20kg)" loading="lazy"></div>
+    <div class="pbody">
+      <span class="pcat">Seeds</span>
+      <h4>PAK AFGOI (SG-2002) (MAIZE FODDER) (20kg)</h4>
+      <span class="purdu urdu">پاک افغوئی مکئی چارہ</span>
+      <span class="pcomp">(Hybrid Maize Fodder)</span>
+      <div class="pviewrow"><span class="pviewbtn">View Details</span></div>
+    </div>
+  </a>
+  <a class="pcard" href="products.html?cat=Seeds" style="cursor:pointer">
+    
+    <div class="pimg"><img src="assets/product-images/sesame-ts5-th6.jpg" alt="SESAME (TS5 & TH6) (1kg)" loading="lazy"></div>
+    <div class="pbody">
+      <span class="pcat">Seeds</span>
+      <h4>SESAME (TS5 & TH6) (1kg)</h4>
+      <span class="purdu urdu">تل ٹی ایس 5 و ٹی ایچ 6</span>
+      <span class="pcomp">(Sesame Variety)</span>
+      <div class="pviewrow"><span class="pviewbtn">View Details</span></div>
+    </div>
+  </a>
+  <a class="pcard" href="products.html?cat=Seeds" style="cursor:pointer">
+    
+    <div class="pimg"><img src="assets/product-images/super-raya-mustard.jpg" alt="SUPER RAYA (MUSTARD) (2kg)" loading="lazy"></div>
+    <div class="pbody">
+      <span class="pcat">Seeds</span>
+      <h4>SUPER RAYA (MUSTARD) (2kg)</h4>
+      <span class="purdu urdu">سپر رایا سرسوں</span>
+      <span class="pcomp">(Mustard/Raya Variety)</span>
+      <div class="pviewrow"><span class="pviewbtn">View Details</span></div>
+    </div>
+  </a>
+    </div>
+  </div>
+</section>
+
+<footer id="footer-contact">
+  <div class="container">
+    <div class="fcols">
+      <div class="fcol">
+        <div class="flogo"><span class="flogo-chip"><img src="assets/ecc-custom/excel-crop-group-logo-cropped.png" alt="Excel Crop Group logo"></span><b>Excel Crop Group</b></div>
+        <p><span class="urdu">ایکسل اور کسان، خوشحال پاکستان</span></p>
+        <p>A company portfolio showcasing genuine agricultural inputs, insecticides, fungicides, herbicides, fertilizers, micronutrients and seeds, for farmers across Pakistan.</p>
+        <div class="fsocials"><a href="#">f</a><a href="#">▷</a><a href="tel:0616537203">☎</a><a href="mailto:info@excelcropcare.com">✉</a></div>
+      </div>
+      <div class="fcol"><h4>Categories</h4><ul>
+        <li><a href="#" onclick="goToProducts('Insecticides');return false">Insecticides</a></li>
+        <li><a href="#" onclick="goToProducts('Fungicides');return false">Fungicides</a></li>
+        <li><a href="#" onclick="goToProducts('Herbicides');return false">Herbicides</a></li>
+        <li><a href="#" onclick="goToProducts('Fertilizers');return false">Fertilizers</a></li>
+        <li><a href="#" onclick="goToProducts('Micronutrients');return false">Micronutrients</a></li>
+        <li><a href="seeds.html">Seeds</a></li>
+      </ul></div>
+      <div class="fcol"><h4>Company</h4><ul>
+        <li><a href="index.html#introduction">Introduction</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="our-team.html">Our Team</a></li>
+        <li><a href="index.html#reach">Our Reach</a></li>
+        <li><a href="index.html#quality">Quality Control</a></li>
+        <li><a href="index.html#manufacturing">Manufacturing</a></li>
+        <li><a href="index.html#weather">Weather &amp; Spray Guide</a></li>
+      </ul></div>
+      <div class="fcol"><h4>Contact Us</h4><ul>
+        <li>Plot No.228-229, Phase-II, Industrial Estate, Multan, Pakistan</li>
+        <li>061-6537203</li>
+        <li>info@excelcropcare.com</li>
+        <li>Mon to Sat, 9AM to 6PM</li>
+      </ul></div>
+    </div>
+    <div class="fbottom">© 2026 Excel Crop Group | Plot No.228-229, Phase-II, Industrial Estate, Multan | 061-6537203 | Company Portfolio Website</div>
+  </div>
+</footer>
+
+<script>
+function goToProducts(cat){
+  window.location.href = 'products.html' + (cat ? ('?cat=' + encodeURIComponent(cat)) : '');
+}
+function runHeaderSearch(){
+  const term = document.getElementById('searchBox').value;
+  const cat = document.getElementById('searchCatSel').value;
+  const params = new URLSearchParams();
+  if(cat) params.set('cat', cat);
+  if(term) params.set('q', term);
+  window.location.href = 'products.html' + (params.toString() ? ('?' + params.toString()) : '');
+}
+function initMiniSliders(){
+  document.querySelectorAll('.mini-slider').forEach(el=>{
+    let imgs;
+    try{ imgs = JSON.parse(el.dataset.images); }catch(e){ return; }
+    if(!imgs || !imgs.length) return;
+    const alt = el.dataset.alt || '';
+    el.innerHTML = imgs.map((src,i)=>`<div class="mini-slide ${i===0?'on':''}"><img src="${src}" alt="${alt}" loading="lazy"></div>`).join('')
+      + (imgs.length>1 ? '<div class="mini-dots">' + imgs.map((_,i)=>`<div class="mini-dot ${i===0?'on':''}" data-i="${i}"></div>`).join('') + '</div>' : '');
+    if(imgs.length<2) return;
+    let idx = 0;
+    const slides = el.querySelectorAll('.mini-slide');
+    const dots = el.querySelectorAll('.mini-dot');
+    function show(n){
+      idx = (n+slides.length)%slides.length;
+      slides.forEach((s,i)=>s.classList.toggle('on', i===idx));
+      dots.forEach((d,i)=>d.classList.toggle('on', i===idx));
+    }
+    dots.forEach(d=>d.addEventListener('click', ()=>show(parseInt(d.dataset.i,10))));
+    setInterval(()=>show(idx+1), 4200 + Math.random()*900);
+  });
+}
+initMiniSliders();
+function initPgHeaders(){
+  document.querySelectorAll('.pg-header-bg').forEach(el=>{
+    let imgs;
+    try{ imgs = JSON.parse(el.dataset.images); }catch(e){ return; }
+    if(!imgs || !imgs.length) return;
+    el.innerHTML = imgs.map((src,i)=>`<div class="phb-slide ${i===0?'on':''}" style="background-image:url('${src}')"></div>`).join('');
+    if(imgs.length<2) return;
+    let idx = 0;
+    const slides = el.querySelectorAll('.phb-slide');
+    setInterval(()=>{ idx = (idx+1)%slides.length; slides.forEach((s,i)=>s.classList.toggle('on', i===idx)); }, 5200);
+  });
+}
+initPgHeaders();
+function initReveal(){
+  const els = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window) || !els.length){ els.forEach(e=>e.classList.add('in')); return; }
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+  els.forEach(e=>io.observe(e));
+}
+initReveal();
+</script>
+</body>
+</html>

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Products - Excel Crop Group | Multan, Pakistan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --g1:#1b6e1b;--g2:#2d8a2d;--g3:#e8f5e9;
+  --o1:#e65100;--o2:#f57c00;--o3:#ff9800;
+  --r1:#c62828;
+  --txt:#1a1a1a;--txt2:#555;--txt3:#888;
+  --border:#e0e0e0;--bg:#f5f5f5;
+  --sh:0 2px 12px rgba(0,0,0,.1);--sh2:0 6px 24px rgba(0,0,0,.15);
+  --rad:8px;--rad2:14px;
+}
+body{font-family:'Poppins',sans-serif;color:var(--txt);background:var(--bg);font-size:14px;line-height:1.5}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;font-family:inherit}
+img{max-width:100%;display:block}
+.container{max-width:1240px;margin:0 auto;padding:0 16px}
+.urdu{font-family:'Noto Nastaliq Urdu',serif;direction:rtl}
+::-webkit-scrollbar{width:10px;height:8px}
+::-webkit-scrollbar-thumb{background:#bcd9bc;border-radius:10px}
+
+/* ============ MOVING TEXT BAR (right-to-left marquee) ============ */
+.ann{background:var(--g1);color:#fff;padding:7px 0;overflow:hidden}
+.ann-inner{display:flex;gap:60px;animation:scrollRtl 26s linear infinite;white-space:nowrap;width:max-content}
+.ann-inner span{font-size:12px;padding:0 10px}
+@keyframes scrollRtl{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ============ TOP BAR ============ */
+.top{background:#f0f7f0;border-bottom:1px solid #d4ebd4;padding:6px 0}
+.top .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.tlinks{display:flex;gap:16px;font-size:12px;flex-wrap:wrap}
+.tlinks a{color:var(--g1);font-weight:500}
+.tlinks a:hover{color:var(--o1)}
+.lang-sw{display:flex;gap:4px}
+.lb{padding:3px 10px;border:1px solid var(--border);border-radius:20px;font-size:11px;background:#fff;cursor:pointer;transition:.2s}
+.lb.on{background:var(--g1);color:#fff;border-color:var(--g1)}
+
+/* ============ HEADER ============ */
+header{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08);position:sticky;top:0;z-index:500}
+.hdr{padding:12px 0}
+.hdr .container{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo-a{display:flex;align-items:center;gap:10px;flex-shrink:0;cursor:pointer}
+.logo-a img{height:56px;width:auto;object-fit:contain;border-radius:8px}
+.logo-t h1{font-size:19px;font-weight:800;color:var(--g1);letter-spacing:-.5px;line-height:1.1}
+.logo-t .lu{font-size:12px;color:var(--o1)}
+.logo-t p{font-size:10px;color:var(--txt3)}
+.srch{flex:1;min-width:200px}
+.sf{display:flex;border:2px solid var(--g2);border-radius:var(--rad);overflow:hidden;box-shadow:0 2px 8px rgba(45,138,45,.1)}
+.sf select{padding:0 8px;border:none;border-right:1px solid #cde8cd;background:#f0f7f0;font-size:12px;outline:none;min-width:110px}
+.sf input{flex:1;padding:10px 12px;border:none;outline:none;font-size:13px;font-family:inherit}
+.sf button{background:var(--g2);color:#fff;border:none;padding:10px 18px;font-size:14px;font-weight:700;transition:.2s}
+.sf button:hover{background:var(--g1)}
+.hdr-r{display:flex;align-items:center;gap:10px;margin-left:auto;flex-shrink:0}
+.partner-logo{height:64px;width:auto;object-fit:contain}
+
+/* ============ NAV ============ */
+.mnav{background:var(--g2);overflow-x:auto;-ms-overflow-style:none;scrollbar-width:none}
+.mnav::-webkit-scrollbar{display:none}
+.mnav .container{display:flex}
+.ni{position:relative}
+.ni>a,.ni>button{color:#fff;padding:11px 15px;font-size:13px;font-weight:500;display:flex;align-items:center;gap:5px;border-right:1px solid rgba(255,255,255,.15);white-space:nowrap;transition:.15s;background:transparent;border-top:none;border-bottom:none;border-left:none;cursor:pointer;font-family:inherit}
+.ni>a:hover,.ni>button:hover{background:rgba(0,0,0,.18)}
+
+/* ============ HERO + SIDEBAR PORTFOLIO LAYOUT ============ */
+.hero-sec{background:#f4faf5;padding:18px 0 26px;border-bottom:1px solid #e3f0e4}
+.shop-layout{display:grid;grid-template-columns:250px 1fr 220px;gap:18px;align-items:stretch}
+.side-cats{background:#fff;border:1px solid #e6eee7;border-radius:var(--rad2);box-shadow:var(--sh);overflow:hidden;height:fit-content}
+.side-head{background:var(--g1);color:#fff;font-weight:800;padding:14px 16px;display:flex;align-items:center;gap:8px;font-size:14px}
+.side-cats .scl{display:block;width:100%;text-align:left;border:0;background:#fff;padding:12px 16px;font-weight:600;font-size:12.5px;color:var(--txt);border-bottom:1px solid #f1f4f1;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:.15s}
+.side-cats .scl:hover{background:var(--g3);color:var(--g1);padding-left:20px}
+.side-cats .scl span.n{color:var(--txt3);font-size:11px;font-weight:400}
+.side-cats .scl-all{background:var(--o1);color:#fff;font-weight:700;justify-content:center}
+.side-cats .scl-all:hover{background:#c84400;padding-left:16px}
+
+.slider{position:relative;overflow:hidden;border-radius:var(--rad2);min-height:380px;box-shadow:var(--sh2)}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity .65s ease;display:flex;align-items:center}
+.slide.on{opacity:1;z-index:1}
+.slide .sbg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.5)}
+.slide .sov{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,40,15,.82) 0%,rgba(6,40,15,.28) 65%,transparent 100%)}
+.sc{position:relative;z-index:2;padding:0 40px;max-width:520px;color:#fff}
+.sbadge{display:inline-block;background:var(--o1);color:#fff;padding:5px 14px;border-radius:20px;font-size:11px;font-weight:700;margin-bottom:12px;text-transform:uppercase;letter-spacing:.8px}
+.sc h2{font-size:32px;font-weight:900;line-height:1.15;margin-bottom:8px;text-shadow:0 2px 8px rgba(0,0,0,.4)}
+.sc .su{font-size:18px;color:#ffd54f;margin-bottom:10px;display:block}
+.sc p{font-size:14px;opacity:.92;margin-bottom:18px;line-height:1.6}
+.sbtns{display:flex;gap:10px;flex-wrap:wrap}
+.sbtn1{background:#fff;color:var(--g1);padding:11px 22px;border-radius:var(--rad);font-weight:700;font-size:13px;transition:.2s;border:2px solid #fff;cursor:pointer}
+.sbtn1:hover{background:var(--o1);color:#fff;border-color:var(--o1)}
+.sbtn2{background:transparent;color:#fff;padding:11px 22px;border-radius:var(--rad);font-weight:600;font-size:13px;border:2px solid rgba(255,255,255,.7);transition:.2s;cursor:pointer}
+.sbtn2:hover{background:rgba(255,255,255,.15)}
+.sarrows{position:absolute;bottom:16px;right:20px;display:flex;gap:8px;z-index:5}
+.sarr{width:34px;height:34px;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.5);border-radius:50%;color:#fff;font-size:15px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.2s}
+.sarr:hover{background:var(--g2)}
+.sdots{position:absolute;bottom:22px;left:40px;display:flex;gap:8px;z-index:5}
+.sdot{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.4);cursor:pointer;transition:.3s;border:1px solid rgba(255,255,255,.6)}
+.sdot.on{background:#fff;transform:scale(1.2)}
+
+.side-support{background:#fff;border:1px solid #e6eee7;border-radius:var(--rad2);box-shadow:var(--sh);padding:16px;display:flex;flex-direction:column;gap:10px}
+.side-support h3{color:var(--g1);font-size:14px;margin-bottom:2px}
+.side-support p{font-size:11.5px;color:var(--txt2);line-height:1.5}
+.side-support .ss-item{display:flex;gap:8px;align-items:flex-start;padding:8px 0;border-top:1px dashed #e5eee5;font-size:12px}
+.side-support .ss-item .ic{font-size:15px}
+.side-support a.btn-wa{background:#25d366;color:#fff;text-align:center;padding:10px;border-radius:var(--rad);font-weight:700;font-size:12.5px;margin-top:4px}
+.side-support a.btn-out{border:1.5px solid var(--g2);color:var(--g1);text-align:center;padding:9px;border-radius:var(--rad);font-weight:700;font-size:12.5px}
+
+@media(max-width:980px){.shop-layout{grid-template-columns:1fr}.side-cats{order:2}.side-support{order:3}.slider{min-height:300px}}
+
+/* ============ IMAGE AD MARQUEE (replaces highlight boxes) ============ */
+.ad-marquee-wrap{background:#fff;padding:18px 0;border-bottom:1px solid var(--border);overflow:hidden}
+.ad-marquee-label{text-align:center;font-size:11px;font-weight:700;color:var(--txt3);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+.ad-marquee-track{display:flex;gap:76px;width:max-content;animation:adScroll 110s linear infinite}
+.ad-marquee-wrap:hover .ad-marquee-track{animation-play-state:paused}
+.ad-card{flex-shrink:0;height:190px;width:auto;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.12);border:1px solid #eee}
+.ad-card img{height:100%;width:auto;display:block;object-fit:cover}
+@keyframes adScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@media(max-width:640px){.ad-card{height:140px}}
+
+/* ============ SECTION GENERIC ============ */
+.sec{padding:34px 0}
+.sec.alt{background:#fff}
+.sch{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:20px;flex-wrap:wrap;gap:10px}
+.stitle{font-size:22px;font-weight:800;color:var(--g1);padding-left:14px;position:relative;line-height:1.2}
+.stitle::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:5px;height:24px;background:var(--o1);border-radius:2px}
+.stitle .su{display:block;font-size:13px;color:var(--o1);font-weight:600;margin-top:3px}
+.vabtn{color:var(--g1);font-size:12px;font-weight:700;border:1.5px solid var(--g2);padding:7px 16px;border-radius:20px;transition:.2s;background:#fff;cursor:pointer;font-family:inherit}
+.vabtn:hover{background:var(--g2);color:#fff}
+
+/* ============ INTRODUCTION ============ */
+/* ============ MINI SLIDER (section side pictures, cycle one at a time) ============ */
+.mini-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.1s ease}
+.mini-slide.on{opacity:1;z-index:1}
+.mini-slide img{width:100%;height:100%;object-fit:cover}
+.mini-dots{position:absolute;bottom:14px;left:14px;display:flex;gap:6px;z-index:3}
+.mini-dot{width:20px;height:3px;border-radius:3px;background:rgba(255,255,255,.6);cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,.3);transition:.2s}
+.mini-dot.on{background:var(--o1)}
+
+.intro-wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.intro-img{position:relative;border-radius:var(--rad2);overflow:hidden;box-shadow:var(--sh2);height:340px}
+.intro-txt .eyebrow{color:var(--o1);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.8px}
+.intro-txt h2{font-size:26px;font-weight:900;color:var(--g1);margin:8px 0 12px;line-height:1.25}
+.intro-txt p{color:var(--txt2);font-size:13.5px;line-height:1.8;margin-bottom:12px}
+.intro-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+.astat{text-align:center;background:var(--g3);border-radius:var(--rad2);padding:14px 6px}
+.astat b{display:block;font-size:22px;color:var(--g1);font-weight:900}
+.astat span{font-size:10.5px;color:var(--txt2);font-weight:600}
+@media(max-width:880px){.intro-wrap{grid-template-columns:1fr}}
+
+/* ============ REACH SECTION (customers boxes) ============ */
+.reach-sec{background:linear-gradient(180deg,#f4faf5,#fff)}
+.reach-wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.reach-img{position:relative;border-radius:var(--rad2);overflow:hidden;box-shadow:var(--sh2);height:400px}
+.reach-txt p{color:var(--txt2);font-size:13.5px;line-height:1.8;margin-bottom:16px}
+.reach-boxes{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.reach-box{border-radius:var(--rad2);padding:24px 18px;color:#fff;text-align:center}
+.reach-box.pk{background:linear-gradient(135deg,var(--g1),#3da03d)}
+.reach-box.pb{background:linear-gradient(135deg,var(--o1),var(--o3))}
+.reach-box b{display:block;font-size:26px;font-weight:900;margin-bottom:4px}
+.reach-box .rb-title{display:block;font-size:14px;font-weight:700;margin-bottom:8px}
+.reach-box span.rb-sub{font-size:11px;opacity:.9;display:block}
+@media(max-width:880px){.reach-wrap{grid-template-columns:1fr}.reach-img{height:280px}}
+@media(max-width:520px){.reach-boxes{grid-template-columns:1fr}}
+.reach-boxes-single{grid-template-columns:1fr}
+.reach-boxes-single .reach-box{padding:34px 26px}
+.reach-boxes-single .reach-box b{font-size:44px}
+
+/* ============ ABOUT US ============ */
+.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.about-collage{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.about-collage img{border-radius:var(--rad2);object-fit:cover;height:150px;width:100%}
+.about-collage img:first-child{grid-row:1/3;height:310px}
+.about-txt .eyebrow{color:var(--o1);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.8px}
+.about-txt h2{font-size:26px;font-weight:900;color:var(--g1);margin:8px 0 12px;line-height:1.25}
+.about-txt p{color:var(--txt2);font-size:13.5px;line-height:1.8;margin-bottom:12px}
+.about-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+@media(max-width:880px){.about-wrap{grid-template-columns:1fr}.about-collage img:first-child{height:180px}.about-stats{grid-template-columns:repeat(2,1fr)}}
+
+.portfolio-cta{background:linear-gradient(135deg,var(--g1),#3da03d);border-radius:var(--rad2);padding:44px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;box-shadow:var(--sh2)}
+.portfolio-cta-txt{max-width:640px}
+.portfolio-cta-txt .eyebrow{color:#d9f2dc;font-weight:700;font-size:11.5px;text-transform:uppercase;letter-spacing:2px;display:inline-block;margin-bottom:8px}
+.portfolio-cta-txt h2{color:#fff;font-size:24px;font-weight:800;margin-bottom:10px;line-height:1.3}
+.portfolio-cta-txt p{color:#e3f3e5;font-size:13.5px;line-height:1.7}
+.portfolio-cta-btn{background:#fff;color:var(--g1);border-color:#fff;flex-shrink:0;font-size:13.5px;padding:13px 26px}
+.portfolio-cta-btn:hover{background:var(--o1);color:#fff;border-color:var(--o1)}
+@media(max-width:700px){.portfolio-cta{flex-direction:column;align-items:flex-start}}
+
+.story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px}
+.story-card{background:#fff;border:1px solid var(--border);border-top:3px solid var(--o1);border-radius:var(--rad2);padding:34px 28px}
+.story-card h4{font-size:18px;font-weight:800;color:var(--g1);margin-bottom:12px}
+.story-card p{font-size:13.5px;color:var(--txt2);line-height:1.8}
+@media(max-width:880px){.story-grid{grid-template-columns:1fr}}
+
+.story-banner{position:relative;overflow:hidden;border-radius:var(--rad2);min-height:420px;box-shadow:var(--sh2)}
+.story-slide{position:absolute;inset:0;opacity:0;transition:opacity .8s ease;display:flex;align-items:center}
+.story-slide.on{opacity:1;z-index:1}
+.story-slide .sbg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.5)}
+.story-slide .sov{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,26,17,.85) 0%,rgba(10,26,17,.45) 60%,rgba(10,26,17,.2) 100%)}
+.story-content{position:relative;z-index:2;padding:44px 48px;max-width:640px;color:#fff}
+.story-content p{font-size:15px;line-height:1.85;opacity:.95}
+.story-dots{position:absolute;bottom:20px;left:48px;display:flex;gap:8px;z-index:5}
+@media(max-width:768px){.story-banner{min-height:520px}.story-content{padding:30px 26px}.story-content p{font-size:13.5px}.story-dots{left:26px}}
+
+/* ============ FEATURES / WHY US ============ */
+.feats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.featc{background:#fff;border:1px solid var(--border);border-radius:var(--rad2);padding:20px 16px;text-align:center;transition:.2s}
+.featc:hover{border-color:var(--g2);box-shadow:var(--sh)}
+.featc .fi{width:52px;height:52px;background:var(--g3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;margin:0 auto 12px}
+.featc h4{font-size:14px;font-weight:700;margin-bottom:6px;color:var(--txt)}
+.featc p{font-size:11.5px;color:var(--txt3);line-height:1.5}
+@media(max-width:880px){.feats-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ============ MANUFACTURING / QUALITY (paragraph + image blocks) ============ */
+.mf-wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.mf-wrap.rev .mf-img{order:2}
+.mf-wrap.rev .mf-txt{order:1}
+.mf-img{position:relative;border-radius:var(--rad2);overflow:hidden;box-shadow:var(--sh2);height:320px}
+.mf-txt .eyebrow{color:var(--o1);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.8px}
+.mf-txt h2{font-size:24px;font-weight:900;color:var(--g1);margin:8px 0 12px;line-height:1.25}
+.mf-txt p{color:var(--txt2);font-size:13.5px;line-height:1.8;margin-bottom:10px}
+.mf-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.mf-tag{background:var(--g3);color:var(--g1);font-size:11px;font-weight:700;padding:6px 12px;border-radius:20px}
+@media(max-width:880px){.mf-wrap,.mf-wrap.rev{grid-template-columns:1fr}.mf-wrap.rev .mf-img,.mf-wrap.rev .mf-txt{order:0}}
+.qc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:22px}
+@media(max-width:880px){.qc-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ============ WEATHER BAR ============ */
+.wthr{background:linear-gradient(135deg,#e8f5e9,#fff,#fff8e1);border-top:1px solid #c8e6c9;border-bottom:1px solid #c8e6c9;padding:16px 0}
+.wcard{max-width:1240px;margin:0 auto;background:#fff;border:1px solid #c8e6c9;border-radius:16px;box-shadow:0 5px 20px rgba(27,110,27,.10);padding:14px 18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.wloc{font-size:13px;font-weight:900;color:var(--g1);min-width:190px;display:flex;align-items:center;gap:6px}
+.wnow{display:flex;align-items:center;gap:10px;border-left:1px solid #e1e7e1;padding-left:16px}
+.wnow .wicon{font-size:30px}
+.wnow strong{font-size:30px;color:#0f5132;line-height:1}
+.wnow small{display:block;font-size:11px;color:#666}
+.wctrl{display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+.wctrl select,.wctrl input{height:36px;border:1.5px solid #c8e6c9;border-radius:10px;padding:0 10px;font-family:inherit;font-size:12px;outline:none;background:#fbfffb}
+.wctrl button{height:36px;border:none;border-radius:10px;background:var(--g1);color:#fff;padding:0 14px;font-size:12px;font-weight:900}
+.wdays{display:flex;gap:8px;flex:1;min-width:300px;overflow-x:auto}
+.wday{min-width:82px;background:#f7faf7;border:1px solid #e4efe4;border-radius:12px;padding:7px 8px;text-align:center}
+.wday b{display:block;font-size:10px;color:#0f5132}
+.wday span{display:block;font-size:17px;line-height:1.2}
+.wday small{display:block;font-size:9px;color:#666;line-height:1.3}
+.wadvice{background:#0f5132;color:#fff;border-radius:10px;padding:8px 12px;font-size:11.5px;font-weight:700;line-height:1.4;max-width:320px}
+
+/* ============ CATEGORY GRID ============ */
+.catgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.catcard{background:#fff;border:1px solid var(--border);border-radius:var(--rad2);overflow:hidden;cursor:pointer;transition:.25s;text-align:center}
+.catcard:hover{border-color:var(--g2);box-shadow:var(--sh2);transform:translateY(-4px)}
+.catcard .ci{height:110px;overflow:hidden}
+.catcard .ci img{height:100%;width:100%;object-fit:cover}
+.catcard-body{padding:12px 8px}
+.catcard h3{font-size:13px;font-weight:700;color:var(--txt)}
+.catcard .cu{display:block;font-size:11px;color:var(--g1);margin-top:2px}
+.catcard .cc{font-size:10.5px;color:var(--txt3);margin-top:2px}
+@media(max-width:880px){.catgrid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){.catgrid{grid-template-columns:repeat(2,1fr)}}
+
+/* ============ PRODUCT GRID / CARDS (no price) ============ */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+.pcard{background:#fff;border:1px solid var(--border);border-radius:var(--rad2);overflow:hidden;transition:.2s;cursor:pointer;display:flex;flex-direction:column;position:relative}
+.pcard:hover{box-shadow:var(--sh2);transform:translateY(-3px);border-color:#cde8cd}
+.pcard .pimg{height:150px;background:#fafcfa;display:flex;align-items:center;justify-content:center;padding:10px;position:relative}
+.pcard .pimg img{max-height:130px;object-fit:contain}
+.pbadge{position:absolute;top:8px;left:8px;background:var(--o1);color:#fff;font-size:10px;font-weight:800;padding:3px 8px;border-radius:20px}
+.pbody{padding:10px 12px 12px;display:flex;flex-direction:column;gap:4px;flex:1}
+.pbody .pcat{font-size:10px;color:var(--g2);font-weight:700;text-transform:uppercase;letter-spacing:.4px}
+.pbody h4{font-size:13px;font-weight:700;line-height:1.3;color:var(--txt)}
+.pbody .purdu{font-size:12px;color:var(--txt3)}
+.pbody .pcomp{font-size:10.5px;color:var(--txt3);line-height:1.4;min-height:28px}
+.pviewrow{margin-top:4px}
+.pviewbtn{background:var(--g3);color:var(--g1);border:none;border-radius:20px;padding:7px 14px;font-size:11px;font-weight:700;width:100%}
+.pviewbtn:hover{background:var(--g2);color:#fff}
+
+/* filter tabs */
+.ftabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.ftab{border:1.5px solid var(--border);background:#fff;padding:8px 16px;border-radius:20px;font-size:12px;font-weight:600;color:var(--txt2)}
+.ftab.on{background:var(--g1);border-color:var(--g1);color:#fff}
+.searchrow{display:flex;gap:10px;margin-bottom:18px;flex-wrap:wrap}
+.searchrow input{flex:1;min-width:200px;padding:10px 14px;border:1.5px solid var(--border);border-radius:var(--rad);font-family:inherit;font-size:13px;outline:none}
+.searchrow input:focus{border-color:var(--g2)}
+
+/* ============ CROP DOCTOR ============ */
+.doctor-grid{display:grid;grid-template-columns:1.1fr repeat(4,1fr);gap:16px}
+.doc-finder{background:#fff;border:1px solid #dcefe0;border-radius:var(--rad2);padding:18px;box-shadow:var(--sh)}
+.doc-finder h3{color:var(--g1);margin-bottom:6px;font-size:15px}
+.doc-finder p.hint{font-size:11.5px;color:var(--txt3);margin-bottom:12px}
+.doc-finder select{width:100%;padding:12px;border:1px solid #cae2cf;border-radius:12px;color:var(--g1);font-weight:700;font-family:inherit;margin-bottom:8px}
+.doc-note{font-size:11px;color:var(--txt3);margin-top:8px}
+.doc-card{background:#fff;border:1px solid #dcefe0;border-radius:var(--rad2);overflow:hidden;cursor:pointer;box-shadow:var(--sh);transition:.2s}
+.doc-card:hover{transform:translateY(-3px);box-shadow:var(--sh2)}
+.doc-card img{width:100%;height:130px;object-fit:cover}
+.doc-card b{display:block;color:var(--g1);font-size:14px;padding:10px 12px 2px}
+.doc-card span{display:block;color:var(--o1);font-weight:800;font-size:12px;padding:0 12px 12px}
+@media(max-width:980px){.doctor-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.doctor-grid{grid-template-columns:1fr}}
+
+/* ============ TESTIMONIALS ============ */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.testi{background:#fff;border:1px solid var(--border);border-radius:var(--rad2);padding:20px;position:relative}
+.testi .stars{color:#ffb300;font-size:13px;margin-bottom:8px}
+.testi p{font-size:12.5px;color:var(--txt2);line-height:1.6;margin-bottom:14px;font-style:italic}
+.testi .who{display:flex;align-items:center;gap:10px}
+.testi .who .av{width:38px;height:38px;border-radius:50%;background:var(--g3);color:var(--g1);display:flex;align-items:center;justify-content:center;font-weight:800}
+.testi .who b{display:block;font-size:12.5px}
+.testi .who span{font-size:11px;color:var(--txt3)}
+@media(max-width:880px){.testi-grid{grid-template-columns:1fr}}
+.feedback-marquee-wrap{padding:8px 0 4px;overflow:hidden}
+.feedback-marquee-track{display:flex;gap:18px;width:max-content;animation:feedbackScroll 90s linear infinite;padding:0 4px}
+.feedback-marquee-wrap:hover .feedback-marquee-track{animation-play-state:paused}
+.testi.fcard{width:320px;flex-shrink:0}
+@keyframes feedbackScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ============ FOOTER ============ */
+footer{background:#123a1e;color:#dff0e2;margin-top:20px}
+.fcols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:24px;padding:36px 0 24px}
+.fcol h4{color:#fff;font-size:14px;margin-bottom:14px;font-weight:800}
+.fcol p,.fcol li{font-size:12px;color:#b8d6c0;line-height:2}
+.fcol ul{list-style:none}
+.fcol a{color:#b8d6c0}
+.fcol a:hover{color:#fff}
+.flogo{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.flogo .flogo-chip{background:#fff;border-radius:8px;padding:7px 9px;display:inline-flex;align-items:center;justify-content:center}
+.flogo img{height:30px;width:auto;display:block}
+.flogo b{color:#fff;font-size:16px}
+.fsocials{display:flex;gap:10px;margin-top:12px}
+.fsocials a{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:14px}
+.fsocials a:hover{background:var(--g2)}
+.fbottom{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:14px 0;font-size:11.5px;color:#9dc2a6}
+@media(max-width:880px){.fcols{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.fcols{grid-template-columns:1fr}}
+
+/* ============ PRODUCT INFO MODAL (no price) ============ */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:2000;display:none;align-items:center;justify-content:center;padding:16px}
+.overlay.on{display:flex}
+.pmodal{background:#fff;border-radius:var(--rad2);max-width:760px;width:100%;max-height:90vh;overflow-y:auto;position:relative;box-shadow:var(--sh2)}
+.pmodal .mclose{position:absolute;top:10px;right:10px;width:34px;height:34px;border-radius:50%;background:#fff;border:1px solid var(--border);font-size:16px;z-index:5;box-shadow:var(--sh)}
+.pmodal .mgrid{display:grid;grid-template-columns:1fr 1fr}
+.pmodal .mimg{background:#fafcfa;display:flex;align-items:center;justify-content:center;padding:24px;min-height:280px}
+.pmodal .mimg img{max-height:280px;object-fit:contain}
+.pmodal .minfo{padding:24px}
+.pmodal .mcat{font-size:11px;color:var(--g2);font-weight:800;text-transform:uppercase;letter-spacing:.5px}
+.pmodal h2{font-size:20px;font-weight:800;margin:6px 0 2px;color:var(--txt)}
+.pmodal .murdu{font-size:15px;color:var(--txt3);margin-bottom:10px}
+.pmodal .mtable{width:100%;margin:12px 0;border-collapse:collapse}
+.pmodal .mtable td{padding:7px 0;font-size:12.5px;border-bottom:1px solid #f0f0f0;vertical-align:top}
+.pmodal .mtable td:first-child{color:var(--txt3);width:110px;font-weight:600}
+@media(max-width:640px){.pmodal .mgrid{grid-template-columns:1fr}.pmodal .mimg{min-height:200px}}
+</style>
+<style>
+.pp-hero.pg-header .pp-crumb{color:#d9f2dc;margin-bottom:10px;position:relative;z-index:2}
+.pp-hero.pg-header .pp-crumb a{color:#fff;font-weight:700}
+/* ============ PREMIUM PAGE HEADER (rotating background) ============ */
+.pg-header{position:relative;overflow:hidden;padding:70px 0 50px;isolation:isolate}
+.pg-header-bg{position:absolute;inset:0;z-index:0}
+.pg-header-bg .phb-slide{position:absolute;inset:0;opacity:0;background-size:cover;background-position:center;transform:scale(1.08);transition:opacity 1.8s ease,transform 9s linear}
+.pg-header-bg .phb-slide.on{opacity:1;transform:scale(1)}
+.pg-header::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(8,42,14,.9),rgba(27,110,27,.72) 55%,rgba(8,42,14,.85));z-index:1}
+.pg-header::after{content:'';position:absolute;left:0;right:0;bottom:0;height:56px;background:linear-gradient(180deg,transparent,#f5f5f5);z-index:1}
+.pg-header .container{position:relative;z-index:2}
+.pg-header span.eyebrow{display:inline-block;color:#ffd54f;font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);padding:5px 16px;border-radius:20px;backdrop-filter:blur(4px);margin-bottom:8px}
+.pg-header h1{font-family:'Poppins',sans-serif;font-size:34px;font-weight:900;color:#fff;margin:8px 0 12px;letter-spacing:-.6px;text-shadow:0 4px 18px rgba(0,0,0,.35)}
+.pg-header p{color:rgba(255,255,255,.92);font-size:13.5px;line-height:1.7;max-width:680px}
+@media(max-width:640px){.pg-header h1{font-size:25px}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<div class="ann"><div class="ann-inner">
+  <span>Plot No.228-229, Phase-II, Industrial Estate, Multan. Phone: 061-6537203</span>
+  <span class="urdu">پاکستان بھر میں خدمات دستیاب</span>
+  <span>100 percent Genuine Registered Agrochemicals</span>
+  <span>Insecticides. Fungicides. Herbicides. Fertilizers. Micronutrients. Seeds.</span>
+  <span>Plot No.228-229, Phase-II, Industrial Estate, Multan. Phone: 061-6537203</span>
+  <span class="urdu">پاکستان بھر میں خدمات دستیاب</span>
+  <span>100 percent Genuine Registered Agrochemicals</span>
+  <span>Insecticides. Fungicides. Herbicides. Fertilizers. Micronutrients. Seeds.</span>
+</div></div>
+
+
+
+<!-- HEADER -->
+<header>
+  <div class="hdr"><div class="container">
+    <a href="index.html" class="logo-a">
+      <img src="assets/ecc-custom/excel-crop-group-logo-cropped.png" alt="Excel Crop Group logo">
+    </a>
+    <div class="srch">
+      <div class="sf">
+        <select id="searchCatSel">
+          <option value="">All Categories</option>
+          <option>Insecticides</option><option>Fungicides</option><option>Herbicides</option>
+          <option>Fertilizers</option><option>Micronutrients</option>
+        </select>
+        <input id="searchBox" type="search" placeholder="Search our product range, e.g. Acelam, Urea, Cotton seed...">
+        <button onclick="runHeaderSearch()">Search</button>
+      </div>
+    </div>
+    <div class="hdr-r">
+      <div class="logo-t">
+        <h1>Excel Crop Group</h1>
+        <span class="lu urdu">ایکسل اور کسان، خوشحال پاکستان</span>
+      </div>
+    </div>
+  </div></div>
+  <nav class="mnav"><div class="container">
+    <div class="ni"><a href="index.html#about"> About Us </a></div>
+    <div class="ni"><a href="index.html#introduction">  Introduction  </a></div>
+    <div class="ni"><a href="index.html#quality"> Quality Control  </a></div>
+    <div class="ni"><a href="index.html#manufacturing"> Manufacturing &amp; Formulations </a></div>
+    <div class="ni"><a href="our-team.html">Our Team</a></div>
+    <div class="ni"><a href="#" onclick="goToProducts('Insecticides');return false">Insecticides</a></div>
+    <div class="ni"><a href="#" onclick="goToProducts('Fungicides');return false">Fungicides</a></div>
+    <div class="ni"><a href="#" onclick="goToProducts('Herbicides');return false">Herbicides</a></div>
+    <div class="ni"><a href="#" onclick="goToProducts('Fertilizers');return false">Fertilizers</a></div>
+    <div class="ni"><a href="#" onclick="goToProducts('Micronutrients');return false">Micronutrients</a></div>
+    <div class="ni"><a href="seeds.html">Seeds</a></div>
+  </div></nav>
+</header>
+
+<section class="pp-hero pg-header">
+  <div class="pg-header-bg" data-images="[&quot;assets/ecc-custom/header-slide-farm.jpg&quot;, &quot;assets/ecc-custom/header-slide-sprayer.jpg&quot;, &quot;assets/ecc-custom/header-slide-harvester.jpg&quot;, &quot;assets/ecc-custom/header-slide-partnership.jpg&quot;]"></div>
+  <div class="container">
+  <div class="pp-crumb"><a href="index.html">Home</a> / Product Portfolio</div>
+  <h1>Product Portfolio</h1>
+  <p>Browse our complete range of 100+ registered insecticides, fungicides, herbicides, fertilizers, micronutrients and seeds. Search by name or composition and filter by category. For pricing or availability, please call 061-6537203 or email info@excelcropcare.com.</p>
+</div></section>
+
+<section class="sec alt" id="products"><div class="container">
+  <div class="searchrow">
+    <input id="prodSearch" type="search" placeholder="Search by product name, formula or Urdu name..." oninput="renderProducts()">
+  </div>
+  <div class="ftabs" id="catTabs"></div>
+  <div class="pgrid" id="pgrid"></div>
+</div></section>
+
+<footer id="footer-contact">
+  <div class="container">
+    <div class="fcols">
+      <div class="fcol">
+        <div class="flogo"><span class="flogo-chip"><img src="assets/ecc-custom/excel-crop-group-logo-cropped.png" alt="Excel Crop Group logo"></span><b>Excel Crop Group</b></div>
+        <p><span class="urdu">ایکسل اور کسان، خوشحال پاکستان</span></p>
+        <p>A company portfolio showcasing genuine agricultural inputs, insecticides, fungicides, herbicides, fertilizers, micronutrients and seeds, for farmers across Pakistan.</p>
+        <div class="fsocials"><a href="#">f</a><a href="#">▷</a><a href="tel:0616537203">☎</a><a href="mailto:info@excelcropcare.com">✉</a></div>
+      </div>
+      <div class="fcol"><h4>Categories</h4><ul>
+        <li><a href="#" onclick="goToProducts('Insecticides');return false">Insecticides</a></li>
+        <li><a href="#" onclick="goToProducts('Fungicides');return false">Fungicides</a></li>
+        <li><a href="#" onclick="goToProducts('Herbicides');return false">Herbicides</a></li>
+        <li><a href="#" onclick="goToProducts('Fertilizers');return false">Fertilizers</a></li>
+        <li><a href="#" onclick="goToProducts('Micronutrients');return false">Micronutrients</a></li>
+        <li><a href="seeds.html">Seeds</a></li>
+      </ul></div>
+      <div class="fcol"><h4>Company</h4><ul>
+        <li><a href="index.html#introduction">Introduction</a></li>
+        <li><a href="index.html#reach">Our Reach</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#quality">Quality Control</a></li>
+        <li><a href="index.html#manufacturing">Manufacturing</a></li>
+        <li><a href="index.html#weather">Weather &amp; Spray Guide</a></li>
+      </ul></div>
+      <div class="fcol"><h4>Contact Us</h4><ul>
+        <li>Plot No.228-229, Phase-II, Industrial Estate, Multan, Pakistan</li>
+        <li>061-6537203</li>
+        <li>info@excelcropcare.com</li>
+        <li>Mon to Sat, 9AM to 6PM</li>
+      </ul></div>
+    </div>
+    <div class="fbottom">© 2026 Excel Crop Group | Plot No.228-229, Phase-II, Industrial Estate, Multan | 061-6537203 | Company Portfolio Website</div>
+  </div>
+</footer>
+
+<div class="overlay" id="prodOverlay" onclick="if(event.target===this)closeProdModal()">
+  <div class="pmodal" id="prodModalBody"></div>
+</div>
+
+<script>
+const PRODUCTS = [{"id":1,"cat":"Insecticides","name":"ACELAM 26% WDG (100gm)","urdu":"ایسلم","wt":"100 gm","price":375,"comp":"Acetamiprid 23.5%+Lambda Cyhalothrin 2.5%","shape":"sachet","hot":false,"disc":15,"img":"assets/product-images/acelam.jpg","realProductPhoto":true},{"id":2,"cat":"Insecticides","name":"AXPERT 5% SC (480ml)","urdu":"ایکسپرٹ","wt":"480 ml","price":925,"comp":"Fipronil 5%","shape":"bottle","hot":false,"disc":0,"img":"assets/product-images/axpert-5-sc.jpg","realProductPhoto":true},{"id":3,"cat":"Insecticides","name":"BUPROFEZIN 25% WP (900gm)","urdu":"بوپروفیزن","wt":"900 gm","price":1350,"comp":"Buprofezin 25%","shape":"sachet","hot":false,"disc":0,"img":"assets/product-images/buprofezin-25-wp.jpg","realProductPhoto":true},{"id":4,"cat":"Insecticides","name":"CERNER 26% FS (80gm)","urdu":"سرنر","wt":"80 gm","price":625,"comp":"Clothianidin 25%+Metalaxyl-M 0.3%+Fludioxonil","shape":"sachet","hot":false,"disc":0,"img":"assets/product-images/cerner.jpg","realProductPhoto":true},{"id":5,"cat":"Insecticides","name":"CHASS 10% EC (500ml)","urdu":"چھاس","wt":"500 ml","price":925,"comp":"Bifenthrin 10%","shape":"bottle","hot":false,"disc":16,"img":"assets/product-images/chass-1ltr.jpg","realProductPhoto":true},{"id":6,"cat":"Insecticides","name":"CHASS 10% EC (1L)","urdu":"چھاس","wt":"1000 ml","price":1675,"comp":"Bifenthrin 10%","shape":"bottle","hot":false,"disc":0,"img":"assets/product-images/chass-1ltr.jpg","realProductPhoto":true},{"id":7,"cat":"Insecticides","name":"DEFTER 5% G (7kg)","urdu":"دفتر","wt":"7 kg","price":1350,"comp":"Monomehypo 5%","shape":"granule","hot":true,"disc":0,"img":"assets/product-images/defter-5-g.jpg","realProductPhoto":true},{"id":8,"cat":"Insecticides","name":"EFFICIENT (150ml)","urdu":"ایفیشنٹ","wt":"150 ml","price":750,"comp":"Emamectin 3%+Lufenuron 5% (Imported)","shape":"bottle","hot":false,"disc":17,"img":"assets/product-images/efficient-150ml.jpg","realProductPhoto":true},{"id":9,"cat":"Insecticides","name":"FIDE 25 WDG (48gm)","urdu":"فائیڈ","wt":"48 gm","price":195,"comp":"Thiamethoxam 25%","shape":"sachet","hot":false,"disc":19,"img":"assets/product-images/fide-25-wdg.jpg","realProductPhoto":true},{"id":10,"cat":"Insecticides","name":"GLADIATOR 0.35% GR (8kg)","urdu":"گلیڈیٹر","wt":"8 kg","price":1495,"comp":"Fipronil 0.3%+Emamectin Benzoate 0.05%","shape":"granule","hot":false,"disc":0,"img":"assets/product-images/gladiator-0-35-gr.jpg","realProductPhoto":true},{"id":11,"cat":"Insecticides","name":"GRIP SUPER 1.9% EC (400ml)","urdu":"گرپ سپر","wt":"400 ml","price":775,"comp":"Emamectin Benzoate 1.9%","shape":"bottle","hot":false,"disc":18,"img":"assets/product-images/grip-super.jpg","realProductPhoto":true},{"id":12,"cat":"Insecticides","name":"GRIP SUPER 1.9% EC (1L)","urdu":"گرپ سپر","wt":"1000 ml","price":1675,"comp":"Emamectin Benzoate 1.9%","shape":"bottle","hot":false,"disc":0,"img":"assets/product-images/grip-super.jpg","realProductPhoto":true},{"id":13,"cat":"Insecticides","name":"HIT MORE 2.5% EC (250ml)","urdu":"ہٹ مور","wt":"250 ml","price":375,"comp":"Lambda Cyhalothrin 2.5%","shape":"bottle","hot":false,"disc":0,"img":"assets/product-images/hit-more-2-5-ec-250ml.jpg","realProductPhoto":true},{"id":14,"cat":"Insecticides","name":"HIT MORE 2.5% EC (1L)","urdu":"ہٹ مور","wt":"1000 ml","price":925,"comp":"Lambda Cyhalothrin 2.5%","shape":"bottle","hot":false,"disc":0,"img":"assets/product-images/hit-more-2-5-ec-1l.jpg","realProductPhoto":true},{"id":15,"cat":"Insecticides","name":"IMIDA 25% WP (200gm)","urdu":"ایمیڈا","wt":"200 gm","price":450,"comp":"Imidacloprid 25%","shape":"sachet","hot":false,"disc":17,"img":"assets/product-images/imida-25-wp.jpg","realProductPhoto":true},{"id":16,"cat":"Insecticides","name":"KILL CROWN 20% SC (150ml)","urdu":"کل کراون","wt":"150 ml","price":375,"comp":"Clothianidin 200G/L","shape":"bottle","hot":false,"disc":18,"img":"assets/product-images/kill-crown-20-sc-150ml.jpg","realProductPhoto":true},{"id":17,"cat":"Insecticides","name":"KILL CROWN 20% SC (1L)","urdu":"کل کراون","wt":"1000 ml","price":1425,"comp":"Clothianidin 200G/L","shape":"bottle","hot":false,"disc":0,"img":"assets/product-images/kill-crown-20-sc-1l.jpg","realProductPhoto":true},{"id":18,"cat":"Insecticides","name":"MEGAFIT 20% SG (100gm)","urdu":"میگافٹ","wt":"100 gm","price":350,"comp":"Dinotefuran 20%","shape":"sachet","hot":false,"disc":19,"img":"assets/product-images/mega-fit.jpg","realProductPhoto":true},{"id":19,"cat":"Insecticides","name":"ONE KILL 3% SC (400ml)","urdu":"ون کل","wt":"400 ml","price":585,"comp":"Emamectin 10G+Lufenuron 20G","shape":"bottle","hot":false,"disc":19,"img":"assets/product-images/one-kill.jpg","realProductPhoto":true},{"id":20,"cat":"Insecticides","name":"ONE KILL 3% SC (1L)","urdu":"ون کل","wt":"1000 ml","price":1185,"comp":"Emamectin 10G+Lufenuron 20G","shape":"bottle","hot":false,"disc":0,"img":"assets/product-images/one-kill.jpg","realProductPhoto":true},{"id":21,"cat":"Insecticides","name":"RAPID 50% WDG (50gm)","urdu":"ریپڈ","wt":"50 gm","price":415,"comp":"Acetamiprid 50%","shape":"sachet","hot":false,"disc":17,"img":"assets/product-images/rapid-50-wdg.jpg","realProductPhoto":false},{"id":22,"cat":"Insecticides","name":"REFUSE 1.6% GR (6kg)","urdu":"ریفیوز","wt":"6 kg","price":1250,"comp":"Chlorantraniliprole 0.4%+Clothianidin 1.2%","shape":"granule","hot":false,"disc":0,"img":"assets/product-images/refuse-1-6-gr.jpg","realProductPhoto":true},{"id":23,"cat":"Insecticides","name":"ROCK WAY 50% WDG (60gm)","urdu":"راک وے","wt":"60 gm","price":740,"comp":"Flonicamid 50%","shape":"sachet","hot":false,"disc":18,"img":"assets/product-images/rock-way.jpg","realProductPhoto":true},{"id":24,"cat":"Insecticides","name":"ROCK WAY 50% WDG (120gm)","urdu":"راک وے","wt":"120 gm","price":1395,"comp":"Flonicamid 50%","shape":"sachet","hot":false,"disc":0,"img":"assets/product-images/rock-way.jpg","realProductPhoto":true},{"id":26,"cat":"Insecticides","name":"SORTER 40% EC (250ml)","urdu":"سورٹر","wt":"250 ml","price":560,"comp":"Chlorpyrifos 40%","shape":"bottle","hot":true,"disc":18,"img":"assets/product-images/sorter-40-ec-250ml.jpg","realProductPhoto":true},{"id":27,"cat":"Insecticides","name":"SORTER 40% EC (1L)","urdu":"سورٹر","wt":"1000 ml","price":1695,"comp":"Chlorpyrifos 40%","shape":"bottle","hot":false,"disc":0,"img":"assets/product-images/sorter-40-ec-1l.jpg","realProductPhoto":true},{"id":28,"cat":"Insecticides","name":"SPOLIT 11.6% (100ml)","urdu":"سپولٹ","wt":"100 ml","price":595,"comp":"Emamectin 2.6%+Chlorantraniliprole 9%","shape":"bottle","hot":false,"disc":0,"img":"assets/product-images/spolit.jpg","realProductPhoto":true},{"id":29,"cat":"Insecticides","name":"STEER 10% WDG (350gm)","urdu":"سٹیئر","wt":"350 gm","price":595,"comp":"Chlorfenapyr 10%","shape":"sachet","hot":false,"disc":0,"img":"assets/product-images/steer.jpg","realProductPhoto":true},{"id":30,"cat":"Insecticides","name":"TIGEN 50% WDG (150gm)","urdu":"ٹائیگن","wt":"150 gm","price":995,"comp":"Clothianidin 50%","shape":"sachet","hot":true,"disc":0,"img":"assets/product-images/tigen-50-wdg.jpg","realProductPhoto":true},{"id":31,"cat":"Insecticides","name":"TEHELKA 1.8% EC (400ml)","urdu":"تہلکہ","wt":"400 ml","price":625,"comp":"Abamectin 1.8%","shape":"bottle","hot":false,"disc":17,"img":"assets/product-images/tehelka-1-8-ec-400ml.jpg","realProductPhoto":true},{"id":32,"cat":"Insecticides","name":"TEHELKA 1.8% EC (1L)","urdu":"تہلکہ","wt":"1000 ml","price":1275,"comp":"Abamectin 1.8%","shape":"bottle","hot":false,"disc":0,"img":"assets/product-images/tehelka-1-8-ec-1l.jpg","realProductPhoto":true},{"id":33,"cat":"Insecticides","name":"TRAILER 0.69% G (7kg)","urdu":"ٹریلر","wt":"7 kg","price":1125,"comp":"Chlorantraniliprole 0.23%+Thiamethoxam 0.46%","shape":"granule","hot":false,"disc":0,"img":"assets/product-images/trailer-0-69-g.jpg","realProductPhoto":true},{"id":34,"cat":"Insecticides","name":"VALOR 12% SC (400ml)","urdu":"ویلر","wt":"400 ml","price":795,"comp":"Abamectin 20G+Thiamethoxam 100G","shape":"bottle","hot":false,"disc":17,"img":"assets/product-images/valor.jpg","realProductPhoto":true},{"id":35,"cat":"Insecticides","name":"WHITE HIT 10.8% EC (400ml)","urdu":"وائٹ ہٹ","wt":"400 ml","price":795,"comp":"Pyriproxyfen 10.8%","shape":"bottle","hot":false,"disc":0,"img":"assets/product-images/white-hit.jpg","realProductPhoto":true},{"id":36,"cat":"Insecticides","name":"X-CLEAN (LUFENURON 5% EC) (400ml)","urdu":"ایکس کلین","wt":"400 ml","price":625,"comp":"Lufenuron 5%","shape":"bottle","hot":false,"disc":18,"img":"assets/product-images/x-clean-lufenuron-5-ec-400ml.jpg","realProductPhoto":true},{"id":37,"cat":"Insecticides","name":"X-CLEAN (LUFENURON 5% EC) (1L)","urdu":"ایکس کلین","wt":"1000 ml","price":1395,"comp":"Lufenuron 5%","shape":"bottle","hot":false,"disc":0,"img":"assets/product-images/x-clean-lufenuron-5-ec-1l.jpg","realProductPhoto":true},{"id":38,"cat":"Fertilizers","name":"EZ GROWTH (10kg)","urdu":"ای زیڈ گروتھ","wt":"10 kg","price":5400,"comp":"Urea Phosphate 17:44","shape":"fert_bag","hot":false,"disc":0,"img":"assets/product-images/ez-growth-10kg.jpg","realProductPhoto":true},{"id":39,"cat":"Fertilizers","name":"EZ GROWTH (25kg)","urdu":"ای زیڈ گروتھ","wt":"25 kg","price":12800,"comp":"Urea Phosphate 17:44","shape":"fert_bag","hot":false,"disc":0,"img":"assets/product-images/ez-growth-25kg.jpg","realProductPhoto":true},{"id":40,"cat":"Fertilizers","name":"MAGNESIUM SULPHATE (25kg)","urdu":"میگنیشیم سلفیٹ","wt":"25 kg","price":3900,"comp":"MgSO4","shape":"fert_bag","hot":false,"disc":0,"img":"assets/product-images/magnesium-sulphate-25kg.jpg","realProductPhoto":false},{"id":41,"cat":"Fertilizers","name":"MANTHAR (M.A.P 12:61) (10kg)","urdu":"منتھر","wt":"10 kg","price":6200,"comp":"Mono Ammonium Phosphate 12:61","shape":"fert_bag","hot":false,"disc":0,"img":"assets/product-images/manthar-map-12-61-10kg.jpg","realProductPhoto":true},{"id":42,"cat":"Fertilizers","name":"MANTHAR (M.A.P 12:61) (25kg)","urdu":"منتھر","wt":"25 kg","price":15000,"comp":"Mono Ammonium Phosphate 12:61","shape":"fert_bag","hot":true,"disc":0,"img":"assets/product-images/manthar-map-12-61-25kg.jpg","realProductPhoto":true},{"id":43,"cat":"Fertilizers","name":"POTCEL 50% (SOP) (10kg)","urdu":"پوٹسل","wt":"10 kg","price":4200,"comp":"Sulphate of Potash 50% K2O","shape":"fert_bag","hot":false,"disc":0,"img":"assets/product-images/potcel-50-sop-10kg.jpg","realProductPhoto":true},{"id":44,"cat":"Fertilizers","name":"POTCEL 50% (SOP) (25kg)","urdu":"پوٹسل","wt":"25 kg","price":10000,"comp":"Sulphate of Potash 50% K2O","shape":"fert_bag","hot":false,"disc":0,"img":"assets/product-images/potcel-50-sop-25kg.jpg","realProductPhoto":true},{"id":45,"cat":"Fertilizers","name":"PROFERBA (NPK 15:18:18) (1kg)","urdu":"پروفیربا","wt":"1 kg","price":650,"comp":"NPK 15:18:18","shape":"sachet","hot":false,"disc":18,"img":"assets/product-images/proferba.jpg","realProductPhoto":true},{"id":46,"cat":"Micronutrients","name":"ACCELERATOR (Sulphur 70%) (2kg)","urdu":"ایکسیلریٹر","wt":"2 kg","price":660,"comp":"Sulphur 70%","shape":"sachet","hot":false,"disc":0,"img":"assets/product-images/accelerator-sulphur-70-2kg.jpg","realProductPhoto":true},{"id":47,"cat":"Micronutrients","name":"ACCELERATOR (Sulphur 70%) (20kg)","urdu":"ایکسیلریٹر","wt":"20 kg","price":5400,"comp":"Sulphur 70%","shape":"fert_bag","hot":false,"disc":0,"img":"assets/product-images/accelerator-sulphur-70-20kg.jpg","realProductPhoto":true},{"id":48,"cat":"Micronutrients","name":"ACCOUNTBILITY (Boron 5%) (1L)","urdu":"اکانٹیبلٹی","wt":"1000 ml","price":740,"comp":"Boron 5%","shape":"bottle","hot":false,"disc":0,"img":"assets/product-images/accountbility-boron-5-1l.jpg","realProductPhoto":true},{"id":49,"cat":"Micronutrients","name":"FERTEX (Biostimulent) (500ml)","urdu":"فرٹیکس","wt":"500 ml","price":650,"comp":"Biostimulant (Amino Acids)","shape":"bottle","hot":true,"disc":18,"img":"assets/product-images/fertex-biostimulant-500ml.jpg","realProductPhoto":true},{"id":50,"cat":"Micronutrients","name":"FERTEX (Biostimulent) (1L)","urdu":"فرٹیکس","wt":"1000 ml","price":1150,"comp":"Biostimulant (Amino Acids)","shape":"bottle","hot":false,"disc":0,"img":"assets/product-images/fertex-biostimulant-1l.jpg","realProductPhoto":true},{"id":51,"cat":"Micronutrients","name":"FINTU (NPK 10:10:10) (1L)","urdu":"فنٹو","wt":"1000 ml","price":850,"comp":"NPK 10:10:10 Liquid","shape":"bottle","hot":false,"disc":0,"img":"assets/product-images/fintu-npk-10-10-10-1l.jpg","realProductPhoto":true},{"id":52,"cat":"Micronutrients","name":"FINTU (NPK 10:10:10) (3L)","urdu":"فنٹو","wt":"3 lit","price":2075,"comp":"NPK 10:10:10 Liquid","shape":"can","hot":false,"disc":0,"img":"assets/product-images/fintu-npk-10-10-10-3l.jpg","realProductPhoto":true},{"id":53,"cat":"Micronutrients","name":"FINTU (NPK 10:10:10) (20L)","urdu":"فنٹو","wt":"20 lit","price":13300,"comp":"NPK 10:10:10 Liquid","shape":"can","hot":false,"disc":0,"img":"assets/product-images/fintu-npk-10-10-10-20l.jpg","realProductPhoto":true},{"id":54,"cat":"Micronutrients","name":"HONEST 30% (Potash 30% Flood) (20L)","urdu":"آنسٹ","wt":"20 lit","price":9500,"comp":"Potash 30% (Flood Grade)","shape":"can","hot":false,"disc":0,"img":"assets/product-images/honest-potash-30-20l.jpg","realProductPhoto":true},{"id":55,"cat":"Micronutrients","name":"HONEST 30% (Potash 30% Flood) (200L)","urdu":"آنسٹ","wt":"200 lit","price":85000,"comp":"Potash 30% (Flood Grade)","shape":"can","hot":false,"disc":0,"img":"assets/product-images/honest-potash-30-200l.jpg","realProductPhoto":true},{"id":56,"cat":"Micronutrients","name":"HONEST 30% (Potash 30% Folior Grade) (1L)","urdu":"آنسٹ","wt":"1000 ml","price":925,"comp":"Potash 30% (Foliar Grade)","shape":"bottle","hot":false,"disc":0,"img":"assets/product-images/honest-potash-foliar-1l.jpg","realProductPhoto":true},{"id":57,"cat":"Micronutrients","name":"MAKHDOOM (Crop Supplment) (5kg)","urdu":"مخدوم","wt":"5 kg","price":1195,"comp":"Zinc 7%+Fe 2%+Cu 1%","shape":"sachet","hot":false,"disc":0,"img":"assets/product-images/makhdoom-crop-supplement-5kg.jpg","realProductPhoto":true},{"id":58,"cat":"Micronutrients","name":"MULTIPLIER 13.5% (Humic Acid 100G+K2O 35G) (4L)","urdu":"ملٹیپلائر","wt":"4 lit","price":795,"comp":"Humic Acid 100G+K2O 35G/L","shape":"can","hot":false,"disc":0,"img":"assets/product-images/multiplier-humic-13-5-4l.jpg","realProductPhoto":true},{"id":59,"cat":"Micronutrients","name":"MULTIPLIER 13.5% (Humic Acid 100G+K2O 35G) (20L)","urdu":"ملٹیپلائر","wt":"20 lit","price":2950,"comp":"Humic Acid 100G+K2O 35G/L","shape":"can","hot":true,"disc":0,"img":"assets/product-images/multiplier-humic-13-5-20l.jpg","realProductPhoto":true},{"id":60,"cat":"Micronutrients","name":"MULTIPLIER 13.5% (Humic Acid 100G+K2O 35G) (200L)","urdu":"ملٹیپلائر","wt":"200 lit","price":29500,"comp":"Humic Acid 100G+K2O 35G/L","shape":"can","hot":false,"disc":0,"img":"assets/product-images/multiplier-humic-13-5-200l.jpg","realProductPhoto":true},{"id":61,"cat":"Micronutrients","name":"TENTIS (Phosphorus) (5L)","urdu":"ٹینٹس","wt":"5 lit","price":3200,"comp":"Phosphorus Liquid","shape":"can","hot":false,"disc":0,"img":"assets/product-images/tentis-phosphorus-5l.jpg","realProductPhoto":true},{"id":62,"cat":"Micronutrients","name":"TENTIS (Phosphorus) (20L)","urdu":"ٹینٹس","wt":"20 lit","price":12000,"comp":"Phosphorus Liquid","shape":"can","hot":false,"disc":0,"img":"assets/product-images/tentis-phosphorus-20l.jpg","realProductPhoto":true},{"id":63,"cat":"Herbicides","name":"ACETOCHLOR 50% EC (100ml)","urdu":"ایسیٹوکلور","wt":"100 ml","price":295,"comp":"Acetochlor 50%","shape":"bottle","hot":false,"disc":0,"img":"assets/product-images/acetochlor.jpg","realProductPhoto":true},{"id":64,"cat":"Herbicides","name":"ACETOCHLOR 50% EC (1L)","urdu":"ایسیٹوکلور","wt":"1000 ml","price":1375,"comp":"Acetochlor 50%","shape":"bottle","hot":false,"disc":0,"img":"assets/product-images/acetochlor.jpg","realProductPhoto":true},{"id":65,"cat":"Herbicides","name":"ALL UP (Glyphosate 41% SL) (1L)","urdu":"آل اپ گلائیفوسیٹ","wt":"1000 ml","price":1195,"comp":"Glyphosate 41%","shape":"bottle","hot":true,"disc":18,"img":"assets/ecc-new/all-up-product-photo.jpg","realProductPhoto":true},{"id":66,"cat":"Herbicides","name":"ATRAZINE 38% SC (1L)","urdu":"ایٹرازین","wt":"1000 ml","price":1150,"comp":"Atrazine 38%","shape":"bottle","hot":false,"disc":0,"img":"assets/product-images/atrazine.jpg","realProductPhoto":true},{"id":67,"cat":"Herbicides","name":"ATRAZINE 38% SC (500ml)","urdu":"ایٹرازین","wt":"500 ml","price":650,"comp":"Atrazine 38%","shape":"bottle","hot":false,"disc":0,"img":"assets/product-images/atrazine.jpg","realProductPhoto":true},{"id":68,"cat":"Herbicides","name":"BIFI (TRIULTRA 25% OD) (360ml)","urdu":"بیفی","wt":"360 ml","price":1375,"comp":"Trifluralin+other 25%","shape":"bottle","hot":false,"disc":17,"img":"assets/product-images/bifi-triultra-25-od.jpg","realProductPhoto":true},{"id":69,"cat":"Herbicides","name":"BROMOXYNIL+MCPA 40% EC (800ml)","urdu":"برومو ایم سی پی اے","wt":"800 ml","price":1875,"comp":"Bromoxynil+MCPA 40%","shape":"bottle","hot":false,"disc":0,"img":"assets/product-images/bromoxynil-mcpa.jpg","realProductPhoto":true},{"id":70,"cat":"Herbicides","name":"BROMOXYNIL+MCPA 40% EC (400ml)","urdu":"برومو ایم سی پی اے","wt":"400 ml","price":1025,"comp":"Bromoxynil+MCPA 40%","shape":"bottle","hot":false,"disc":0,"img":"assets/product-images/bromoxynil-mcpa.jpg","realProductPhoto":true},{"id":71,"cat":"Herbicides","name":"DORMAL 75% WDG (20gm)","urdu":"ڈورمل","wt":"20 gm","price":725,"comp":"Halosulfuron Methyl 75%","shape":"sachet","hot":false,"disc":0,"img":"assets/product-images/dormal-75-wdg.jpg","realProductPhoto":false},{"id":72,"cat":"Herbicides","name":"FULL CONTROL 50% WP (500gm)","urdu":"فل کنٹرول","wt":"500 gm","price":925,"comp":"Mesotrione 10%+Atrazine 40%","shape":"sachet","hot":false,"disc":17,"img":"assets/product-images/full-control.jpg","realProductPhoto":true},{"id":73,"cat":"Herbicides","name":"GAZONER 15% (500ml)","urdu":"گیزونر","wt":"500 ml","price":1275,"comp":"Quizalofop 15%","shape":"bottle","hot":false,"disc":18,"img":"assets/product-images/gazonner.jpg","realProductPhoto":true},{"id":74,"cat":"Herbicides","name":"KEKE 30% SC (35ml)","urdu":"کیکی","wt":"35 ml","price":1050,"comp":"Topramezone 30%","shape":"bottle","hot":false,"disc":0,"img":"assets/product-images/keke-30-sc.jpg","realProductPhoto":true},{"id":75,"cat":"Herbicides","name":"MATRIX (100gm)","urdu":"میٹرکس","wt":"100 gm","price":800,"comp":"Bensulfuron Methyl 12%+Bisbyribic Sodium 18%","shape":"sachet","hot":false,"disc":0,"img":"assets/product-images/matrix-bensulfuron-bsn.jpg","realProductPhoto":false},{"id":76,"cat":"Herbicides","name":"METAFIT 20% WP (20gm)","urdu":"میٹافٹ","wt":"20 gm","price":199,"comp":"Metsulfuron Methyl 20%","shape":"sachet","hot":false,"disc":0,"img":"assets/product-images/metafit-20-wp.jpg","realProductPhoto":false},{"id":77,"cat":"Herbicides","name":"MOCK (480ml)","urdu":"موک","wt":"480 ml","price":2275,"comp":"Cyhalofop-butyl 15%+Metamifop 10%","shape":"bottle","hot":false,"disc":0,"img":"assets/product-images/mock-cyhalofop-metamifop.jpg","realProductPhoto":false},{"id":78,"cat":"Herbicides","name":"PENDIMETHALIN 33% EC (800ml)","urdu":"پنڈی میتھالن","wt":"800 ml","price":1325,"comp":"Pendimethalin 33%","shape":"bottle","hot":false,"disc":0,"img":"assets/product-images/pendimethalin-33-ec.jpg","realProductPhoto":true},{"id":79,"cat":"Herbicides","name":"RECALL 42% EC (800ml)","urdu":"ریکال","wt":"800 ml","price":1195,"comp":"Pendimethalin+Acetochlor 42%","shape":"bottle","hot":true,"disc":0,"img":"assets/product-images/recall-42-ec.jpg","realProductPhoto":true},{"id":80,"cat":"Herbicides","name":"SICKLE 75 WDG (13.6gm)","urdu":"سِکل","wt":"13.6 gm","price":850,"comp":"Sulfosulfuron+Alkyl Ether Sulphate 75%","shape":"sachet","hot":false,"disc":0,"img":"assets/product-images/sickle-75-wdg.jpg","realProductPhoto":false},{"id":81,"cat":"Herbicides","name":"START UP 55% SC (GENGWEI) (500ml)","urdu":"سٹارٹ اپ","wt":"500 ml","price":850,"comp":"Mesotrione 50G+Atrazine 500G","shape":"bottle","hot":false,"disc":0,"img":"assets/ecc-new/start-up-500ml-product-photo.jpg","realProductPhoto":true},{"id":82,"cat":"Herbicides","name":"START UP 55% SC (GENGWEI) (1L)","urdu":"سٹارٹ اپ","wt":"1000 ml","price":1550,"comp":"Mesotrione 50G+Atrazine 500G","shape":"bottle","hot":false,"disc":0,"img":"assets/product-images/start-up-55-sc-1l.jpg","realProductPhoto":false},{"id":83,"cat":"Herbicides","name":"SUPER LOCK UP 26% OD (150ml)","urdu":"سپر لاک اپ","wt":"150 ml","price":1350,"comp":"Mesosulfuron+Florasulam+Fluroxypyr 26%","shape":"bottle","hot":false,"disc":17,"img":"assets/product-images/super-lock-up-26-od.jpg","realProductPhoto":true},{"id":84,"cat":"Herbicides","name":"TRIMEN SUPER 28.6% WDG (14gm)","urdu":"ٹرائمن سپر","wt":"14 gm","price":199,"comp":"Tribenuron-Methyl 14.3%+Metsulfuron Me 14.3%","shape":"sachet","hot":false,"disc":0,"img":"assets/product-images/trimen-super-28-6-wdg.jpg","realProductPhoto":false},{"id":85,"cat":"Herbicides","name":"WALTER SUPER (350ml)","urdu":"والٹر سپر","wt":"350 ml","price":850,"comp":"Fluroxypyr Meptyl 120G+Flurasulam 4G+MCPA 356G","shape":"bottle","hot":false,"disc":0,"img":"assets/product-images/walter-super-1.jpg","realProductPhoto":true},{"id":86,"cat":"Herbicides","name":"YANGSUI 50% SC (325ml)","urdu":"یانگسوئی","wt":"325 ml","price":975,"comp":"Fluroxypyr Meptyl+MCPA Isooctyl+Florasulam","shape":"bottle","hot":false,"disc":0,"img":"assets/product-images/yangsui-50-sc.jpg","realProductPhoto":false},{"id":87,"cat":"Herbicides","name":"YI NONG LE 20% WP (300gm)","urdu":"یی نانگ لی","wt":"300 gm","price":650,"comp":"Acetochlor 15.5%+Bensulfuron Methyl 4.5%","shape":"sachet","hot":false,"disc":0,"img":"assets/product-images/yi-yong-le.jpg","realProductPhoto":true},{"id":88,"cat":"Fungicides","name":"CYMOXYNIL+MANCOZEB 72% WP (600gm)","urdu":"سیمو میکوزیب","wt":"600 gm","price":1450,"comp":"Cymoxanil+Mancozeb 72%","shape":"sachet","hot":false,"disc":17,"img":"assets/product-images/cymoxynil-mancozeb-72-wp.jpg","realProductPhoto":true},{"id":89,"cat":"Fungicides","name":"DEFINITE 10% WDG (300gm)","urdu":"ڈیفینٹ","wt":"300 gm","price":600,"comp":"Difenoconazole 10%","shape":"sachet","hot":false,"disc":18,"img":"assets/product-images/definite-10-wdg.jpg","realProductPhoto":false},{"id":90,"cat":"Fungicides","name":"FINER 50% SC (120ml)","urdu":"فائنر","wt":"120 ml","price":695,"comp":"Azoxystrobin 200G/L+Tebuconazole 300G/L","shape":"bottle","hot":false,"disc":18,"img":"assets/product-images/finer.jpg","realProductPhoto":true},{"id":91,"cat":"Fungicides","name":"METALAXYL+MANCOZEB 72% WP (1kg)","urdu":"میٹا میکوزیب","wt":"1000 gm","price":2350,"comp":"Metalaxyl+Mancozeb 72%","shape":"sachet","hot":false,"disc":0,"img":"assets/product-images/metalaxyl-mancozeb-72-wp.jpg","realProductPhoto":true},{"id":92,"cat":"Fungicides","name":"PARAKH 60% WG (300gm)","urdu":"پرکھ","wt":"300 gm","price":1495,"comp":"Metiram 55%+Pyraclostrobin 5%","shape":"sachet","hot":false,"disc":17,"img":"assets/product-images/parakh-60-wg.jpg","realProductPhoto":true},{"id":93,"cat":"Fungicides","name":"PISTON 25% WP (100gm)","urdu":"پسٹن","wt":"100 gm","price":275,"comp":"Triadimefon 25%","shape":"sachet","hot":false,"disc":19,"img":"assets/product-images/piston-25-wp.jpg","realProductPhoto":true},{"id":94,"cat":"Fungicides","name":"PUCHENG STAR 47% WP (250gm)","urdu":"پوچینگ اسٹار","wt":"250 gm","price":950,"comp":"Kasugamycin 20G+Copper Oxychloride 450G","shape":"sachet","hot":false,"disc":0,"img":"assets/product-images/pucheng-star.jpg","realProductPhoto":true},{"id":95,"cat":"Fungicides","name":"PYRAZOLE 45% WP (100gm)","urdu":"پائریزول","wt":"100 gm","price":450,"comp":"Pyraclostrobin+Tebuconazole 45%","shape":"sachet","hot":false,"disc":18,"img":"assets/product-images/pyrazole.jpg","realProductPhoto":true},{"id":96,"cat":"Fungicides","name":"RECADO 32.5% SC (200ml)","urdu":"ریکاڈو","wt":"200 ml","price":950,"comp":"Azoxystrobin+Difenoconazole 32.5%","shape":"bottle","hot":false,"disc":17,"img":"assets/product-images/recado.jpg","realProductPhoto":true},{"id":97,"cat":"Fungicides","name":"SAFE ALL 80% (Sulphur) (1kg)","urdu":"سیف آل","wt":"1 kg","price":695,"comp":"Sulphur 80%","shape":"sachet","hot":true,"disc":0,"img":"assets/product-images/safe-all-80-sulphur-1kg.jpg","realProductPhoto":true},{"id":98,"cat":"Fungicides","name":"SAFE ALL 80% (Sulphur) (25kg)","urdu":"سیف آل","wt":"25 kg","price":14900,"comp":"Sulphur 80%","shape":"fert_bag","hot":false,"disc":0,"img":"assets/product-images/safe-all-80-sulphur-25kg.jpg","realProductPhoto":true},{"id":99,"cat":"Fungicides","name":"SUCCESS 72% WP (1kg)","urdu":"سکسیس","wt":"1 kg","price":2550,"comp":"Chlorothalonil 64%+Metalaxyl 8%","shape":"sachet","hot":false,"disc":0,"img":"assets/product-images/success.jpg","realProductPhoto":true},{"id":100,"cat":"Fungicides","name":"THIOPHANATE 70% WP (400gm)","urdu":"تھیوفانیٹ","wt":"400 gm","price":1050,"comp":"Thiophanate Methyl 70%","shape":"sachet","hot":false,"disc":17,"img":"assets/product-images/thiophenate.jpg","realProductPhoto":true}];
+
+const CAT_URDU = {
+  Insecticides:'کیڑے مار ادویات', Fungicides:'فنگس کش ادویات', Herbicides:'جڑی بوٹی مار ادویات',
+  Fertilizers:'کھاد', Micronutrients:'مائیکرو نیوٹرینٹس', Seeds:'بیج'
+};
+const CATS = ['Insecticides','Fungicides','Herbicides','Fertilizers','Micronutrients'];
+
+const CAT_DESC = {
+  Insecticides:'Products in our Insecticides range are formulated to help control a range of insect pests that commonly affect field and vegetable crops in Pakistan.',
+  Fungicides:'Products in our Fungicides range are designed to help prevent and control fungal diseases such as leaf spot, blight and rust across a variety of crops.',
+  Herbicides:'Products in our Herbicides range are used to help control unwanted weeds and grasses that compete with crops for nutrients, light and water.',
+  Fertilizers:'Products in our Fertilizers range supply essential nutrients that support healthy plant development from sowing through to harvest.',
+  Micronutrients:'Products in our Micronutrients range help correct common nutrient deficiencies and support more balanced, consistent plant growth.',
+  Seeds:'This variety is offered as part of our Seeds range, selected with an eye toward reliable germination and healthy crop establishment.'
+};
+const FORM_DESC = {
+  WDG:'It is supplied as a Water Dispersible Granule, formulated to disperse readily when mixed with water for spraying.',
+  WG:'It is supplied as a Water Dispersible Granule, formulated to disperse readily when mixed with water for spraying.',
+  WP:'It is supplied as a Wettable Powder, designed to be mixed with water to form a sprayable suspension.',
+  EC:'It is supplied as an Emulsifiable Concentrate, which mixes with water to form a stable spray emulsion.',
+  SC:'It is supplied as a Suspension Concentrate, formulated for consistent mixing and even application.',
+  SL:'It is supplied as a Soluble Concentrate that dissolves fully when mixed with water.',
+  OD:'It is supplied as an Oil Dispersion formulation.',
+  SG:'It is supplied as a Soluble Granule formulation that dissolves in water before spraying.',
+  GR:'It is supplied in Granular form for direct field application.',
+  FS:'It is supplied as a Flowable Concentrate for seed treatment.'
+};
+const SHAPE_DESC = {
+  sachet:'It is packaged in easy to handle sachets.',
+  bottle:'It is packaged in bottles for convenient measuring and mixing.',
+  can:'It is packaged in cans.',
+  fert_bag:'It is packaged in bags suited to field scale use.',
+  seed_bag:'It is packaged in seed bags.',
+  granule:'It is supplied in granular form, ready for field application.'
+};
+function detectFormulation(p){
+  const hay = (p.name||'') + ' ' + (p.comp||'');
+  const m = hay.match(/\b(WDG|WG|WP|EC|SC|SL|OD|SG|GR|FS)\b/);
+  return m ? m[1] : null;
+}
+function generateDescription(p){
+  const catText = CAT_DESC[p.cat] || 'This product is part of our agricultural inputs range.';
+  const form = detectFormulation(p);
+  const formText = form && FORM_DESC[form] ? FORM_DESC[form] : '';
+  const shapeText = SHAPE_DESC[p.shape] || '';
+  const compText = p.comp ? `${p.name} is formulated with ${p.comp}.` : '';
+  return `${catText} ${compText} ${formText} ${shapeText} As with any crop input, always read the product label and follow recommended application guidance, or contact our team for field specific advice.`.replace(/\s+/g,' ').trim();
+}
+
+function makeCard(p){
+  const badge = p.hot ? `<span class="pbadge">Popular</span>` : '';
+  return `<div class="pcard" onclick="openProdModal(${p.id})">
+    ${badge}
+    <div class="pimg"><img src="${p.img}" alt="${p.name}" loading="lazy"></div>
+    <div class="pbody">
+      <span class="pcat">${p.cat}</span>
+      <h4>${p.name}</h4>
+      <span class="purdu urdu">${p.urdu||''}</span>
+      <span class="pcomp">${p.comp ? '(' + p.comp + ')' : ''}</span>
+      <div class="pviewrow"><button class="pviewbtn" onclick="event.stopPropagation();openProdModal(${p.id})">View Details</button></div>
+    </div>
+  </div>`;
+}
+
+
+let currentCat = '';
+function buildCatTabs(){
+  const box = document.getElementById('catTabs');
+  let html = `<button class="ftab ${currentCat===''?'on':''}" onclick="filterCat('')">All (${PRODUCTS.length})</button>`;
+  CATS.forEach(c=>{
+    const n = PRODUCTS.filter(p=>p.cat===c).length;
+    html += `<button class="ftab ${currentCat===c?'on':''}" onclick="filterCat('${c}')">${c} (${n})</button>`;
+  });
+  box.innerHTML = html;
+}
+
+function filterCat(c){
+  currentCat = c;
+  buildCatTabs();
+  renderProducts();
+  document.getElementById('products').scrollIntoView({behavior:'smooth'});
+}
+function goToProducts(cat){ filterCat(cat||''); }
+
+function renderProducts(){
+  const q = (document.getElementById('prodSearch').value||'').toLowerCase().trim();
+  let list = PRODUCTS;
+  if(currentCat) list = list.filter(p=>p.cat===currentCat);
+  if(q) list = list.filter(p => (p.name+' '+(p.urdu||'')+' '+(p.comp||'')).toLowerCase().includes(q));
+  const grid = document.getElementById('pgrid');
+  grid.innerHTML = list.length ? list.map(makeCard).join('') : `<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--txt3)">No products found. Try another search or category.</div>`;
+}
+
+function runHeaderSearch(){
+  const term = document.getElementById('searchBox').value;
+  const cat = document.getElementById('searchCatSel').value;
+  document.getElementById('prodSearch').value = term;
+  filterCat(cat||'');
+}
+
+function openProdModal(id){
+  const p = PRODUCTS.find(x=>x.id===id);
+  if(!p) return;
+  document.getElementById('prodModalBody').innerHTML = `
+    <button class="mclose" onclick="closeProdModal()">✕</button>
+    <div class="mgrid">
+      <div class="mimg"><img src="${p.img}" alt="${p.name}"></div>
+      <div class="minfo">
+        <span class="mcat">${p.cat}</span>
+        <h2>${p.name}</h2>
+        <div class="murdu urdu">${p.urdu||''}</div>
+        <table class="mtable">
+          <tr><td>Composition</td><td>${p.comp ? '(' + p.comp + ')' : 'Not specified'}</td></tr>
+          <tr><td>Pack Size</td><td>${p.wt||'Not specified'}</td></tr>
+          <tr><td>Category</td><td>${p.cat}</td></tr>
+          <tr><td>Genuine</td><td>Registered and authentic product</td></tr>
+        </table>
+        <p style="font-size:12.5px;color:var(--txt2);line-height:1.7;margin:10px 0 4px">${generateDescription(p)}</p>
+      </div>
+    </div>`;
+  document.getElementById('prodOverlay').classList.add('on');
+}
+function closeProdModal(){ document.getElementById('prodOverlay').classList.remove('on'); }
+
+/* Read cat / q from URL on load */
+(function initFromUrl(){
+  const params = new URLSearchParams(window.location.search);
+  const cat = params.get('cat') || '';
+  const q = params.get('q') || '';
+  currentCat = CATS.includes(cat) ? cat : '';
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('prodSearch').value = q;
+    buildCatTabs();
+    renderProducts();
+  });
+})();
+function initPgHeaders(){
+  document.querySelectorAll('.pg-header-bg').forEach(el=>{
+    let imgs;
+    try{ imgs = JSON.parse(el.dataset.images); }catch(e){ return; }
+    if(!imgs || !imgs.length) return;
+    el.innerHTML = imgs.map((src,i)=>`<div class="phb-slide ${i===0?'on':''}" style="background-image:url('${src}')"></div>`).join('');
+    if(imgs.length<2) return;
+    let idx = 0;
+    const slides = el.querySelectorAll('.phb-slide');
+    setInterval(()=>{ idx = (idx+1)%slides.length; slides.forEach((s,i)=>s.classList.toggle('on', i===idx)); }, 5200);
+  });
+}
+initPgHeaders();
+</script>
+</body>
+</html>

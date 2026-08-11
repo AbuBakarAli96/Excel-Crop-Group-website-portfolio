@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Team - Excel Crop Group, Multan, Pakistan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --g1:#1b6e1b;--g2:#2d8a2d;--g3:#e8f5e9;
+  --o1:#e65100;--o2:#f57c00;--o3:#ff9800;
+  --r1:#c62828;
+  --txt:#1a1a1a;--txt2:#555;--txt3:#888;
+  --border:#e0e0e0;--bg:#f5f5f5;
+  --sh:0 2px 12px rgba(0,0,0,.1);--sh2:0 6px 24px rgba(0,0,0,.15);
+  --rad:8px;--rad2:14px;
+}
+body{font-family:'Poppins',sans-serif;color:var(--txt);background:var(--bg);font-size:14px;line-height:1.5}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;font-family:inherit}
+img{max-width:100%;display:block}
+.container{max-width:1240px;margin:0 auto;padding:0 16px}
+.urdu{font-family:'Noto Nastaliq Urdu',serif;direction:rtl}
+::-webkit-scrollbar{width:10px;height:8px}
+::-webkit-scrollbar-thumb{background:#bcd9bc;border-radius:10px}
+
+/* ============ MOVING TEXT BAR (right-to-left marquee) ============ */
+.ann{background:var(--g1);color:#fff;padding:7px 0;overflow:hidden}
+.ann-inner{display:flex;gap:60px;animation:scrollRtl 26s linear infinite;white-space:nowrap;width:max-content}
+.ann-inner span{font-size:12px;padding:0 10px}
+@keyframes scrollRtl{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ============ TOP BAR ============ */
+.top{background:#f0f7f0;border-bottom:1px solid #d4ebd4;padding:6px 0}
+.top .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.tlinks{display:flex;gap:16px;font-size:12px;flex-wrap:wrap}
+.tlinks a{color:var(--g1);font-weight:500}
+.tlinks a:hover{color:var(--o1)}
+.lang-sw{display:flex;gap:4px}
+.lb{padding:3px 10px;border:1px solid var(--border);border-radius:20px;font-size:11px;background:#fff;cursor:pointer;transition:.2s}
+.lb.on{background:var(--g1);color:#fff;border-color:var(--g1)}
+
+/* ============ HEADER ============ */
+header{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08);position:sticky;top:0;z-index:500}
+.hdr{padding:12px 0}
+.hdr .container{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo-a{display:flex;align-items:center;gap:10px;flex-shrink:0;cursor:pointer}
+.logo-a img{height:56px;width:auto;object-fit:contain;border-radius:8px}
+.logo-t h1{font-size:19px;font-weight:800;color:var(--g1);letter-spacing:-.5px;line-height:1.1}
+.logo-t .lu{font-size:12px;color:var(--o1)}
+.logo-t p{font-size:10px;color:var(--txt3)}
+.srch{flex:1;min-width:200px}
+.sf{display:flex;border:2px solid var(--g2);border-radius:var(--rad);overflow:hidden;box-shadow:0 2px 8px rgba(45,138,45,.1)}
+.sf select{padding:0 8px;border:none;border-right:1px solid #cde8cd;background:#f0f7f0;font-size:12px;outline:none;min-width:110px}
+.sf input{flex:1;padding:10px 12px;border:none;outline:none;font-size:13px;font-family:inherit}
+.sf button{background:var(--g2);color:#fff;border:none;padding:10px 18px;font-size:14px;font-weight:700;transition:.2s}
+.sf button:hover{background:var(--g1)}
+.hdr-r{display:flex;align-items:center;gap:10px;margin-left:auto;flex-shrink:0}
+.partner-logo{height:64px;width:auto;object-fit:contain}
+.hdr-wordmark{font-size:20px;font-weight:800;letter-spacing:.3px;background:linear-gradient(90deg,var(--g1),#2f9e5f);-webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap;font-style:italic}
+
+/* ============ NAV ============ */
+.mnav{background:var(--g2);overflow-x:auto;-ms-overflow-style:none;scrollbar-width:none}
+.mnav::-webkit-scrollbar{display:none}
+.mnav .container{display:flex}
+.ni{position:relative}
+.ni>a,.ni>button{color:#fff;padding:11px 15px;font-size:13px;font-weight:500;display:flex;align-items:center;gap:5px;border-right:1px solid rgba(255,255,255,.15);white-space:nowrap;transition:.15s;background:transparent;border-top:none;border-bottom:none;border-left:none;cursor:pointer;font-family:inherit}
+.ni>a:hover,.ni>button:hover{background:rgba(0,0,0,.18)}
+
+/* ============ HERO + SIDEBAR PORTFOLIO LAYOUT ============ */
+.hero-sec{background:#f4faf5;padding:18px 0 26px;border-bottom:1px solid #e3f0e4}
+.shop-layout{display:grid;grid-template-columns:250px 1fr 220px;gap:18px;align-items:stretch}
+.side-cats{background:#fff;border:1px solid #e6eee7;border-radius:var(--rad2);box-shadow:var(--sh);overflow:hidden;height:fit-content}
+.side-head{background:var(--g1);color:#fff;font-weight:800;padding:14px 16px;display:flex;align-items:center;gap:8px;font-size:14px}
+.side-cats .scl{display:block;width:100%;text-align:left;border:0;background:#fff;padding:12px 16px;font-weight:600;font-size:12.5px;color:var(--txt);border-bottom:1px solid #f1f4f1;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:.15s}
+.side-cats .scl:hover{background:var(--g3);color:var(--g1);padding-left:20px}
+.side-cats .scl span.n{color:var(--txt3);font-size:11px;font-weight:400}
+.side-cats .scl-all{background:var(--o1);color:#fff;font-weight:700;justify-content:center}
+.side-cats .scl-all:hover{background:#c84400;padding-left:16px}
+
+.slider{position:relative;overflow:hidden;border-radius:var(--rad2);min-height:380px;box-shadow:var(--sh2)}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity .65s ease;display:flex;align-items:center}
+.slide.on{opacity:1;z-index:1}
+.slide .sbg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.5)}
+.slide .sov{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,40,15,.82) 0%,rgba(6,40,15,.28) 65%,transparent 100%)}
+.sc{position:relative;z-index:2;padding:0 40px;max-width:520px;color:#fff}
+.sbadge{display:inline-block;background:var(--o1);color:#fff;padding:5px 14px;border-radius:20px;font-size:11px;font-weight:700;margin-bottom:12px;text-transform:uppercase;letter-spacing:.8px}
+.sc h2{font-size:32px;font-weight:900;line-height:1.15;margin-bottom:8px;text-shadow:0 2px 8px rgba(0,0,0,.4)}
+.sc .su{font-size:18px;color:#ffd54f;margin-bottom:10px;display:block}
+.sc p{font-size:14px;opacity:.92;margin-bottom:18px;line-height:1.6}
+.sbtns{display:flex;gap:10px;flex-wrap:wrap}
+.sbtn1{background:#fff;color:var(--g1);padding:11px 22px;border-radius:var(--rad);font-weight:700;font-size:13px;transition:.2s;border:2px solid #fff;cursor:pointer}
+.sbtn1:hover{background:var(--o1);color:#fff;border-color:var(--o1)}
+.sbtn2{background:transparent;color:#fff;padding:11px 22px;border-radius:var(--rad);font-weight:600;font-size:13px;border:2px solid rgba(255,255,255,.7);transition:.2s;cursor:pointer}
+.sbtn2:hover{background:rgba(255,255,255,.15)}
+.sarrows{position:absolute;bottom:16px;right:20px;display:flex;gap:8px;z-index:5}
+.sarr{width:34px;height:34px;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.5);border-radius:50%;color:#fff;font-size:15px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.2s}
+.sarr:hover{background:var(--g2)}
+.sdots{position:absolute;bottom:22px;left:40px;display:flex;gap:8px;z-index:5}
+.sdot{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.4);cursor:pointer;transition:.3s;border:1px solid rgba(255,255,255,.6)}
+.sdot.on{background:#fff;transform:scale(1.2)}
+
+.side-support{background:#fff;border:1px solid #e6eee7;border-radius:var(--rad2);box-shadow:var(--sh);padding:16px;display:flex;flex-direction:column;gap:10px}
+.side-support h3{color:var(--g1);font-size:14px;margin-bottom:2px}
+.side-support p{font-size:11.5px;color:var(--txt2);line-height:1.5}
+.side-support .ss-item{display:flex;gap:8px;align-items:flex-start;padding:8px 0;border-top:1px dashed #e5eee5;font-size:12px}
+.side-support .ss-item .ic{font-size:15px}
+.side-support a.btn-wa{background:var(--g1);color:#fff;text-align:center;padding:10px;border-radius:var(--rad);font-weight:700;font-size:12.5px;margin-top:4px}
+.side-support a.btn-out{border:1.5px solid var(--g2);color:var(--g1);text-align:center;padding:9px;border-radius:var(--rad);font-weight:700;font-size:12.5px}
+
+.lead-card{background:linear-gradient(180deg,#fbfdfb,#fff);border-bottom:1px solid #eef3ee;padding:18px 16px 16px;text-align:center}
+.lead-card .lc-photo{width:84px;height:84px;border-radius:50%;overflow:hidden;margin:0 auto 10px;border:3px solid var(--g3);box-shadow:var(--sh)}
+.lead-card .lc-photo img{width:100%;height:100%;object-fit:cover}
+.lead-card .lc-name{font-size:13.5px;font-weight:800;color:var(--txt);margin-bottom:1px}
+.lead-card .lc-role{font-size:10.5px;color:var(--g1);font-weight:700;text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px}
+.lead-card .lc-label{font-size:9.5px;color:var(--txt3);text-transform:uppercase;letter-spacing:.6px;font-weight:700;margin-bottom:4px}
+.lead-card .lc-quote{font-size:11.5px;color:var(--txt2);line-height:1.6;font-style:italic;position:relative;padding:0 4px}
+.side-support .lead-card{border:1px solid #eef3ee;border-radius:var(--rad);margin-bottom:2px}
+@media(max-width:980px){.shop-layout{grid-template-columns:1fr}.side-cats{order:2}.side-support{order:3}.slider{min-height:300px}}
+
+/* ============ IMAGE AD MARQUEE (replaces highlight boxes) ============ */
+.ad-marquee-wrap{background:#fff;padding:18px 0;border-bottom:1px solid var(--border);overflow:hidden}
+.ad-marquee-label{text-align:center;font-size:11px;font-weight:700;color:var(--txt3);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+.ad-marquee-track{display:flex;gap:76px;width:max-content;animation:adScroll 110s linear infinite}
+.ad-marquee-wrap:hover .ad-marquee-track{animation-play-state:paused}
+.ad-card{flex-shrink:0;height:190px;width:auto;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.12);border:1px solid #eee}
+.ad-card img{height:100%;width:auto;display:block;object-fit:cover}
+@keyframes adScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@media(max-width:640px){.ad-card{height:140px}}
+
+/* ============ SECTION GENERIC ============ */
+.sec{padding:34px 0}
+.sec.alt{background:#fff}
+.sch{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:20px;flex-wrap:wrap;gap:10px}
+.brands-sec{padding-top:6px}
+.brands-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.brand-card{background:#fff;border:1px solid #e6eee7;border-radius:var(--rad2);box-shadow:var(--sh);padding:24px 16px;text-align:center;transition:.25s ease;cursor:default}
+.brand-card:hover{transform:translateY(-6px);box-shadow:var(--sh2);border-color:var(--g2)}
+.brand-logo{height:72px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.brand-logo img{max-height:72px;max-width:100%;object-fit:contain}
+.brand-card h4{font-size:14px;font-weight:800;color:var(--txt);letter-spacing:.2px}
+@media(max-width:860px){.brands-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.brands-grid{grid-template-columns:1fr}}
+.stitle{font-size:22px;font-weight:800;color:var(--g1);padding-left:14px;position:relative;line-height:1.2}
+.stitle::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:5px;height:24px;background:var(--o1);border-radius:2px}
+.stitle .su{display:block;font-size:13px;color:var(--o1);font-weight:600;margin-top:3px}
+.vabtn{color:var(--g1);font-size:12px;font-weight:700;border:1.5px solid var(--g2);padding:7px 16px;border-radius:20px;transition:.2s;background:#fff;cursor:pointer;font-family:inherit}
+.vabtn:hover{background:var(--g2);color:#fff}
+
+/* ============ INTRODUCTION ============ */
+/* ============ MINI SLIDER (section side pictures, cycle one at a time) ============ */
+.mini-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.1s ease}
+.mini-slide.on{opacity:1;z-index:1}
+.mini-slide img{width:100%;height:100%;object-fit:cover}
+.mini-dots{position:absolute;bottom:14px;left:14px;display:flex;gap:6px;z-index:3}
+.mini-dot{width:20px;height:3px;border-radius:3px;background:rgba(255,255,255,.6);cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,.3);transition:.2s}
+.mini-dot.on{background:var(--o1)}
+
+.intro-wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.intro-img{position:relative;border-radius:var(--rad2);overflow:hidden;box-shadow:var(--sh2);height:340px}
+.intro-txt .eyebrow{color:var(--o1);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.8px}
+.intro-txt h2{font-size:26px;font-weight:900;color:var(--g1);margin:8px 0 12px;line-height:1.25}
+.intro-txt p{color:var(--txt2);font-size:13.5px;line-height:1.8;margin-bottom:12px}
+.intro-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px;max-width:340px}
+.astat{text-align:center;background:var(--g3);border-radius:var(--rad2);padding:14px 6px}
+.astat b{display:block;font-size:22px;color:var(--g1);font-weight:900}
+.astat span{font-size:10.5px;color:var(--txt2);font-weight:600}
+@media(max-width:880px){.intro-wrap{grid-template-columns:1fr}}
+
+/* ============ REACH SECTION (customers boxes) ============ */
+.reach-sec{background:linear-gradient(180deg,#f4faf5,#fff)}
+.reach-wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.reach-img{position:relative;border-radius:var(--rad2);overflow:hidden;box-shadow:var(--sh2);height:400px}
+.reach-txt p{color:var(--txt2);font-size:13.5px;line-height:1.8;margin-bottom:16px}
+.reach-boxes{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.reach-box{border-radius:var(--rad2);padding:24px 18px;color:#fff;text-align:center}
+.reach-box.pk{background:linear-gradient(135deg,var(--g1),#3da03d)}
+.reach-box.pb{background:linear-gradient(135deg,var(--o1),var(--o3))}
+.reach-box b{display:block;font-size:26px;font-weight:900;margin-bottom:4px}
+.reach-box .rb-title{display:block;font-size:14px;font-weight:700;margin-bottom:8px}
+.reach-box span.rb-sub{font-size:11px;opacity:.9;display:block}
+@media(max-width:880px){.reach-wrap{grid-template-columns:1fr}.reach-img{height:280px}}
+@media(max-width:520px){.reach-boxes{grid-template-columns:1fr}}
+.reach-boxes-single{grid-template-columns:1fr}
+.reach-boxes-single .reach-box{padding:34px 26px}
+.reach-boxes-single .reach-box b{font-size:44px}
+
+/* ============ ABOUT US ============ */
+.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.about-collage{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.about-collage img{border-radius:var(--rad2);object-fit:cover;height:150px;width:100%}
+.about-collage img:first-child{grid-row:1/3;height:310px}
+.about-txt .eyebrow{color:var(--o1);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.8px}
+.about-txt h2{font-size:26px;font-weight:900;color:var(--g1);margin:8px 0 12px;line-height:1.25}
+.about-txt p{color:var(--txt2);font-size:13.5px;line-height:1.8;margin-bottom:12px}
+.about-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+@media(max-width:880px){.about-wrap{grid-template-columns:1fr}.about-collage img:first-child{height:180px}.about-stats{grid-template-columns:repeat(2,1fr)}}
+
+.portfolio-cta{background:linear-gradient(135deg,var(--g1),#3da03d);border-radius:var(--rad2);padding:44px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;box-shadow:var(--sh2)}
+.portfolio-cta-txt{max-width:640px}
+.portfolio-cta-txt .eyebrow{color:#d9f2dc;font-weight:700;font-size:11.5px;text-transform:uppercase;letter-spacing:2px;display:inline-block;margin-bottom:8px}
+.portfolio-cta-txt h2{color:#fff;font-size:24px;font-weight:800;margin-bottom:10px;line-height:1.3}
+.portfolio-cta-txt p{color:#e3f3e5;font-size:13.5px;line-height:1.7}
+.portfolio-cta-btn{background:#fff;color:var(--g1);border-color:#fff;flex-shrink:0;font-size:13.5px;padding:13px 26px}
+.portfolio-cta-btn:hover{background:var(--o1);color:#fff;border-color:var(--o1)}
+@media(max-width:700px){.portfolio-cta{flex-direction:column;align-items:flex-start}}
+
+.story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px}
+.story-card{background:#fff;border:1px solid var(--border);border-top:3px solid var(--o1);border-radius:var(--rad2);padding:34px 28px}
+.story-card h4{font-size:18px;font-weight:800;color:var(--g1);margin-bottom:12px}
+.story-card p{font-size:13.5px;color:var(--txt2);line-height:1.8}
+@media(max-width:880px){.story-grid{grid-template-columns:1fr}}
+
+.story-banner{position:relative;overflow:hidden;border-radius:var(--rad2);min-height:420px;box-shadow:var(--sh2)}
+.story-slide{position:absolute;inset:0;opacity:0;transition:opacity .8s ease;display:flex;align-items:center}
+.story-slide.on{opacity:1;z-index:1}
+.story-slide .sbg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.5)}
+.story-slide .sov{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,26,17,.85) 0%,rgba(10,26,17,.45) 60%,rgba(10,26,17,.2) 100%)}
+.story-content{position:relative;z-index:2;padding:44px 48px;max-width:640px;color:#fff}
+.story-content p{font-size:15px;line-height:1.85;opacity:.95}
+.story-dots{position:absolute;bottom:20px;left:48px;display:flex;gap:8px;z-index:5}
+@media(max-width:768px){.story-banner{min-height:520px}.story-content{padding:30px 26px}.story-content p{font-size:13.5px}.story-dots{left:26px}}
+
+/* ============ FEATURES / WHY US ============ */
+.feats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.featc{background:#fff;border:1px solid var(--border);border-radius:var(--rad2);padding:20px 16px;text-align:center;transition:.2s}
+.featc:hover{border-color:var(--g2);box-shadow:var(--sh)}
+.featc .fi{width:52px;height:52px;background:var(--g3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;margin:0 auto 12px;color:var(--g1)}
+.featc h4{font-size:14px;font-weight:700;margin-bottom:6px;color:var(--txt)}
+.featc p{font-size:11.5px;color:var(--txt3);line-height:1.5}
+@media(max-width:880px){.feats-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ============ MANUFACTURING / QUALITY (paragraph + image blocks) ============ */
+.mf-wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.mf-wrap.rev .mf-img{order:2}
+.mf-wrap.rev .mf-txt{order:1}
+.mf-img{position:relative;border-radius:var(--rad2);overflow:hidden;box-shadow:var(--sh2);height:320px}
+.mf-txt .eyebrow{color:var(--o1);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.8px}
+.mf-txt h2{font-size:24px;font-weight:900;color:var(--g1);margin:8px 0 12px;line-height:1.25}
+.mf-txt p{color:var(--txt2);font-size:13.5px;line-height:1.8;margin-bottom:10px}
+.mf-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.mf-tag{background:var(--g3);color:var(--g1);font-size:11px;font-weight:700;padding:6px 12px;border-radius:20px}
+@media(max-width:880px){.mf-wrap,.mf-wrap.rev{grid-template-columns:1fr}.mf-wrap.rev .mf-img,.mf-wrap.rev .mf-txt{order:0}}
+.qc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:22px}
+@media(max-width:880px){.qc-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ============ WEATHER BAR ============ */
+.wthr{background:linear-gradient(135deg,#e8f5e9,#fff,#fff8e1);border-top:1px solid #c8e6c9;border-bottom:1px solid #c8e6c9;padding:16px 0}
+.wcard{max-width:1240px;margin:0 auto;background:#fff;border:1px solid #c8e6c9;border-radius:16px;box-shadow:0 5px 20px rgba(27,110,27,.10);padding:14px 18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.wloc{font-size:13px;font-weight:900;color:var(--g1);min-width:190px;display:flex;align-items:center;gap:6px}
+.wnow{display:flex;align-items:center;gap:10px;border-left:1px solid #e1e7e1;padding-left:16px}
+.wnow .wicon{font-size:30px}
+.wnow strong{font-size:30px;color:#0f5132;line-height:1}
+.wnow small{display:block;font-size:11px;color:#666}
+.wctrl{display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+.wctrl select,.wctrl input{height:36px;border:1.5px solid #c8e6c9;border-radius:10px;padding:0 10px;font-family:inherit;font-size:12px;outline:none;background:#fbfffb}
+.wctrl button{height:36px;border:none;border-radius:10px;background:var(--g1);color:#fff;padding:0 14px;font-size:12px;font-weight:900}
+.wdays{display:flex;gap:8px;flex:1;min-width:300px;overflow-x:auto}
+.wday{min-width:82px;background:#f7faf7;border:1px solid #e4efe4;border-radius:12px;padding:7px 8px;text-align:center}
+.wday b{display:block;font-size:10px;color:#0f5132}
+.wday span{display:block;font-size:17px;line-height:1.2}
+.wday small{display:block;font-size:9px;color:#666;line-height:1.3}
+.wadvice{background:#0f5132;color:#fff;border-radius:10px;padding:8px 12px;font-size:11.5px;font-weight:700;line-height:1.4;max-width:320px}
+
+/* ============ CATEGORY GRID ============ */
+.catgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.catcard{background:#fff;border:1px solid var(--border);border-radius:var(--rad2);overflow:hidden;cursor:pointer;transition:.25s;text-align:center}
+.catcard:hover{border-color:var(--g2);box-shadow:var(--sh2);transform:translateY(-4px)}
+.catcard .ci{height:110px;overflow:hidden}
+.catcard .ci img{height:100%;width:100%;object-fit:cover}
+.catcard-body{padding:12px 8px}
+.catcard h3{font-size:13px;font-weight:700;color:var(--txt)}
+.catcard .cu{display:block;font-size:11px;color:var(--g1);margin-top:2px}
+.catcard .cc{font-size:10.5px;color:var(--txt3);margin-top:2px}
+@media(max-width:880px){.catgrid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){.catgrid{grid-template-columns:repeat(2,1fr)}}
+
+/* ============ PRODUCT GRID / CARDS (no price) ============ */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+.pcard{background:#fff;border:1px solid var(--border);border-radius:var(--rad2);overflow:hidden;transition:.2s;cursor:pointer;display:flex;flex-direction:column;position:relative}
+.pcard:hover{box-shadow:var(--sh2);transform:translateY(-3px);border-color:#cde8cd}
+.pcard .pimg{height:150px;background:#fafcfa;display:flex;align-items:center;justify-content:center;padding:10px;position:relative}
+.pcard .pimg img{max-height:130px;object-fit:contain}
+.pbadge{position:absolute;top:8px;left:8px;background:var(--o1);color:#fff;font-size:10px;font-weight:800;padding:3px 8px;border-radius:20px}
+.pbody{padding:10px 12px 12px;display:flex;flex-direction:column;gap:4px;flex:1}
+.pbody .pcat{font-size:10px;color:var(--g2);font-weight:700;text-transform:uppercase;letter-spacing:.4px}
+.pbody h4{font-size:13px;font-weight:700;line-height:1.3;color:var(--txt)}
+.pbody .purdu{font-size:12px;color:var(--txt3)}
+.pbody .pcomp{font-size:10.5px;color:var(--txt3);line-height:1.4;min-height:28px}
+.pviewrow{margin-top:4px}
+.pviewbtn{background:var(--g3);color:var(--g1);border:none;border-radius:20px;padding:7px 14px;font-size:11px;font-weight:700;width:100%}
+.pviewbtn:hover{background:var(--g2);color:#fff}
+
+/* filter tabs */
+.ftabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.ftab{border:1.5px solid var(--border);background:#fff;padding:8px 16px;border-radius:20px;font-size:12px;font-weight:600;color:var(--txt2)}
+.ftab.on{background:var(--g1);border-color:var(--g1);color:#fff}
+.searchrow{display:flex;gap:10px;margin-bottom:18px;flex-wrap:wrap}
+.searchrow input{flex:1;min-width:200px;padding:10px 14px;border:1.5px solid var(--border);border-radius:var(--rad);font-family:inherit;font-size:13px;outline:none}
+.searchrow input:focus{border-color:var(--g2)}
+
+/* ============ CROP DOCTOR ============ */
+.doctor-grid{display:grid;grid-template-columns:1.1fr repeat(4,1fr);gap:16px}
+.doc-finder{background:#fff;border:1px solid #dcefe0;border-radius:var(--rad2);padding:18px;box-shadow:var(--sh)}
+.doc-finder h3{color:var(--g1);margin-bottom:6px;font-size:15px}
+.doc-finder p.hint{font-size:11.5px;color:var(--txt3);margin-bottom:12px}
+.doc-finder select{width:100%;padding:12px;border:1px solid #cae2cf;border-radius:12px;color:var(--g1);font-weight:700;font-family:inherit;margin-bottom:8px}
+.doc-note{font-size:11px;color:var(--txt3);margin-top:8px}
+.doc-card{background:#fff;border:1px solid #dcefe0;border-radius:var(--rad2);overflow:hidden;cursor:pointer;box-shadow:var(--sh);transition:.2s}
+.doc-card:hover{transform:translateY(-3px);box-shadow:var(--sh2)}
+.doc-card img{width:100%;height:130px;object-fit:cover}
+.doc-card b{display:block;color:var(--g1);font-size:14px;padding:10px 12px 2px}
+.doc-card span{display:block;color:var(--o1);font-weight:800;font-size:12px;padding:0 12px 12px}
+@media(max-width:980px){.doctor-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.doctor-grid{grid-template-columns:1fr}}
+
+/* ============ TESTIMONIALS ============ */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.testi{background:#fff;border:1px solid var(--border);border-radius:var(--rad2);padding:20px;position:relative}
+.testi .stars{color:#ffb300;font-size:13px;margin-bottom:8px}
+.testi p{font-size:12.5px;color:var(--txt2);line-height:1.6;margin-bottom:14px;font-style:italic}
+.testi .who{display:flex;align-items:center;gap:10px}
+.testi .who .av{width:38px;height:38px;border-radius:50%;background:var(--g3);color:var(--g1);display:flex;align-items:center;justify-content:center;font-weight:800}
+.testi .who b{display:block;font-size:12.5px}
+.testi .who span{font-size:11px;color:var(--txt3)}
+@media(max-width:880px){.testi-grid{grid-template-columns:1fr}}
+.feedback-marquee-wrap{padding:8px 0 4px;overflow:hidden}
+.feedback-marquee-track{display:flex;gap:18px;width:max-content;animation:feedbackScroll 90s linear infinite;padding:0 4px}
+.feedback-marquee-wrap:hover .feedback-marquee-track{animation-play-state:paused}
+.testi.fcard{width:320px;flex-shrink:0}
+@keyframes feedbackScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ============ FOOTER ============ */
+footer{background:#123a1e;color:#dff0e2;margin-top:20px}
+.fcols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:24px;padding:36px 0 24px}
+.fcol h4{color:#fff;font-size:14px;margin-bottom:14px;font-weight:800}
+.fcol p,.fcol li{font-size:12px;color:#b8d6c0;line-height:2}
+.fcol ul{list-style:none}
+.fcol a{color:#b8d6c0}
+.fcol a:hover{color:#fff}
+.flogo{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.flogo .flogo-chip{background:#fff;border-radius:8px;padding:7px 9px;display:inline-flex;align-items:center;justify-content:center}
+.flogo img{height:30px;width:auto;display:block}
+.flogo b{color:#fff;font-size:16px}
+.fsocials{display:flex;gap:10px;margin-top:12px}
+.fsocials a{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:14px}
+.fsocials a:hover{background:var(--g2)}
+.fbottom{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:14px 0;font-size:11.5px;color:#9dc2a6}
+@media(max-width:880px){.fcols{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.fcols{grid-template-columns:1fr}}
+
+/* ============ PRODUCT INFO MODAL (no price) ============ */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:2000;display:none;align-items:center;justify-content:center;padding:16px}
+.overlay.on{display:flex}
+.pmodal{background:#fff;border-radius:var(--rad2);max-width:760px;width:100%;max-height:90vh;overflow-y:auto;position:relative;box-shadow:var(--sh2)}
+.pmodal .mclose{position:absolute;top:10px;right:10px;width:34px;height:34px;border-radius:50%;background:#fff;border:1px solid var(--border);font-size:16px;z-index:5;box-shadow:var(--sh)}
+.pmodal .mgrid{display:grid;grid-template-columns:1fr 1fr}
+.pmodal .mimg{background:#fafcfa;display:flex;align-items:center;justify-content:center;padding:24px;min-height:280px}
+.pmodal .mimg img{max-height:280px;object-fit:contain}
+.pmodal .minfo{padding:24px}
+.pmodal .mcat{font-size:11px;color:var(--g2);font-weight:800;text-transform:uppercase;letter-spacing:.5px}
+.pmodal h2{font-size:20px;font-weight:800;margin:6px 0 2px;color:var(--txt)}
+.pmodal .murdu{font-size:15px;color:var(--txt3);margin-bottom:10px}
+.pmodal .mtable{width:100%;margin:12px 0;border-collapse:collapse}
+.pmodal .mtable td{padding:7px 0;font-size:12.5px;border-bottom:1px solid #f0f0f0;vertical-align:top}
+.pmodal .mtable td:first-child{color:var(--txt3);width:110px;font-weight:600}
+@media(max-width:640px){.pmodal .mgrid{grid-template-columns:1fr}.pmodal .mimg{min-height:200px}}
+
+/* ============ OUR TEAM PAGE ============ */
+/* ============ PREMIUM PAGE HEADER (rotating background) ============ */
+.pg-header{position:relative;overflow:hidden;padding:76px 0 58px;text-align:center;isolation:isolate}
+.pg-header-bg{position:absolute;inset:0;z-index:0}
+.pg-header-bg .phb-slide{position:absolute;inset:0;opacity:0;background-size:cover;background-position:center;transform:scale(1.08);transition:opacity 1.8s ease,transform 9s linear}
+.pg-header-bg .phb-slide.on{opacity:1;transform:scale(1)}
+.pg-header::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(8,42,14,.9),rgba(27,110,27,.72) 55%,rgba(8,42,14,.85));z-index:1}
+.pg-header::after{content:'';position:absolute;left:0;right:0;bottom:0;height:70px;background:linear-gradient(180deg,transparent,#fff);z-index:1}
+.pg-header .container{position:relative;z-index:2}
+.team-hero span.eyebrow,.pg-header span.eyebrow{display:inline-block;color:#ffd54f;font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);padding:5px 16px;border-radius:20px;backdrop-filter:blur(4px)}
+.team-hero h1,.pg-header h1{font-family:'Poppins',sans-serif;font-size:40px;font-weight:900;color:#fff;margin:16px 0 12px;letter-spacing:-.8px;text-shadow:0 4px 18px rgba(0,0,0,.35)}
+.team-hero p,.pg-header p{color:rgba(255,255,255,.92);max-width:640px;margin:0 auto;font-size:14.5px;line-height:1.7}
+.team-hero{text-align:center}
+@media(max-width:640px){.team-hero h1,.pg-header h1{font-size:29px}}
+
+/* scroll reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:translateY(0)}
+.reveal-delay1{transition-delay:.08s}.reveal-delay2{transition-delay:.16s}.reveal-delay3{transition-delay:.24s}.reveal-delay4{transition-delay:.32s}.reveal-delay5{transition-delay:.4s}.reveal-delay6{transition-delay:.48s}.reveal-delay7{transition-delay:.56s}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.emp-photo-rect{opacity:1;transform:none;transition:none}}
+
+.team-intro{padding:44px 0 8px;text-align:center}
+.team-intro .container{max-width:820px}
+.team-intro span.eyebrow{color:var(--o1);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:1px}
+.team-intro h2{font-size:24px;font-weight:900;color:var(--g1);margin:8px 0 12px}
+.team-intro p{color:var(--txt2);font-size:13.5px;line-height:1.8;margin-bottom:8px}
+.team-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:640px;margin:22px auto 0}
+.team-stats .astat{padding:16px 6px}
+@media(max-width:640px){.team-stats{grid-template-columns:repeat(2,1fr)}}
+
+.team-sec{padding:32px 0 60px}
+.team-dept{margin-bottom:52px;padding-bottom:8px;border-bottom:1px dashed #e3ece3}
+.team-dept:last-child{margin-bottom:0;border-bottom:none}
+.team-dept-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.team-dept-head h2{font-size:21px;font-weight:800;color:var(--g1);letter-spacing:-.3px;display:flex;align-items:center;gap:10px}
+.team-dept-head h2 .dept-ic{width:34px;height:34px;border-radius:50%;background:var(--g3);color:var(--g1);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.team-dept-head h2 .dept-ic svg{display:block}
+.team-dept-head .dept-count{font-size:11px;color:var(--g1);font-weight:700;background:var(--g3);padding:4px 12px;border-radius:20px;white-space:nowrap}
+.dept-intro{font-size:12.5px;color:var(--txt3);line-height:1.7;max-width:760px;margin:0 0 20px}
+.emp-row{display:flex;gap:28px;background:#fff;border:1px solid var(--border);border-radius:var(--rad2);box-shadow:var(--sh);padding:26px;margin-bottom:18px;transition:.35s cubic-bezier(.2,.7,.2,1)}
+.emp-row:last-child{margin-bottom:0}
+.emp-row:hover{box-shadow:0 18px 38px -14px rgba(27,110,27,.28);border-color:#d9ead9;transform:translateY(-5px)}
+.emp-photo-rect{width:160px;height:190px;flex-shrink:0;border-radius:var(--rad);overflow:hidden;background:var(--g3);box-shadow:var(--sh);position:relative;border:3px solid #fff;transition:border-color .3s ease,opacity .7s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.22,1.4,.36,1);opacity:0;transform:translateX(-64px) rotate(-9deg) scale(.88)}
+.team-dept.photo-in .emp-photo-rect{opacity:1;transform:translateX(0) rotate(0deg) scale(1)}
+.emp-row:hover .emp-photo-rect{border-color:var(--o1)}
+.emp-photo-rect img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.7,.2,1);transform:scale(1.02)}
+.emp-row:hover .emp-photo-rect img{transform:scale(1.12) rotate(.3deg)}
+.emp-photo-rect::before{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(8,42,14,.34),rgba(27,110,27,.16) 55%,transparent 85%);z-index:1;pointer-events:none}
+.emp-photo-rect::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(8,42,14,.35));opacity:0;transition:opacity .35s ease}
+.emp-row:hover .emp-photo-rect::after{opacity:1}
+.emp-photo-rect{width:160px;height:190px;flex-shrink:0;border-radius:var(--rad);overflow:hidden;background:var(--g3);box-shadow:var(--sh)}
+.emp-photo-rect img{width:100%;height:100%;object-fit:cover;display:block}
+.emp-info{flex:1;min-width:0;background:linear-gradient(160deg,#0f4a17,#1b6e1b 45%,#2d8a2d 100%);border-radius:var(--rad2);padding:22px 26px;position:relative;overflow:hidden;isolation:isolate;box-shadow:0 8px 22px -8px rgba(8,42,14,.4)}
+.emp-info::before{content:'';position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(115deg,transparent,rgba(255,255,255,.32),transparent);transform:skewX(-18deg);animation:empShine 3.4s ease-in-out infinite;pointer-events:none;z-index:1}
+@keyframes empShine{0%{left:-60%}55%,100%{left:130%}}
+.emp-name{font-size:18px;font-weight:800;color:#fff;margin-bottom:4px;letter-spacing:-.2px;position:relative;z-index:2;text-shadow:0 1px 6px rgba(0,0,0,.35)}
+.emp-role{font-size:13px;color:#ffd54f;font-weight:700;margin-bottom:8px;position:relative;z-index:2}
+.emp-desc{position:relative;z-index:2}
+.emp-desc p{font-size:13px;color:rgba(255,255,255,.92);line-height:1.8;margin-bottom:10px}
+.emp-desc p:last-child{margin-bottom:0}
+@media(max-width:680px){.emp-row{flex-direction:column}.emp-photo-rect{width:100%;height:220px}}
+
+</style>
+</head>
+<body>
+
+<!-- MOVING TEXT BAR -->
+<div class="ann"><div class="ann-inner">
+  <span>Plot No.228-229, Phase-II, Industrial Estate, Multan. Phone: 061-6537203</span>
+  <span class="urdu">پاکستان بھر میں خدمات دستیاب</span>
+  <span>100 percent Genuine Registered Agrochemicals</span>
+  <span>Insecticides. Fungicides. Herbicides. Fertilizers. Micronutrients. Seeds.</span>
+  <span>Plot No.228-229, Phase-II, Industrial Estate, Multan. Phone: 061-6537203</span>
+  <span class="urdu">پاکستان بھر میں خدمات دستیاب</span>
+  <span>100 percent Genuine Registered Agrochemicals</span>
+  <span>Insecticides. Fungicides. Herbicides. Fertilizers. Micronutrients. Seeds.</span>
+</div></div>
+
+
+
+<!-- HEADER -->
+<header>
+  <div class="hdr"><div class="container">
+    <a href="index.html" class="logo-a">
+      <img src="assets/ecc-custom/excel-crop-group-logo-cropped.png" alt="Excel Crop Group logo">
+    </a>
+    <div class="srch">
+      <div class="sf">
+        <select id="searchCatSel">
+          <option value="">All Categories</option>
+          <option>Insecticides</option><option>Fungicides</option><option>Herbicides</option>
+          <option>Fertilizers</option><option>Micronutrients</option>
+        </select>
+        <input id="searchBox" type="search" placeholder="Search our product range, e.g. Acelam, Urea, Cotton seed...">
+        <button onclick="runHeaderSearch()">Search</button>
+      </div>
+    </div>
+    <div class="hdr-r">
+      <div class="logo-t">
+        <h1>Excel Crop Group</h1>
+        <span class="lu urdu">ایکسل اور کسان، خوشحال پاکستان</span>
+      </div>
+    </div>
+  </div></div>
+  <nav class="mnav"><div class="container">
+    <div class="ni"><a href="index.html#about"> About Us </a></div>
+    <div class="ni"><a href="index.html#introduction">  Introduction  </a></div>
+    <div class="ni"><a href="index.html#quality"> Quality Control  </a></div>
+    <div class="ni"><a href="index.html#manufacturing"> Manufacturing &amp; Formulations </a></div>
+    <div class="ni"><a href="our-team.html">Our Team</a></div>
+    <div class="ni"><a href="#" onclick="goToProducts('Insecticides');return false">Insecticides</a></div>
+    <div class="ni"><a href="#" onclick="goToProducts('Fungicides');return false">Fungicides</a></div>
+    <div class="ni"><a href="#" onclick="goToProducts('Herbicides');return false">Herbicides</a></div>
+    <div class="ni"><a href="#" onclick="goToProducts('Fertilizers');return false">Fertilizers</a></div>
+    <div class="ni"><a href="#" onclick="goToProducts('Micronutrients');return false">Micronutrients</a></div>
+    <div class="ni"><a href="seeds.html">Seeds</a></div>
+  </div></nav>
+</header>
+
+<!-- ============ OUR TEAM HERO ============ -->
+<section class="team-hero pg-header">
+  <div class="pg-header-bg" data-images="[&quot;assets/stock2/team-training-session.jpg&quot;, &quot;assets/stock2/farmer-training-program.jpg&quot;, &quot;assets/ecc-new/customers-across-pakistan-1.jpg&quot;, &quot;assets/stock2/agri-lab-research.jpg&quot;]"></div>
+  <div class="container">
+    <span class="eyebrow">Meet Excel Crop Group</span>
+    <h1>The People Behind the Company</h1>
+    <p>The department heads who lead Excel Crop Group's day to day operations, from compliance and finance to quality control, supply chain and our seed business &mdash; the people turning our promise of genuine agri inputs into everyday reality.</p>
+  </div>
+</section>
+
+<!-- ============ TEAM INTRODUCTION ============ -->
+<section class="team-intro reveal"><div class="container">
+  <span class="eyebrow">Our People</span>
+  <h2>One Team, Many Departments, One Standard</h2>
+  <p>Excel Crop Group is built on the discipline and dedication of the department heads who guide our work every day. Each leader brings their own expertise, from legal compliance and finance to quality control, supply chain, packing and our seed business, but all share the same commitment to genuine, registered agricultural inputs and dependable service for farmers across Pakistan.</p>
+  <p>Below, meet the people responsible for each part of that promise.</p>
+</div></section>
+
+<!-- ============ TEAM GRID ============ -->
+<section class="team-sec">
+  <div class="container">
+
+    <div class="team-dept reveal">
+      
+      <div class="emp-row">
+        <div class="emp-photo-rect"><img src="assets/team/avatars/maimoona-yasmeen.svg" alt="Mrs. Maimoona Yasmeen"></div>
+        <div class="emp-info">
+          <div class="emp-name">Mrs. Maimoona Yasmeen</div>
+          <div class="emp-role">Co-Founder, Excel Crop Group &amp; Head of Corporate Social Responsibility</div>
+          <div class="emp-desc">
+            <p>As Co-Founder of Excel Crop Group, Mrs. Maimoona Yasmeen champions the Company's commitment to sustainable development, social responsibility, and ethical business practices.</p>
+            <p>She leads initiatives that create meaningful impact for communities, promote environmental stewardship, and reinforce the Group's vision of responsible and inclusive growth.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-dept reveal reveal-delay1">
+       <div class="emp-row">
+        <div class="emp-photo-rect"><img src="assets/team/avatars/fatima-wahla.svg" alt="Mrs. Fatima Wahla"></div>
+        <div class="emp-info">
+          <div class="emp-name">Mrs. Fatima Wahla</div>
+          <div class="emp-role">Head of Legal &amp; Compliance</div>
+          <div class="emp-desc">
+            <p>Mrs. Fatima Wahla provides strategic leadership in legal affairs, regulatory compliance, and corporate governance.</p>
+            <p>She ensures that the Company's operations are conducted with the highest standards of integrity, safeguarding business interests while fostering a culture of accountability, transparency, and compliance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-dept reveal reveal-delay2">
+      
+      <div class="emp-row">
+        <div class="emp-photo-rect"><img src="assets/team/avatars/umar-warraich.svg" alt="Mr. Muhammad Umar Ali Warraich"></div>
+        <div class="emp-info">
+          <div class="emp-name">Mr. Muhammad Umar Ali Warraich</div>
+          <div class="emp-role">Head of Operations</div>
+          <div class="emp-desc">
+            <p>Mr. Muhammad Umar Ali Warraich leads the Operations function, coordinating day-to-day activities across departments to keep the Company running efficiently.</p>
+            <p>His focus on process discipline and cross-department coordination helps ensure that every part of the business works together smoothly in service of farmers and dealers across Pakistan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-dept reveal reveal-delay3">
+      
+      <div class="emp-row">
+        <div class="emp-photo-rect"><img src="assets/team/avatars/mubashir-akhtar.svg" alt="Mr. Mubashir Akhtar"></div>
+        <div class="emp-info">
+          <div class="emp-name">Mr. Mubashir Akhtar</div>
+          <div class="emp-role">Head of Accounts &amp; Finance</div>
+          <div class="emp-desc">
+            <p>Mr. Mubashir Akhtar leads the Accounts &amp; Finance function with a focus on financial excellence, governance, and strategic planning.</p>
+            <p>He oversees financial management, reporting, budgeting, and internal controls, ensuring fiscal discipline and providing the financial insights that support sustainable business growth and long-term value creation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-dept reveal reveal-delay4">
+      
+      <div class="emp-row">
+        <div class="emp-photo-rect"><img src="assets/team/avatars/allah-nawaz.svg" alt="Mr. Allah Nawaz"></div>
+        <div class="emp-info">
+          <div class="emp-name">Mr. Allah Nawaz</div>
+          <div class="emp-role">Head of Supply Chain</div>
+          <div class="emp-desc">
+            <p>Mr. Allah Nawaz directs the Company's supply chain strategy, ensuring seamless integration of procurement, inventory, logistics, and distribution.</p>
+            <p>His leadership strengthens operational efficiency, supply continuity, and customer satisfaction while supporting the Company's commitment to quality and timely market delivery.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-dept reveal reveal-delay5">
+
+      <div class="emp-row">
+        <div class="emp-photo-rect"><img src="assets/team/avatars/usama-naveed.svg" alt="Mr. Usama Naveed"></div>
+        <div class="emp-info">
+          <div class="emp-name">Mr. Usama Naveed</div>
+          <div class="emp-role">Head of Quality Control</div>
+          <div class="emp-desc">
+            <p>Mr. Usama Naveed leads the Quality Control Department with an unwavering commitment to product excellence and continuous improvement.</p>
+            <p>He oversees quality assurance systems, regulatory compliance, and rigorous testing protocols, ensuring that every product consistently meets the highest standards of safety, reliability, and performance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-dept reveal reveal-delay6">
+      
+      <div class="emp-row">
+        <div class="emp-photo-rect"><img src="assets/team/avatars/mustaqeem-rao.svg" alt="Mr. Mustaqeem Rao"></div>
+        <div class="emp-info">
+          <div class="emp-name">Mr. Mustaqeem Rao</div>
+          <div class="emp-role">Head of Packing Department</div>
+          <div class="emp-desc">
+            <p>Mr. Mustaqeem Rao leads the Packing Department, ensuring operational excellence in packaging processes through efficiency, precision, and quality assurance.</p>
+            <p>His leadership plays a vital role in preserving product integrity, enhancing operational performance, and delivering products that reflect the Company's commitment to excellence.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-dept reveal reveal-delay7">
+      
+      <div class="emp-row">
+        <div class="emp-photo-rect"><img src="assets/team/avatars/umer-hassan.svg" alt="Mr. Umer Hassan"></div>
+        <div class="emp-info">
+          <div class="emp-name">Mr. Umer Hassan</div>
+          <div class="emp-role">Head of Seed Department</div>
+          <div class="emp-desc">
+            <p>Mr. Umer Hassan provides leadership for the Company's Seed Department, overseeing seed production, processing, quality assurance, and innovation.</p>
+            <p>His focus on excellence and reliability supports the delivery of superior seed solutions that contribute to enhanced agricultural productivity and long-term value for farmers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer id="footer-contact">
+  <div class="container">
+    <div class="fcols">
+      <div class="fcol">
+        <div class="flogo"><span class="flogo-chip"><img src="assets/ecc-custom/excel-crop-group-logo-cropped.png" alt="Excel Crop Group logo"></span><b>Excel Crop Group</b></div>
+        <p><span class="urdu">ایکسل اور کسان، خوشحال پاکستان</span></p>
+        <p>A company portfolio showcasing genuine agricultural inputs, insecticides, fungicides, herbicides, fertilizers, micronutrients and seeds, for farmers across Pakistan.</p>
+        <div class="fsocials"><a href="#">f</a><a href="#">▷</a><a href="tel:0616537203">☎</a><a href="mailto:info@excelcropcare.com">✉</a></div>
+      </div>
+      <div class="fcol"><h4>Categories</h4><ul>
+        <li><a href="#" onclick="goToProducts('Insecticides');return false">Insecticides</a></li>
+        <li><a href="#" onclick="goToProducts('Fungicides');return false">Fungicides</a></li>
+        <li><a href="#" onclick="goToProducts('Herbicides');return false">Herbicides</a></li>
+        <li><a href="#" onclick="goToProducts('Fertilizers');return false">Fertilizers</a></li>
+        <li><a href="#" onclick="goToProducts('Micronutrients');return false">Micronutrients</a></li>
+        <li><a href="seeds.html">Seeds</a></li>
+      </ul></div>
+      <div class="fcol"><h4>Company</h4><ul>
+        <li><a href="index.html#introduction">Introduction</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="our-team.html">Our Team</a></li>
+        <li><a href="index.html#reach">Our Reach</a></li>
+        <li><a href="index.html#quality">Quality Control</a></li>
+        <li><a href="index.html#manufacturing">Manufacturing</a></li>
+        <li><a href="index.html#weather">Weather &amp; Spray Guide</a></li>
+      </ul></div>
+      <div class="fcol"><h4>Contact Us</h4><ul>
+        <li>Plot No.228-229, Phase-II, Industrial Estate, Multan, Pakistan</li>
+        <li>061-6537203</li>
+        <li>info@excelcropcare.com</li>
+        <li>Mon to Sat, 9AM to 6PM</li>
+      </ul></div>
+    </div>
+    <div class="fbottom">© 2026 Excel Crop Group | Plot No.228-229, Phase-II, Industrial Estate, Multan | 061-6537203 | Company Portfolio Website</div>
+  </div>
+</footer>
+
+<script>
+function goToProducts(cat){
+  window.location.href = 'products.html' + (cat ? ('?cat=' + encodeURIComponent(cat)) : '');
+}
+function runHeaderSearch(){
+  const term = document.getElementById('searchBox').value;
+  const cat = document.getElementById('searchCatSel').value;
+  const params = new URLSearchParams();
+  if(cat) params.set('cat', cat);
+  if(term) params.set('q', term);
+  window.location.href = 'products.html' + (params.toString() ? ('?' + params.toString()) : '');
+}
+function initPgHeaders(){
+  document.querySelectorAll('.pg-header-bg').forEach(el=>{
+    let imgs;
+    try{ imgs = JSON.parse(el.dataset.images); }catch(e){ return; }
+    if(!imgs || !imgs.length) return;
+    el.innerHTML = imgs.map((src,i)=>`<div class="phb-slide ${i===0?'on':''}" style="background-image:url('${src}')"></div>`).join('');
+    if(imgs.length<2) return;
+    let idx = 0;
+    const slides = el.querySelectorAll('.phb-slide');
+    setInterval(()=>{ idx = (idx+1)%slides.length; slides.forEach((s,i)=>s.classList.toggle('on', i===idx)); }, 5200);
+  });
+}
+initPgHeaders();
+function initReveal(){
+  const els = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window) || !els.length){ els.forEach(e=>e.classList.add('in')); return; }
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+  els.forEach(e=>io.observe(e));
+}
+initReveal();
+
+/* Employee photos: rotate in every time the card enters the viewport, rotate out when it leaves */
+function initPhotoRotate(){
+  const cards = document.querySelectorAll('.team-dept');
+  if(!('IntersectionObserver' in window) || !cards.length){ cards.forEach(c=>c.classList.add('photo-in')); return; }
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ e.target.classList.toggle('photo-in', e.isIntersecting); });
+  }, {threshold:.2, rootMargin:'0px 0px -10% 0px'});
+  cards.forEach(c=>io.observe(c));
+}
+initPhotoRotate();
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<svg viewBox="0 0 160 190" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e65100"/>
+      <stop offset="100%" stop-color="#9c3700"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="190" fill="url(#bg)"/>
+  <circle cx="122" cy="26" r="70" fill="#ffffff" opacity="0.05"/>
+  <!-- shoulders / bust -->
+  <path d="M-10 200 C -10 140 30 118 80 118 C130 118 170 140 170 200 Z" fill="#f4efe7"/>
+  <path d="M-10 200 C -10 140 30 118 80 118 C130 118 170 140 170 200 Z" fill="#9c3700" opacity="0.10"/>
+  <!-- neck -->
+  <rect x="66" y="96" width="28" height="30" rx="10" fill="#e7bd93"/>
+  <!-- hair back -->
+  <path d="M42 88 Q40 40 80 36 Q120 40 118 88 L118 108 Q118 118 108 118 L52 118 Q42 118 42 108 Z" fill="#3a2418"/>
+  <!-- face -->
+  <ellipse cx="80" cy="80" rx="27" ry="29" fill="#efc49b"/>
+  <!-- hair front / fringe -->
+  <path d="M52 78 Q50 42 80 40 Q110 42 108 78 Q106 56 92 52 Q88 62 80 60 Q72 62 68 52 Q54 56 52 78Z" fill="#2e1c11"/>
+  <!-- simple face detail -->
+  <ellipse cx="69" cy="82" rx="3" ry="3.6" fill="#3a2418" opacity="0.75"/>
+  <ellipse cx="91" cy="82" rx="3" ry="3.6" fill="#3a2418" opacity="0.75"/>
+  <path d="M72 96 Q80 100 88 96" stroke="#a8683f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.6"/>
+</svg>
