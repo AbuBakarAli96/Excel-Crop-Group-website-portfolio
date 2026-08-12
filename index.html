@@ -88,14 +88,15 @@ header{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08);position:sticky;top
 /* ============ HERO + SIDEBAR PORTFOLIO LAYOUT ============ */
 .hero-sec{position:relative;overflow:hidden;min-height:640px}
 /* ---- Silver sinusoidal hero bottom: undulates in place (no horizontal travel) ---- */
-.hero-wave-wrap{position:absolute;left:0;right:0;bottom:-1px;height:110px;z-index:1;pointer-events:none;overflow:hidden}
-.hero-wave-wrap svg{position:absolute;left:0;bottom:0;width:100%;height:100%;display:block}
-.wv-sine-fill{fill:var(--bg)}
-.wv-sine-line{fill:none;stroke:url(#silverShineGrad);stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 6px rgba(255,255,255,.55))}
-@media(prefers-reduced-motion:reduce){.hero-wave-wrap animate,.hero-wave-wrap animateTransform{display:none}}
+.hero-straight-wrap{position:absolute;left:0;right:0;bottom:-1px;height:110px;z-index:1;pointer-events:none;overflow:hidden}
+.hero-straight-fill{position:absolute;left:0;right:0;bottom:0;height:60px;background:var(--bg)}
+.hero-straight-line{position:absolute;left:0;right:0;bottom:60px;height:2px;overflow:hidden;background:rgba(255,255,255,.28)}
+.hsl-glow{position:absolute;top:-7px;bottom:-7px;left:-25%;width:25%;background:linear-gradient(90deg,transparent,#fff 45%,#fff 55%,transparent);filter:drop-shadow(0 0 6px rgba(255,255,255,.75));animation:hslSweep 3.2s linear infinite}
+@keyframes hslSweep{0%{left:-25%}100%{left:100%}}
+@media(prefers-reduced-motion:reduce){.hsl-glow{animation:none}}
 .hero-sec>.container{position:relative;z-index:1;padding-top:56px;padding-bottom:56px}
 .hero-sec .shop-layout{position:relative;z-index:1}
-.shop-layout{display:grid;grid-template-columns:280px 1fr 230px;gap:18px;align-items:stretch}
+.shop-layout{display:grid;grid-template-columns:236px 1fr 230px;gap:18px;align-items:stretch}
 .side-cats{background:#fff;border:1px solid #e6eee7;border-radius:var(--rad2);box-shadow:var(--sh);overflow:hidden;height:fit-content}
 .side-head{background:var(--g1);color:#fff;font-weight:800;padding:14px 16px;display:flex;align-items:center;gap:8px;font-size:14px}
 .side-cats .scl{display:block;width:100%;text-align:left;border:0;background:#fff;padding:12px 16px;font-weight:600;font-size:12.5px;color:var(--txt);border-bottom:1px solid #f1f4f1;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:.15s}
@@ -171,22 +172,20 @@ header{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08);position:sticky;top
 .side-support .lead-card{box-shadow:none;border:none}
 .side-support{padding:0;overflow:hidden;background:transparent;border:none;box-shadow:none}
 /* CEO card: bigger photo, bolder & larger vision quote, premium sizing */
-.lead-card-ceo .lc-photo-frame{height:246px}
-.lead-card-ceo .lc-body{padding:20px 24px 24px}
-.lead-card-ceo .lc-name{font-size:21px;font-weight:900;letter-spacing:-.3px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.5)}
-.lead-card-ceo .lc-role{font-size:11.5px;padding:6px 15px}
-.lead-card-ceo .lc-role-sub{font-size:9px}
-.lead-card-ceo .lc-vision-title{font-size:20px;margin-top:18px}
-.lead-card-ceo .lc-quote{font-family:Georgia,'Times New Roman',serif;font-size:17px;font-weight:700;color:#fff;line-height:1.6;font-style:normal;position:relative;padding-left:22px;text-shadow:0 2px 8px rgba(0,0,0,.5)}
+.lead-card-ceo .lc-photo-frame{height:201px}
+.lead-card-ceo .lc-body{padding:16px 18px 18px}
+.lead-card-ceo .lc-name{font-size:18px;font-weight:900;letter-spacing:-.3px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.5)}
+.lead-card-ceo .lc-role{font-size:10.5px;padding:5px 13px}
+.lead-card-ceo .lc-role-sub{font-size:8.5px}
+.lead-card-ceo .lc-vision-title{font-size:17px;margin-top:14px}
+.lead-card-ceo .lc-quote{font-family:Georgia,'Times New Roman',serif;font-size:15.5px;font-weight:700;color:#fff;line-height:1.55;font-style:normal;position:relative;padding-left:22px;text-shadow:0 2px 8px rgba(0,0,0,.5)}
 .lead-card-ceo .lc-quote::before{content:'\201C';position:absolute;left:-6px;top:-10px;font-size:42px;font-weight:900;color:#ffd54f;font-family:Georgia,serif;line-height:1;text-shadow:0 2px 6px rgba(0,0,0,.4)}
 .lead-card-ceo .lc-quote::after{font-size:22px;font-weight:900;text-shadow:0 2px 6px rgba(230,81,0,.25)}
-.lead-card-ceo .lc-quote mark{background:linear-gradient(180deg,transparent 60%,rgba(255,193,7,.55) 60%);color:#fff;padding:0 1px}
 /* Non-CEO executive card (e.g. Head of Marketing) photo height */
 .lead-card:not(.lead-card-ceo) .lc-photo-frame{height:172px}
 .lead-card:not(.lead-card-ceo) .lc-quote{font-family:Georgia,'Times New Roman',serif;padding-left:16px;font-size:14px;font-weight:600;font-style:normal;color:#fff}
 .lead-card:not(.lead-card-ceo) .lc-quote::before{content:'\201C';position:absolute;left:-4px;top:-8px;font-size:28px;font-weight:900;color:#ffd54f;font-family:Georgia,serif;line-height:1}
 .lead-card:not(.lead-card-ceo) .lc-quote::after{font-size:19px;font-weight:900}
-.lead-card:not(.lead-card-ceo) .lc-quote mark{background:linear-gradient(180deg,transparent 60%,rgba(255,193,7,.5) 60%);color:#fff;padding:0 1px}
 /* Mission panel: text-only, content starts at the top of the box (not vertically centered) */
 .lead-card-mission .lc-body{justify-content:flex-start}
 .side-mission{align-self:center}
@@ -196,8 +195,7 @@ header{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08);position:sticky;top
 .lc-body-mission .lc-quote{font-family:Georgia,'Times New Roman',serif;padding-left:16px;font-size:14px;font-weight:600;font-style:normal;color:#fff}
 .lc-body-mission .lc-quote::before{content:'\201C';position:absolute;left:-4px;top:-8px;font-size:28px;font-weight:900;color:#ffd54f;font-family:Georgia,serif;line-height:1}
 .lc-body-mission .lc-quote::after{font-size:19px;font-weight:900;color:#ffd54f}
-.lc-body-mission .lc-quote mark{background:linear-gradient(180deg,transparent 60%,rgba(255,193,7,.5) 60%);color:#fff;padding:0 1px}
-@media(max-width:980px){.shop-layout{grid-template-columns:1fr}.side-cats{order:2}.side-support{order:3}.hero-slide-inner{grid-template-columns:1fr}.sc,.sc-controls{grid-column:1}.lead-card-ceo .lc-photo-frame{height:280px}}
+@media(max-width:980px){.shop-layout{grid-template-columns:1fr}.side-cats{order:2}.side-support{order:3}.hero-slide-inner{grid-template-columns:1fr}.sc,.sc-controls{grid-column:1}.lead-card-ceo .lc-photo-frame{height:212px}}
 @media(prefers-reduced-motion:reduce){.lead-card{animation:none}.lead-card::before{animation:none}.lc-glow{animation:none}.lc-frame-ring{animation:none}}
 
 /* ============ IMAGE AD MARQUEE (replaces highlight boxes) ============ */
@@ -216,14 +214,37 @@ header{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08);position:sticky;top
 .sch{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:20px;flex-wrap:wrap;gap:10px}
 .brands-sec{padding-top:6px}
 .brands-sec .container{max-width:980px}
-.brands-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.brand-card{background:#fff;border:1px solid #e6eee7;border-radius:var(--rad2);box-shadow:var(--sh);padding:22px 14px;text-align:center;transition:.25s ease;cursor:default}
-.brand-card:hover{transform:translateY(-6px);box-shadow:var(--sh2);border-color:var(--g2)}
-.brand-logo{height:64px;width:100%;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
-.brand-logo img{max-height:72px;max-width:100%;object-fit:contain}
-.brand-card h4{font-size:14px;font-weight:800;color:var(--txt);letter-spacing:.2px}
-@media(max-width:860px){.brands-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:480px){.brands-grid{grid-template-columns:1fr}}
+.brands-strip{display:flex;align-items:center;gap:30px}
+.brands-strip-label{font-size:14px;font-weight:900;letter-spacing:1px;color:var(--g1);white-space:nowrap;padding-right:22px;border-right:1px solid #e6eee7}
+.brands-strip-row{display:flex;align-items:stretch;gap:0;flex:1;overflow-x:auto;scrollbar-width:none}
+.brands-strip-row::-webkit-scrollbar{display:none}
+.brand-wm{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;flex:0 0 auto;padding:6px 32px;transition:transform .3s ease;cursor:pointer}
+.brand-wm:not(:last-child)::after{content:'';position:absolute;right:0;top:10%;bottom:10%;width:1px;background:linear-gradient(180deg,transparent,#d7ded8,transparent)}
+.brand-wm-logo{position:relative;height:56px;width:118px;display:flex;align-items:center;justify-content:center}
+.brand-wm-logo img{max-height:100%;max-width:100%;object-fit:contain;transition:transform .35s ease,filter .35s ease}
+.brand-wm span{font-size:12px;font-weight:700;color:var(--txt);opacity:.65;letter-spacing:.2px;white-space:nowrap;transition:opacity .3s ease}
+.brand-wm:hover{transform:translateY(-6px) scale(1.06)}
+.brand-wm:hover .brand-wm-logo img{filter:drop-shadow(0 8px 14px rgba(0,0,0,.18))}
+.brand-wm:hover span{opacity:1}
+.brand-wm.shaking .brand-wm-logo img{animation:brandShake .5s ease}
+@keyframes brandShake{0%,100%{transform:translateX(0) scale(1.1)}15%{transform:translateX(-6px) scale(1.1)}30%{transform:translateX(5px) scale(1.1)}45%{transform:translateX(-4px) scale(1.1)}60%{transform:translateX(3px) scale(1.1)}75%{transform:translateX(-2px) scale(1.1)}}
+@media(max-width:760px){.brands-strip{flex-direction:column;align-items:flex-start;gap:14px}.brands-strip-label{border-right:none;padding-right:0}.brands-strip-row{width:100%;padding-bottom:6px}.brand-wm:not(:last-child)::after{display:none}}
+.vendors-intro{max-width:760px;margin:0 auto 30px;text-align:center;font-size:13.5px;color:var(--txt3);line-height:1.7}
+.vendors-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:stretch}
+.vendor-col{background:#fff;border:1px solid #e6eee7;border-radius:var(--rad2);box-shadow:var(--sh);padding:26px 24px;display:flex;flex-direction:column;transition:.25s ease}
+.vendor-col:hover{box-shadow:var(--sh2)}
+.vendor-col-head{display:flex;align-items:center;gap:9px;font-size:16px;font-weight:800;color:var(--g1);margin-bottom:6px}
+.vendor-col-head svg{flex-shrink:0}
+.vendor-col-sub{font-size:12.5px;color:var(--txt3);margin:0 0 14px;line-height:1.6}
+.vendor-list{list-style:none;margin:0;padding:0}
+.vendor-list li{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:10px 0;border-bottom:1px dashed #e3ece3;font-size:13px;color:var(--txt)}
+.vendor-list li:last-child{border-bottom:none}
+.vendor-list li span{font-weight:700}
+.vendor-list li em{font-style:normal;font-size:11px;color:var(--txt3);white-space:nowrap}
+.vendor-fill-graphic{margin-top:18px;border-radius:var(--rad);overflow:hidden;flex:1;min-height:150px;box-shadow:var(--sh);background:linear-gradient(180deg,#eaf6ec 0%,#dcf0e0 100%);position:relative}
+.vendor-fill-graphic svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.vendor-fill-graphic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:760px){.vendors-grid{grid-template-columns:1fr}}
 .stitle{font-size:22px;font-weight:800;color:var(--g1);padding-left:14px;position:relative;line-height:1.2}
 .stitle::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:5px;height:24px;background:var(--o1);border-radius:2px}
 .stitle .su{display:block;font-size:13px;color:var(--o1);font-weight:600;margin-top:3px}
@@ -578,7 +599,7 @@ footer{background:#123a1e;color:#dff0e2;margin-top:20px}
         <span class="sbadge">Nationwide Presence</span>
         <h2>Partnering with Farmers<br>Across Pakistan</h2>
         <span class="su urdu">پاکستان بھر کے کسانوں کا ساتھی</span>
-        <p>From Multan to farms across Punjab, our team offers genuine products and honest, field level advice.</p>
+        <p>From Multan to farms across Punjab, our team offers quality products and honest, field level advice.</p>
         <div class="sbtns">
           <button class="sbtn1" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">Learn More</button>
           <a class="sbtn2" href="#footer-contact" style="display:inline-flex;align-items:center;justify-content:center">Talk to Our Team</a>
@@ -587,30 +608,10 @@ footer{background:#123a1e;color:#dff0e2;margin-top:20px}
     </div>
   </div>
 
-    <div class="hero-wave-wrap" aria-hidden="true">
-    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-      <defs>
-        <linearGradient id="silverShineGrad" gradientUnits="userSpaceOnUse" x1="-900" y1="0" x2="0" y2="0" spreadMethod="reflect">
-          <stop offset="0%" stop-color="#9aa3ad"/>
-          <stop offset="12%" stop-color="#e8ecef"/>
-          <stop offset="24%" stop-color="#ffffff"/>
-          <stop offset="36%" stop-color="#b7bec6"/>
-          <stop offset="50%" stop-color="#8b939c"/>
-          <stop offset="64%" stop-color="#c9cfd4"/>
-          <stop offset="76%" stop-color="#ffffff"/>
-          <stop offset="88%" stop-color="#dfe3e6"/>
-          <stop offset="100%" stop-color="#9aa3ad"/>
-          <animateTransform attributeName="gradientTransform" type="translate" from="0 0" to="1800 0" dur="3.2s" repeatCount="indefinite"/>
-        </linearGradient>
-      </defs>
-      <path class="wv-sine-fill" d="M0.0,55.00 L10.0,63.00 L20.0,68.86 L30.0,71.00 L40.0,68.86 L50.0,63.00 L60.0,55.00 L70.0,47.00 L80.0,41.14 L90.0,39.00 L100.0,41.14 L110.0,47.00 L120.0,55.00 L130.0,63.00 L140.0,68.86 L150.0,71.00 L160.0,68.86 L170.0,63.00 L180.0,55.00 L190.0,47.00 L200.0,41.14 L210.0,39.00 L220.0,41.14 L230.0,47.00 L240.0,55.00 L250.0,63.00 L260.0,68.86 L270.0,71.00 L280.0,68.86 L290.0,63.00 L300.0,55.00 L310.0,47.00 L320.0,41.14 L330.0,39.00 L340.0,41.14 L350.0,47.00 L360.0,55.00 L370.0,63.00 L380.0,68.86 L390.0,71.00 L400.0,68.86 L410.0,63.00 L420.0,55.00 L430.0,47.00 L440.0,41.14 L450.0,39.00 L460.0,41.14 L470.0,47.00 L480.0,55.00 L490.0,63.00 L500.0,68.86 L510.0,71.00 L520.0,68.86 L530.0,63.00 L540.0,55.00 L550.0,47.00 L560.0,41.14 L570.0,39.00 L580.0,41.14 L590.0,47.00 L600.0,55.00 L610.0,63.00 L620.0,68.86 L630.0,71.00 L640.0,68.86 L650.0,63.00 L660.0,55.00 L670.0,47.00 L680.0,41.14 L690.0,39.00 L700.0,41.14 L710.0,47.00 L720.0,55.00 L730.0,63.00 L740.0,68.86 L750.0,71.00 L760.0,68.86 L770.0,63.00 L780.0,55.00 L790.0,47.00 L800.0,41.14 L810.0,39.00 L820.0,41.14 L830.0,47.00 L840.0,55.00 L850.0,63.00 L860.0,68.86 L870.0,71.00 L880.0,68.86 L890.0,63.00 L900.0,55.00 L910.0,47.00 L920.0,41.14 L930.0,39.00 L940.0,41.14 L950.0,47.00 L960.0,55.00 L970.0,63.00 L980.0,68.86 L990.0,71.00 L1000.0,68.86 L1010.0,63.00 L1020.0,55.00 L1030.0,47.00 L1040.0,41.14 L1050.0,39.00 L1060.0,41.14 L1070.0,47.00 L1080.0,55.00 L1090.0,63.00 L1100.0,68.86 L1110.0,71.00 L1120.0,68.86 L1130.0,63.00 L1140.0,55.00 L1150.0,47.00 L1160.0,41.14 L1170.0,39.00 L1180.0,41.14 L1190.0,47.00 L1200.0,55.00 L1200.0,120 L0.0,120 Z">
-        <animate attributeName="d" dur="4.5s" repeatCount="indefinite" calcMode="linear" values="M0.0,55.00 L10.0,63.00 L20.0,68.86 L30.0,71.00 L40.0,68.86 L50.0,63.00 L60.0,55.00 L70.0,47.00 L80.0,41.14 L90.0,39.00 L100.0,41.14 L110.0,47.00 L120.0,55.00 L130.0,63.00 L140.0,68.86 L150.0,71.00 L160.0,68.86 L170.0,63.00 L180.0,55.00 L190.0,47.00 L200.0,41.14 L210.0,39.00 L220.0,41.14 L230.0,47.00 L240.0,55.00 L250.0,63.00 L260.0,68.86 L270.0,71.00 L280.0,68.86 L290.0,63.00 L300.0,55.00 L310.0,47.00 L320.0,41.14 L330.0,39.00 L340.0,41.14 L350.0,47.00 L360.0,55.00 L370.0,63.00 L380.0,68.86 L390.0,71.00 L400.0,68.86 L410.0,63.00 L420.0,55.00 L430.0,47.00 L440.0,41.14 L450.0,39.00 L460.0,41.14 L470.0,47.00 L480.0,55.00 L490.0,63.00 L500.0,68.86 L510.0,71.00 L520.0,68.86 L530.0,63.00 L540.0,55.00 L550.0,47.00 L560.0,41.14 L570.0,39.00 L580.0,41.14 L590.0,47.00 L600.0,55.00 L610.0,63.00 L620.0,68.86 L630.0,71.00 L640.0,68.86 L650.0,63.00 L660.0,55.00 L670.0,47.00 L680.0,41.14 L690.0,39.00 L700.0,41.14 L710.0,47.00 L720.0,55.00 L730.0,63.00 L740.0,68.86 L750.0,71.00 L760.0,68.86 L770.0,63.00 L780.0,55.00 L790.0,47.00 L800.0,41.14 L810.0,39.00 L820.0,41.14 L830.0,47.00 L840.0,55.00 L850.0,63.00 L860.0,68.86 L870.0,71.00 L880.0,68.86 L890.0,63.00 L900.0,55.00 L910.0,47.00 L920.0,41.14 L930.0,39.00 L940.0,41.14 L950.0,47.00 L960.0,55.00 L970.0,63.00 L980.0,68.86 L990.0,71.00 L1000.0,68.86 L1010.0,63.00 L1020.0,55.00 L1030.0,47.00 L1040.0,41.14 L1050.0,39.00 L1060.0,41.14 L1070.0,47.00 L1080.0,55.00 L1090.0,63.00 L1100.0,68.86 L1110.0,71.00 L1120.0,68.86 L1130.0,63.00 L1140.0,55.00 L1150.0,47.00 L1160.0,41.14 L1170.0,39.00 L1180.0,41.14 L1190.0,47.00 L1200.0,55.00 L1200.0,120 L0.0,120 Z;M0.0,71.00 L10.0,68.86 L20.0,63.00 L30.0,55.00 L40.0,47.00 L50.0,41.14 L60.0,39.00 L70.0,41.14 L80.0,47.00 L90.0,55.00 L100.0,63.00 L110.0,68.86 L120.0,71.00 L130.0,68.86 L140.0,63.00 L150.0,55.00 L160.0,47.00 L170.0,41.14 L180.0,39.00 L190.0,41.14 L200.0,47.00 L210.0,55.00 L220.0,63.00 L230.0,68.86 L240.0,71.00 L250.0,68.86 L260.0,63.00 L270.0,55.00 L280.0,47.00 L290.0,41.14 L300.0,39.00 L310.0,41.14 L320.0,47.00 L330.0,55.00 L340.0,63.00 L350.0,68.86 L360.0,71.00 L370.0,68.86 L380.0,63.00 L390.0,55.00 L400.0,47.00 L410.0,41.14 L420.0,39.00 L430.0,41.14 L440.0,47.00 L450.0,55.00 L460.0,63.00 L470.0,68.86 L480.0,71.00 L490.0,68.86 L500.0,63.00 L510.0,55.00 L520.0,47.00 L530.0,41.14 L540.0,39.00 L550.0,41.14 L560.0,47.00 L570.0,55.00 L580.0,63.00 L590.0,68.86 L600.0,71.00 L610.0,68.86 L620.0,63.00 L630.0,55.00 L640.0,47.00 L650.0,41.14 L660.0,39.00 L670.0,41.14 L680.0,47.00 L690.0,55.00 L700.0,63.00 L710.0,68.86 L720.0,71.00 L730.0,68.86 L740.0,63.00 L750.0,55.00 L760.0,47.00 L770.0,41.14 L780.0,39.00 L790.0,41.14 L800.0,47.00 L810.0,55.00 L820.0,63.00 L830.0,68.86 L840.0,71.00 L850.0,68.86 L860.0,63.00 L870.0,55.00 L880.0,47.00 L890.0,41.14 L900.0,39.00 L910.0,41.14 L920.0,47.00 L930.0,55.00 L940.0,63.00 L950.0,68.86 L960.0,71.00 L970.0,68.86 L980.0,63.00 L990.0,55.00 L1000.0,47.00 L1010.0,41.14 L1020.0,39.00 L1030.0,41.14 L1040.0,47.00 L1050.0,55.00 L1060.0,63.00 L1070.0,68.86 L1080.0,71.00 L1090.0,68.86 L1100.0,63.00 L1110.0,55.00 L1120.0,47.00 L1130.0,41.14 L1140.0,39.00 L1150.0,41.14 L1160.0,47.00 L1170.0,55.00 L1180.0,63.00 L1190.0,68.86 L1200.0,71.00 L1200.0,120 L0.0,120 Z;M0.0,55.00 L10.0,47.00 L20.0,41.14 L30.0,39.00 L40.0,41.14 L50.0,47.00 L60.0,55.00 L70.0,63.00 L80.0,68.86 L90.0,71.00 L100.0,68.86 L110.0,63.00 L120.0,55.00 L130.0,47.00 L140.0,41.14 L150.0,39.00 L160.0,41.14 L170.0,47.00 L180.0,55.00 L190.0,63.00 L200.0,68.86 L210.0,71.00 L220.0,68.86 L230.0,63.00 L240.0,55.00 L250.0,47.00 L260.0,41.14 L270.0,39.00 L280.0,41.14 L290.0,47.00 L300.0,55.00 L310.0,63.00 L320.0,68.86 L330.0,71.00 L340.0,68.86 L350.0,63.00 L360.0,55.00 L370.0,47.00 L380.0,41.14 L390.0,39.00 L400.0,41.14 L410.0,47.00 L420.0,55.00 L430.0,63.00 L440.0,68.86 L450.0,71.00 L460.0,68.86 L470.0,63.00 L480.0,55.00 L490.0,47.00 L500.0,41.14 L510.0,39.00 L520.0,41.14 L530.0,47.00 L540.0,55.00 L550.0,63.00 L560.0,68.86 L570.0,71.00 L580.0,68.86 L590.0,63.00 L600.0,55.00 L610.0,47.00 L620.0,41.14 L630.0,39.00 L640.0,41.14 L650.0,47.00 L660.0,55.00 L670.0,63.00 L680.0,68.86 L690.0,71.00 L700.0,68.86 L710.0,63.00 L720.0,55.00 L730.0,47.00 L740.0,41.14 L750.0,39.00 L760.0,41.14 L770.0,47.00 L780.0,55.00 L790.0,63.00 L800.0,68.86 L810.0,71.00 L820.0,68.86 L830.0,63.00 L840.0,55.00 L850.0,47.00 L860.0,41.14 L870.0,39.00 L880.0,41.14 L890.0,47.00 L900.0,55.00 L910.0,63.00 L920.0,68.86 L930.0,71.00 L940.0,68.86 L950.0,63.00 L960.0,55.00 L970.0,47.00 L980.0,41.14 L990.0,39.00 L1000.0,41.14 L1010.0,47.00 L1020.0,55.00 L1030.0,63.00 L1040.0,68.86 L1050.0,71.00 L1060.0,68.86 L1070.0,63.00 L1080.0,55.00 L1090.0,47.00 L1100.0,41.14 L1110.0,39.00 L1120.0,41.14 L1130.0,47.00 L1140.0,55.00 L1150.0,63.00 L1160.0,68.86 L1170.0,71.00 L1180.0,68.86 L1190.0,63.00 L1200.0,55.00 L1200.0,120 L0.0,120 Z;M0.0,39.00 L10.0,41.14 L20.0,47.00 L30.0,55.00 L40.0,63.00 L50.0,68.86 L60.0,71.00 L70.0,68.86 L80.0,63.00 L90.0,55.00 L100.0,47.00 L110.0,41.14 L120.0,39.00 L130.0,41.14 L140.0,47.00 L150.0,55.00 L160.0,63.00 L170.0,68.86 L180.0,71.00 L190.0,68.86 L200.0,63.00 L210.0,55.00 L220.0,47.00 L230.0,41.14 L240.0,39.00 L250.0,41.14 L260.0,47.00 L270.0,55.00 L280.0,63.00 L290.0,68.86 L300.0,71.00 L310.0,68.86 L320.0,63.00 L330.0,55.00 L340.0,47.00 L350.0,41.14 L360.0,39.00 L370.0,41.14 L380.0,47.00 L390.0,55.00 L400.0,63.00 L410.0,68.86 L420.0,71.00 L430.0,68.86 L440.0,63.00 L450.0,55.00 L460.0,47.00 L470.0,41.14 L480.0,39.00 L490.0,41.14 L500.0,47.00 L510.0,55.00 L520.0,63.00 L530.0,68.86 L540.0,71.00 L550.0,68.86 L560.0,63.00 L570.0,55.00 L580.0,47.00 L590.0,41.14 L600.0,39.00 L610.0,41.14 L620.0,47.00 L630.0,55.00 L640.0,63.00 L650.0,68.86 L660.0,71.00 L670.0,68.86 L680.0,63.00 L690.0,55.00 L700.0,47.00 L710.0,41.14 L720.0,39.00 L730.0,41.14 L740.0,47.00 L750.0,55.00 L760.0,63.00 L770.0,68.86 L780.0,71.00 L790.0,68.86 L800.0,63.00 L810.0,55.00 L820.0,47.00 L830.0,41.14 L840.0,39.00 L850.0,41.14 L860.0,47.00 L870.0,55.00 L880.0,63.00 L890.0,68.86 L900.0,71.00 L910.0,68.86 L920.0,63.00 L930.0,55.00 L940.0,47.00 L950.0,41.14 L960.0,39.00 L970.0,41.14 L980.0,47.00 L990.0,55.00 L1000.0,63.00 L1010.0,68.86 L1020.0,71.00 L1030.0,68.86 L1040.0,63.00 L1050.0,55.00 L1060.0,47.00 L1070.0,41.14 L1080.0,39.00 L1090.0,41.14 L1100.0,47.00 L1110.0,55.00 L1120.0,63.00 L1130.0,68.86 L1140.0,71.00 L1150.0,68.86 L1160.0,63.00 L1170.0,55.00 L1180.0,47.00 L1190.0,41.14 L1200.0,39.00 L1200.0,120 L0.0,120 Z;M0.0,55.00 L10.0,63.00 L20.0,68.86 L30.0,71.00 L40.0,68.86 L50.0,63.00 L60.0,55.00 L70.0,47.00 L80.0,41.14 L90.0,39.00 L100.0,41.14 L110.0,47.00 L120.0,55.00 L130.0,63.00 L140.0,68.86 L150.0,71.00 L160.0,68.86 L170.0,63.00 L180.0,55.00 L190.0,47.00 L200.0,41.14 L210.0,39.00 L220.0,41.14 L230.0,47.00 L240.0,55.00 L250.0,63.00 L260.0,68.86 L270.0,71.00 L280.0,68.86 L290.0,63.00 L300.0,55.00 L310.0,47.00 L320.0,41.14 L330.0,39.00 L340.0,41.14 L350.0,47.00 L360.0,55.00 L370.0,63.00 L380.0,68.86 L390.0,71.00 L400.0,68.86 L410.0,63.00 L420.0,55.00 L430.0,47.00 L440.0,41.14 L450.0,39.00 L460.0,41.14 L470.0,47.00 L480.0,55.00 L490.0,63.00 L500.0,68.86 L510.0,71.00 L520.0,68.86 L530.0,63.00 L540.0,55.00 L550.0,47.00 L560.0,41.14 L570.0,39.00 L580.0,41.14 L590.0,47.00 L600.0,55.00 L610.0,63.00 L620.0,68.86 L630.0,71.00 L640.0,68.86 L650.0,63.00 L660.0,55.00 L670.0,47.00 L680.0,41.14 L690.0,39.00 L700.0,41.14 L710.0,47.00 L720.0,55.00 L730.0,63.00 L740.0,68.86 L750.0,71.00 L760.0,68.86 L770.0,63.00 L780.0,55.00 L790.0,47.00 L800.0,41.14 L810.0,39.00 L820.0,41.14 L830.0,47.00 L840.0,55.00 L850.0,63.00 L860.0,68.86 L870.0,71.00 L880.0,68.86 L890.0,63.00 L900.0,55.00 L910.0,47.00 L920.0,41.14 L930.0,39.00 L940.0,41.14 L950.0,47.00 L960.0,55.00 L970.0,63.00 L980.0,68.86 L990.0,71.00 L1000.0,68.86 L1010.0,63.00 L1020.0,55.00 L1030.0,47.00 L1040.0,41.14 L1050.0,39.00 L1060.0,41.14 L1070.0,47.00 L1080.0,55.00 L1090.0,63.00 L1100.0,68.86 L1110.0,71.00 L1120.0,68.86 L1130.0,63.00 L1140.0,55.00 L1150.0,47.00 L1160.0,41.14 L1170.0,39.00 L1180.0,41.14 L1190.0,47.00 L1200.0,55.00 L1200.0,120 L0.0,120 Z"/>
-      </path>
-      <path class="wv-sine-line" d="M0.0,55.00 L10.0,63.00 L20.0,68.86 L30.0,71.00 L40.0,68.86 L50.0,63.00 L60.0,55.00 L70.0,47.00 L80.0,41.14 L90.0,39.00 L100.0,41.14 L110.0,47.00 L120.0,55.00 L130.0,63.00 L140.0,68.86 L150.0,71.00 L160.0,68.86 L170.0,63.00 L180.0,55.00 L190.0,47.00 L200.0,41.14 L210.0,39.00 L220.0,41.14 L230.0,47.00 L240.0,55.00 L250.0,63.00 L260.0,68.86 L270.0,71.00 L280.0,68.86 L290.0,63.00 L300.0,55.00 L310.0,47.00 L320.0,41.14 L330.0,39.00 L340.0,41.14 L350.0,47.00 L360.0,55.00 L370.0,63.00 L380.0,68.86 L390.0,71.00 L400.0,68.86 L410.0,63.00 L420.0,55.00 L430.0,47.00 L440.0,41.14 L450.0,39.00 L460.0,41.14 L470.0,47.00 L480.0,55.00 L490.0,63.00 L500.0,68.86 L510.0,71.00 L520.0,68.86 L530.0,63.00 L540.0,55.00 L550.0,47.00 L560.0,41.14 L570.0,39.00 L580.0,41.14 L590.0,47.00 L600.0,55.00 L610.0,63.00 L620.0,68.86 L630.0,71.00 L640.0,68.86 L650.0,63.00 L660.0,55.00 L670.0,47.00 L680.0,41.14 L690.0,39.00 L700.0,41.14 L710.0,47.00 L720.0,55.00 L730.0,63.00 L740.0,68.86 L750.0,71.00 L760.0,68.86 L770.0,63.00 L780.0,55.00 L790.0,47.00 L800.0,41.14 L810.0,39.00 L820.0,41.14 L830.0,47.00 L840.0,55.00 L850.0,63.00 L860.0,68.86 L870.0,71.00 L880.0,68.86 L890.0,63.00 L900.0,55.00 L910.0,47.00 L920.0,41.14 L930.0,39.00 L940.0,41.14 L950.0,47.00 L960.0,55.00 L970.0,63.00 L980.0,68.86 L990.0,71.00 L1000.0,68.86 L1010.0,63.00 L1020.0,55.00 L1030.0,47.00 L1040.0,41.14 L1050.0,39.00 L1060.0,41.14 L1070.0,47.00 L1080.0,55.00 L1090.0,63.00 L1100.0,68.86 L1110.0,71.00 L1120.0,68.86 L1130.0,63.00 L1140.0,55.00 L1150.0,47.00 L1160.0,41.14 L1170.0,39.00 L1180.0,41.14 L1190.0,47.00 L1200.0,55.00">
-        <animate attributeName="d" dur="4.5s" repeatCount="indefinite" calcMode="linear" values="M0.0,55.00 L10.0,63.00 L20.0,68.86 L30.0,71.00 L40.0,68.86 L50.0,63.00 L60.0,55.00 L70.0,47.00 L80.0,41.14 L90.0,39.00 L100.0,41.14 L110.0,47.00 L120.0,55.00 L130.0,63.00 L140.0,68.86 L150.0,71.00 L160.0,68.86 L170.0,63.00 L180.0,55.00 L190.0,47.00 L200.0,41.14 L210.0,39.00 L220.0,41.14 L230.0,47.00 L240.0,55.00 L250.0,63.00 L260.0,68.86 L270.0,71.00 L280.0,68.86 L290.0,63.00 L300.0,55.00 L310.0,47.00 L320.0,41.14 L330.0,39.00 L340.0,41.14 L350.0,47.00 L360.0,55.00 L370.0,63.00 L380.0,68.86 L390.0,71.00 L400.0,68.86 L410.0,63.00 L420.0,55.00 L430.0,47.00 L440.0,41.14 L450.0,39.00 L460.0,41.14 L470.0,47.00 L480.0,55.00 L490.0,63.00 L500.0,68.86 L510.0,71.00 L520.0,68.86 L530.0,63.00 L540.0,55.00 L550.0,47.00 L560.0,41.14 L570.0,39.00 L580.0,41.14 L590.0,47.00 L600.0,55.00 L610.0,63.00 L620.0,68.86 L630.0,71.00 L640.0,68.86 L650.0,63.00 L660.0,55.00 L670.0,47.00 L680.0,41.14 L690.0,39.00 L700.0,41.14 L710.0,47.00 L720.0,55.00 L730.0,63.00 L740.0,68.86 L750.0,71.00 L760.0,68.86 L770.0,63.00 L780.0,55.00 L790.0,47.00 L800.0,41.14 L810.0,39.00 L820.0,41.14 L830.0,47.00 L840.0,55.00 L850.0,63.00 L860.0,68.86 L870.0,71.00 L880.0,68.86 L890.0,63.00 L900.0,55.00 L910.0,47.00 L920.0,41.14 L930.0,39.00 L940.0,41.14 L950.0,47.00 L960.0,55.00 L970.0,63.00 L980.0,68.86 L990.0,71.00 L1000.0,68.86 L1010.0,63.00 L1020.0,55.00 L1030.0,47.00 L1040.0,41.14 L1050.0,39.00 L1060.0,41.14 L1070.0,47.00 L1080.0,55.00 L1090.0,63.00 L1100.0,68.86 L1110.0,71.00 L1120.0,68.86 L1130.0,63.00 L1140.0,55.00 L1150.0,47.00 L1160.0,41.14 L1170.0,39.00 L1180.0,41.14 L1190.0,47.00 L1200.0,55.00;M0.0,71.00 L10.0,68.86 L20.0,63.00 L30.0,55.00 L40.0,47.00 L50.0,41.14 L60.0,39.00 L70.0,41.14 L80.0,47.00 L90.0,55.00 L100.0,63.00 L110.0,68.86 L120.0,71.00 L130.0,68.86 L140.0,63.00 L150.0,55.00 L160.0,47.00 L170.0,41.14 L180.0,39.00 L190.0,41.14 L200.0,47.00 L210.0,55.00 L220.0,63.00 L230.0,68.86 L240.0,71.00 L250.0,68.86 L260.0,63.00 L270.0,55.00 L280.0,47.00 L290.0,41.14 L300.0,39.00 L310.0,41.14 L320.0,47.00 L330.0,55.00 L340.0,63.00 L350.0,68.86 L360.0,71.00 L370.0,68.86 L380.0,63.00 L390.0,55.00 L400.0,47.00 L410.0,41.14 L420.0,39.00 L430.0,41.14 L440.0,47.00 L450.0,55.00 L460.0,63.00 L470.0,68.86 L480.0,71.00 L490.0,68.86 L500.0,63.00 L510.0,55.00 L520.0,47.00 L530.0,41.14 L540.0,39.00 L550.0,41.14 L560.0,47.00 L570.0,55.00 L580.0,63.00 L590.0,68.86 L600.0,71.00 L610.0,68.86 L620.0,63.00 L630.0,55.00 L640.0,47.00 L650.0,41.14 L660.0,39.00 L670.0,41.14 L680.0,47.00 L690.0,55.00 L700.0,63.00 L710.0,68.86 L720.0,71.00 L730.0,68.86 L740.0,63.00 L750.0,55.00 L760.0,47.00 L770.0,41.14 L780.0,39.00 L790.0,41.14 L800.0,47.00 L810.0,55.00 L820.0,63.00 L830.0,68.86 L840.0,71.00 L850.0,68.86 L860.0,63.00 L870.0,55.00 L880.0,47.00 L890.0,41.14 L900.0,39.00 L910.0,41.14 L920.0,47.00 L930.0,55.00 L940.0,63.00 L950.0,68.86 L960.0,71.00 L970.0,68.86 L980.0,63.00 L990.0,55.00 L1000.0,47.00 L1010.0,41.14 L1020.0,39.00 L1030.0,41.14 L1040.0,47.00 L1050.0,55.00 L1060.0,63.00 L1070.0,68.86 L1080.0,71.00 L1090.0,68.86 L1100.0,63.00 L1110.0,55.00 L1120.0,47.00 L1130.0,41.14 L1140.0,39.00 L1150.0,41.14 L1160.0,47.00 L1170.0,55.00 L1180.0,63.00 L1190.0,68.86 L1200.0,71.00;M0.0,55.00 L10.0,47.00 L20.0,41.14 L30.0,39.00 L40.0,41.14 L50.0,47.00 L60.0,55.00 L70.0,63.00 L80.0,68.86 L90.0,71.00 L100.0,68.86 L110.0,63.00 L120.0,55.00 L130.0,47.00 L140.0,41.14 L150.0,39.00 L160.0,41.14 L170.0,47.00 L180.0,55.00 L190.0,63.00 L200.0,68.86 L210.0,71.00 L220.0,68.86 L230.0,63.00 L240.0,55.00 L250.0,47.00 L260.0,41.14 L270.0,39.00 L280.0,41.14 L290.0,47.00 L300.0,55.00 L310.0,63.00 L320.0,68.86 L330.0,71.00 L340.0,68.86 L350.0,63.00 L360.0,55.00 L370.0,47.00 L380.0,41.14 L390.0,39.00 L400.0,41.14 L410.0,47.00 L420.0,55.00 L430.0,63.00 L440.0,68.86 L450.0,71.00 L460.0,68.86 L470.0,63.00 L480.0,55.00 L490.0,47.00 L500.0,41.14 L510.0,39.00 L520.0,41.14 L530.0,47.00 L540.0,55.00 L550.0,63.00 L560.0,68.86 L570.0,71.00 L580.0,68.86 L590.0,63.00 L600.0,55.00 L610.0,47.00 L620.0,41.14 L630.0,39.00 L640.0,41.14 L650.0,47.00 L660.0,55.00 L670.0,63.00 L680.0,68.86 L690.0,71.00 L700.0,68.86 L710.0,63.00 L720.0,55.00 L730.0,47.00 L740.0,41.14 L750.0,39.00 L760.0,41.14 L770.0,47.00 L780.0,55.00 L790.0,63.00 L800.0,68.86 L810.0,71.00 L820.0,68.86 L830.0,63.00 L840.0,55.00 L850.0,47.00 L860.0,41.14 L870.0,39.00 L880.0,41.14 L890.0,47.00 L900.0,55.00 L910.0,63.00 L920.0,68.86 L930.0,71.00 L940.0,68.86 L950.0,63.00 L960.0,55.00 L970.0,47.00 L980.0,41.14 L990.0,39.00 L1000.0,41.14 L1010.0,47.00 L1020.0,55.00 L1030.0,63.00 L1040.0,68.86 L1050.0,71.00 L1060.0,68.86 L1070.0,63.00 L1080.0,55.00 L1090.0,47.00 L1100.0,41.14 L1110.0,39.00 L1120.0,41.14 L1130.0,47.00 L1140.0,55.00 L1150.0,63.00 L1160.0,68.86 L1170.0,71.00 L1180.0,68.86 L1190.0,63.00 L1200.0,55.00;M0.0,39.00 L10.0,41.14 L20.0,47.00 L30.0,55.00 L40.0,63.00 L50.0,68.86 L60.0,71.00 L70.0,68.86 L80.0,63.00 L90.0,55.00 L100.0,47.00 L110.0,41.14 L120.0,39.00 L130.0,41.14 L140.0,47.00 L150.0,55.00 L160.0,63.00 L170.0,68.86 L180.0,71.00 L190.0,68.86 L200.0,63.00 L210.0,55.00 L220.0,47.00 L230.0,41.14 L240.0,39.00 L250.0,41.14 L260.0,47.00 L270.0,55.00 L280.0,63.00 L290.0,68.86 L300.0,71.00 L310.0,68.86 L320.0,63.00 L330.0,55.00 L340.0,47.00 L350.0,41.14 L360.0,39.00 L370.0,41.14 L380.0,47.00 L390.0,55.00 L400.0,63.00 L410.0,68.86 L420.0,71.00 L430.0,68.86 L440.0,63.00 L450.0,55.00 L460.0,47.00 L470.0,41.14 L480.0,39.00 L490.0,41.14 L500.0,47.00 L510.0,55.00 L520.0,63.00 L530.0,68.86 L540.0,71.00 L550.0,68.86 L560.0,63.00 L570.0,55.00 L580.0,47.00 L590.0,41.14 L600.0,39.00 L610.0,41.14 L620.0,47.00 L630.0,55.00 L640.0,63.00 L650.0,68.86 L660.0,71.00 L670.0,68.86 L680.0,63.00 L690.0,55.00 L700.0,47.00 L710.0,41.14 L720.0,39.00 L730.0,41.14 L740.0,47.00 L750.0,55.00 L760.0,63.00 L770.0,68.86 L780.0,71.00 L790.0,68.86 L800.0,63.00 L810.0,55.00 L820.0,47.00 L830.0,41.14 L840.0,39.00 L850.0,41.14 L860.0,47.00 L870.0,55.00 L880.0,63.00 L890.0,68.86 L900.0,71.00 L910.0,68.86 L920.0,63.00 L930.0,55.00 L940.0,47.00 L950.0,41.14 L960.0,39.00 L970.0,41.14 L980.0,47.00 L990.0,55.00 L1000.0,63.00 L1010.0,68.86 L1020.0,71.00 L1030.0,68.86 L1040.0,63.00 L1050.0,55.00 L1060.0,47.00 L1070.0,41.14 L1080.0,39.00 L1090.0,41.14 L1100.0,47.00 L1110.0,55.00 L1120.0,63.00 L1130.0,68.86 L1140.0,71.00 L1150.0,68.86 L1160.0,63.00 L1170.0,55.00 L1180.0,47.00 L1190.0,41.14 L1200.0,39.00;M0.0,55.00 L10.0,63.00 L20.0,68.86 L30.0,71.00 L40.0,68.86 L50.0,63.00 L60.0,55.00 L70.0,47.00 L80.0,41.14 L90.0,39.00 L100.0,41.14 L110.0,47.00 L120.0,55.00 L130.0,63.00 L140.0,68.86 L150.0,71.00 L160.0,68.86 L170.0,63.00 L180.0,55.00 L190.0,47.00 L200.0,41.14 L210.0,39.00 L220.0,41.14 L230.0,47.00 L240.0,55.00 L250.0,63.00 L260.0,68.86 L270.0,71.00 L280.0,68.86 L290.0,63.00 L300.0,55.00 L310.0,47.00 L320.0,41.14 L330.0,39.00 L340.0,41.14 L350.0,47.00 L360.0,55.00 L370.0,63.00 L380.0,68.86 L390.0,71.00 L400.0,68.86 L410.0,63.00 L420.0,55.00 L430.0,47.00 L440.0,41.14 L450.0,39.00 L460.0,41.14 L470.0,47.00 L480.0,55.00 L490.0,63.00 L500.0,68.86 L510.0,71.00 L520.0,68.86 L530.0,63.00 L540.0,55.00 L550.0,47.00 L560.0,41.14 L570.0,39.00 L580.0,41.14 L590.0,47.00 L600.0,55.00 L610.0,63.00 L620.0,68.86 L630.0,71.00 L640.0,68.86 L650.0,63.00 L660.0,55.00 L670.0,47.00 L680.0,41.14 L690.0,39.00 L700.0,41.14 L710.0,47.00 L720.0,55.00 L730.0,63.00 L740.0,68.86 L750.0,71.00 L760.0,68.86 L770.0,63.00 L780.0,55.00 L790.0,47.00 L800.0,41.14 L810.0,39.00 L820.0,41.14 L830.0,47.00 L840.0,55.00 L850.0,63.00 L860.0,68.86 L870.0,71.00 L880.0,68.86 L890.0,63.00 L900.0,55.00 L910.0,47.00 L920.0,41.14 L930.0,39.00 L940.0,41.14 L950.0,47.00 L960.0,55.00 L970.0,63.00 L980.0,68.86 L990.0,71.00 L1000.0,68.86 L1010.0,63.00 L1020.0,55.00 L1030.0,47.00 L1040.0,41.14 L1050.0,39.00 L1060.0,41.14 L1070.0,47.00 L1080.0,55.00 L1090.0,63.00 L1100.0,68.86 L1110.0,71.00 L1120.0,68.86 L1130.0,63.00 L1140.0,55.00 L1150.0,47.00 L1160.0,41.14 L1170.0,39.00 L1180.0,41.14 L1190.0,47.00 L1200.0,55.00"/>
-      </path>
-    </svg>
-  </div>
+    <div class="hero-straight-wrap" aria-hidden="true">
+      <div class="hero-straight-fill"></div>
+      <div class="hero-straight-line"><span class="hsl-glow"></span></div>
+    </div>
 
   <div class="hero-controls-layer">
     <div class="hero-slide-inner">
@@ -633,13 +634,13 @@ footer{background:#123a1e;color:#dff0e2;margin-top:20px}
           <div class="lc-glow"></div>
           <div class="lc-photo-frame">
             <div class="lc-frame-ring"></div>
-            <div class="lc-photo"><img src="assets/team/ceo-photo.jpg" alt="Mr. Muhammad Yusuf Wahla, Founder &amp; Chairman, Excel Crop Group"></div>
+            <div class="lc-photo"><img src="assets/team/ceo-photo.jpg" alt="Mr. Muhammad Yosuf Wahla, Founder &amp; Chairman, Excel Crop Group"></div>
           </div>
           <div class="lc-body">
-            <div class="lc-name">Mr. Muhammad Yusuf Wahla</div>
+            <div class="lc-name">Mr. Muhammad Yosuf Wahla</div>
             <div class="lc-role">Founder &amp; Chairman<span class="lc-role-sub">Excel Crop Group</span></div>
             <div class="lc-label lc-vision-title"><svg class="lc-ic" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg>Our Vision Is</div>
-            <p class="lc-quote">To develop an <mark>atmosphere</mark> where mankind, agriculture and nature support each other.</p>
+            <p class="lc-quote">To develop an atmosphere where mankind, agriculture and nature support each other.</p>
           </div>
         </div>
       </aside>
@@ -651,7 +652,7 @@ footer{background:#123a1e;color:#dff0e2;margin-top:20px}
           <div class="lc-glow"></div>
           <div class="lc-body lc-body-mission">
             <div class="lc-label lc-vision-title"><svg class="lc-ic" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>Our Mission Is</div>
-            <p class="lc-quote">To lead Pakistan's agricultural <mark>transformation</mark> through innovative, knowledge-driven crop protection and production solutions, safeguarding the interests of all stakeholders while strengthening the national economy and promoting sustainable growth.</p>
+            <p class="lc-quote">To lead Pakistan's agricultural transformation through innovative, knowledge-driven crop protection and production solutions, safeguarding the interests of all stakeholders while strengthening the national economy and promoting sustainable growth.</p>
           </div>
         </div>
       </aside>
@@ -663,23 +664,13 @@ footer{background:#123a1e;color:#dff0e2;margin-top:20px}
 
 <!-- ============ OUR BRANDS ============ -->
 <section class="sec brands-sec"><div class="container">
-  <div class="sch"><h2 class="stitle">Our Brands<span class="su urdu">ہمارے برانڈز</span></h2></div>
-  <div class="brands-grid">
-    <div class="brand-card">
-      <div class="brand-logo"><img src="assets/ecc-new/excel-crop-care-logo-official.png" alt="Excel Crop Care logo"></div>
-      <h4>Excel Crop Care</h4>
-    </div>
-    <div class="brand-card">
-      <div class="brand-logo"><img src="assets/ecc-new/bonti-seed-logo-cropped.png" alt="Bounty Corporation logo"></div>
-      <h4>Bounty Corporation (Private) Limited</h4>
-    </div>
-    <div class="brand-card">
-      <div class="brand-logo"><img src="assets/brands/hu-enterprises-logo.jpg" alt="HU Enterprises logo"></div>
-      <h4>HU Enterprises</h4>
-    </div>
-    <div class="brand-card">
-      <div class="brand-logo"><img src="assets/brands/fusion-agro-logo.jpg" alt="Fusion Agro LLP logo"></div>
-      <h4>Fusion Agro LLP</h4>
+  <div class="brands-strip">
+    <div class="brands-strip-label">OUR BRANDS</div>
+    <div class="brands-strip-row">
+      <div class="brand-wm"><div class="brand-wm-logo"><img src="assets/ecc-new/excel-crop-care-logo-official.png" alt="Excel Crop Care logo"></div><span>Excel Crop Care</span></div>
+      <div class="brand-wm"><div class="brand-wm-logo"><img src="assets/ecc-new/bonti-seed-logo-cropped.png" alt="Bounty Seed Corporation logo"></div><span>Bounty Seed Corporation (Pvt.) Ltd.</span></div>
+      <div class="brand-wm"><div class="brand-wm-logo"><img src="assets/brands/hu-enterprises-logo-transparent.png" alt="HU Enterprises logo"></div><span>HU Enterprises</span></div>
+      <div class="brand-wm"><div class="brand-wm-logo"><img src="assets/brands/fusion-agro-logo-transparent.png" alt="Fusion Agro LLP logo"></div><span>Fusion Agro LLP</span></div>
     </div>
   </div>
 </div></section>
@@ -740,7 +731,7 @@ footer{background:#123a1e;color:#dff0e2;margin-top:20px}
     <div class="reach-img mini-slider" data-images="[&quot;assets/stock/farmer-carrying-harvest.jpg&quot;, &quot;assets/ecc-new/customers-across-pakistan-1.jpg&quot;, &quot;assets/ecc-new/customers-across-pakistan-2.jpg&quot;]" data-alt="Farmers across Pakistan"></div>
     <div class="reach-txt">
       <p>From our base in Multan, Excel Crop Group serves farming communities that stretch well across Pakistan. Our products travel from the warehouse to fields growing cotton, wheat, rice, sugarcane, maize and vegetables, reaching customers in towns and villages across the country through a growing network of dealers and direct relationships built over years of consistent service.</p>
-      <p>The trust of these farmers is the foundation of our business. Whether a customer is placing a first order or has been buying from us for seasons, our commitment to genuine products and honest advice remains the same, no matter how far the field is from Multan.</p>
+      <p>The trust of these farmers is the foundation of our business. Whether a customer is placing a first order or has been buying from us for seasons, our commitment to quality products and honest advice remains the same, no matter how far the field is from Multan.</p>
       <div class="reach-boxes">
         <div class="reach-box pk">
           <span class="rb-title">Farmers From Pakistan</span>
@@ -832,6 +823,43 @@ footer{background:#123a1e;color:#dff0e2;margin-top:20px}
     <button class="vabtn" onclick="goToProducts('')">View All</button>
   </div>
   <div class="pgrid" id="hotGrid"></div>
+</div></section>
+
+<!-- ============ OUR VENDORS ============ -->
+<section class="sec alt" id="vendors"><div class="container">
+  <div class="sch"><h2 class="stitle">Our Vendors<span class="su urdu">ہمارے وینڈرز</span></h2></div>
+  <p class="vendors-intro">Excel Crop Care maintains a trusted network of local and international vendors to support the reliable sourcing and timely availability of quality agricultural products, packaging materials, and related supplies.</p>
+  <div class="vendors-grid">
+    <div class="vendor-col">
+      <div class="vendor-col-head"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 4 6 4 9s-1.5 6.4-4 9c-2.5-2.6-4-6-4-9s1.5-6.4 4-9z"/></svg>International Vendors</div>
+      <p class="vendor-col-sub">Connecting Excel Crop Care with established suppliers across global markets, supporting quality products, competitive sourcing and dependable international supply.</p>
+      <ul class="vendor-list">
+        <li><span>CAC Shanghai International Trading Co., Ltd.</span><em>China</em></li>
+        <li><span>ISKY Hong Kong Co., Ltd.</span><em>Hong Kong</em></li>
+        <li><span>Thai Harvest Ltd.</span><em>China</em></li>
+        <li><span>Sesoda Corporation</span><em>Taiwan</em></li>
+        <li><span>Jiangsu Sinmyang International Co., Ltd.</span><em>China</em></li>
+        <li><span>Hubei Jinghong Chemicals Co., Ltd.</span><em>China</em></li>
+        <li><span>Inner Mongolia Blok Biology Co., Ltd.</span><em>China</em></li>
+        <li><span>Zhejiang Xinnong Chemicals Co., Ltd.</span><em>China</em></li>
+        <li><span>Nanjing Huazhou Pharmaceutical Co., Ltd.</span><em>China</em></li>
+        <li><span>Zhejiang Jinfanda Biochemical Co., Ltd.</span><em>China</em></li>
+        <li><span>Nanjing Red Sun Biochemistry Co., Ltd.</span><em>China</em></li>
+      </ul>
+    </div>
+    <div class="vendor-col">
+      <div class="vendor-col-head"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-8h6v8"/></svg>National Vendors</div>
+      <p class="vendor-col-sub">Complementing our international sourcing with responsive, economical and timely access to essential products, packaging and operational supplies.</p>
+      <ul class="vendor-list">
+        <li><span>Suncrop Pesticides</span><em>Multan, Pakistan</em></li>
+        <li><span>NF Biotech (Pvt.) Ltd.</span><em>Pakistan</em></li>
+        <li><span>Multan Packages</span><em>Pakistan</em></li>
+        <li><span>Nafees Entrepreneur</span><em>Pakistan</em></li>
+        <li><span>Sarkhail Packages (Pvt.) Ltd.</span><em>Pakistan</em></li>
+      </ul>
+      <div class="vendor-fill-graphic"><img src="assets/ecc-custom/vendor-cornfield-sunset.jpg" alt="Green crop field at sunrise" loading="lazy"></div>
+    </div>
+  </div>
 </div></section>
 
 <!-- ============ OUR STORY ============ -->
@@ -1101,7 +1129,7 @@ const FARMER_TESTIMONIALS = [
   {name:"رانا اعجاز احمد", role:"Retailer", loc:"Sahiwal", lang:"ur", text:"دکان پر گاہک اکثر ایکسل کراپ گروپ کا نام لے کر ہی مانگتے ہیں۔"},
 
   {name:"Waseem Abbas", role:"Farmer", loc:"Vehari", lang:"en", text:"Their fungicide controlled the leaf spot problem we were dealing with, good results overall."},
-  {name:"Kashif Nawaz", role:"Farmer", loc:"Muzaffargarh", lang:"roman", text:"Achi genuine products hain, sirf hamare gaon delivery mein thora waqt zyada lagta hai."},
+  {name:"Kashif Nawaz", role:"Farmer", loc:"Muzaffargarh", lang:"roman", text:"Achi quality products hain, sirf hamare gaon delivery mein thora waqt zyada lagta hai."},
   {name:"سردار وقاص علی", role:"Agricultural Consultant", loc:"Muzaffargarh", lang:"ur", text:"میں اپنے بہت سے کلائنٹس کو ان کی مصنوعات تجویز کرتا ہوں کیونکہ نتائج ہمیشہ اچھے ملتے ہیں۔"},
 
   {name:"Farrukh Zaman", role:"Farmer", loc:"Sahiwal", lang:"en", text:"The BiFi product gave a noticeably stronger wheat grain this season."},
@@ -1168,7 +1196,7 @@ function makeCard(p){
   </div>`;
 }
 
-const POPULAR_PRODUCT_IDS = [65,26,49,59,97,42,7,101,10,92]; /* All Up, Sorter, Fertex, Multiplier, Save All, Manthar, Defter, Hybrid Corn Seed, Gladiator, Parkh */
+const POPULAR_PRODUCT_IDS = [65,26,49,59,97,42,82,101,62,92]; /* All Up, Sorter, Fertex, Multiplier, Save All, Manthar, Start Up, Hybrid Corn Seed, Tentis, Parkh */
 function buildHotGrid(){
   const hot = POPULAR_PRODUCT_IDS.map(id => PRODUCTS.find(p=>p.id===id)).filter(Boolean);
   document.getElementById('hotGrid').innerHTML = hot.map(makeCard).join('');
@@ -1410,6 +1438,16 @@ loadWeather();
   }, {threshold:.1, rootMargin:'0px 0px -40px 0px'});
   els.forEach(e=>io.observe(e));
 })();
+
+/* =================== BRAND LOGO CLICK SHAKE =================== */
+document.querySelectorAll('.brand-wm').forEach(el=>{
+  el.addEventListener('click', ()=>{
+    el.classList.remove('shaking');
+    void el.offsetWidth;
+    el.classList.add('shaking');
+  });
+  el.addEventListener('animationend', e=>{ if(e.animationName==='brandShake') el.classList.remove('shaking'); });
+});
 </script>
 </body>
 </html>
