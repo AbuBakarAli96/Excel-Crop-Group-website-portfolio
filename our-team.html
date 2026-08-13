@@ -420,6 +420,8 @@ footer{background:#123a1e;color:#dff0e2;margin-top:20px}
 .emp-row:hover .emp-photo-rect::after{opacity:1}
 .emp-photo-rect{width:160px;height:190px;flex-shrink:0;border-radius:var(--rad);overflow:hidden;background:var(--g3);box-shadow:var(--sh)}
 .emp-photo-rect img{width:100%;height:100%;object-fit:cover;display:block}
+.emp-photo-col{display:flex;flex-direction:column;align-items:center;flex-shrink:0;gap:10px}
+.emp-photo-name{font-size:13.5px;font-weight:800;color:var(--txt);text-align:center;width:160px;line-height:1.3}
 .emp-info{flex:1;min-width:0;background:linear-gradient(160deg,#0f4a17,#1b6e1b 45%,#2d8a2d 100%);border-radius:var(--rad2);padding:22px 26px;position:relative;overflow:hidden;isolation:isolate;box-shadow:0 8px 22px -8px rgba(8,42,14,.4)}
 .emp-info::before{content:'';position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(115deg,transparent,rgba(255,255,255,.32),transparent);transform:skewX(-18deg);animation:empShine 3.4s ease-in-out infinite;pointer-events:none;z-index:1}
 @keyframes empShine{0%{left:-60%}55%,100%{left:130%}}
@@ -428,7 +430,7 @@ footer{background:#123a1e;color:#dff0e2;margin-top:20px}
 .emp-desc{position:relative;z-index:2}
 .emp-desc p{font-size:13px;color:rgba(255,255,255,.92);line-height:1.8;margin-bottom:10px}
 .emp-desc p:last-child{margin-bottom:0}
-@media(max-width:680px){.emp-row{flex-direction:column}.emp-photo-rect{width:100%;height:220px}}
+@media(max-width:680px){.emp-row{flex-direction:column}.emp-photo-col{width:100%}.emp-photo-rect{width:100%;height:220px}.emp-photo-name{width:100%;font-size:15px}}
 
 </style>
 </head>
@@ -493,7 +495,7 @@ footer{background:#123a1e;color:#dff0e2;margin-top:20px}
   <div class="container">
     <span class="eyebrow">Meet Excel Crop Group</span>
     <h1>The People Behind the Company</h1>
-    <p>The department heads who lead Excel Crop Group's day to day operations, from compliance and finance to quality control, supply chain and our seed business &mdash; the people turning our promise of quality agri inputs into everyday reality.</p>
+    <p>The department heads who lead Excel Crop Group's day to day operations, from compliance and finance to quality control, supply chain and our seed business &mdash; the people turning our promise of genuine agri inputs into everyday reality.</p>
   </div>
 </section>
 
@@ -501,8 +503,8 @@ footer{background:#123a1e;color:#dff0e2;margin-top:20px}
 <section class="team-intro reveal"><div class="container">
   <span class="eyebrow">Our People</span>
   <h2>One Team, Many Departments, One Standard</h2>
-  <p>Excel Crop Group is built on the discipline and dedication of the department heads who guide our work every day. Each leader brings their own expertise, from legal compliance and finance to quality control, supply chain, packing and our seed business, but all share the same commitment to quality, registered agricultural inputs and dependable service for farmers across Pakistan.</p>
-  <p>Below, meet the people responsible for each part of that commitment.</p>
+  <p>Excel Crop Group is built on the discipline and dedication of the department heads who guide our work every day. Each leader brings their own expertise, from legal compliance and finance to quality control, supply chain, packing and our seed business, but all share the same commitment to genuine, registered agricultural inputs and dependable service for farmers across Pakistan.</p>
+  <p>Below, meet the people responsible for each part of that promise.</p>
 </div></section>
 
 <!-- ============ TEAM GRID ============ -->
@@ -512,9 +514,8 @@ footer{background:#123a1e;color:#dff0e2;margin-top:20px}
     <div class="team-dept reveal">
       
       <div class="emp-row">
-        <div class="emp-photo-rect"><img src="assets/team/avatars/maimoona-yasmeen.svg" alt="Mrs. Maimoona Yasmeen"></div>
+        <div class="emp-photo-col"><div class="emp-photo-rect"><img src="assets/team/avatars/maimoona-yasmeen.svg" alt="Mrs. Maimoona Yasmeen"></div><div class="emp-photo-name">Mrs. Maimoona Yasmeen</div></div>
         <div class="emp-info">
-          <div class="emp-name">Mrs. Maimoona Yasmeen</div>
           <div class="emp-role">Co-Founder, Excel Crop Group &amp; Head of Corporate Social Responsibility</div>
           <div class="emp-desc">
             <p>As Co-Founder of Excel Crop Group, Mrs. Maimoona Yasmeen champions the Company's commitment to sustainable development, social responsibility, and ethical business practices.</p>
@@ -526,9 +527,8 @@ footer{background:#123a1e;color:#dff0e2;margin-top:20px}
 
     <div class="team-dept reveal reveal-delay1">
        <div class="emp-row">
-        <div class="emp-photo-rect"><img src="assets/team/avatars/fatima-wahla.svg" alt="Mrs. Fatima Wahla"></div>
+        <div class="emp-photo-col"><div class="emp-photo-rect"><img src="assets/team/avatars/fatima-wahla.svg" alt="Mrs. Fatima Wahla"></div><div class="emp-photo-name">Mrs. Fatima Wahla</div></div>
         <div class="emp-info">
-          <div class="emp-name">Mrs. Fatima Wahla</div>
           <div class="emp-role">Head of Legal &amp; Compliance</div>
           <div class="emp-desc">
             <p>Mrs. Fatima Wahla provides strategic leadership in legal affairs, regulatory compliance, and corporate governance.</p>
@@ -541,9 +541,8 @@ footer{background:#123a1e;color:#dff0e2;margin-top:20px}
     <div class="team-dept reveal reveal-delay2">
       
       <div class="emp-row">
-        <div class="emp-photo-rect"><img src="assets/team/avatars/umar-warraich.svg" alt="Mr. Muhammad Umar Ali Warraich"></div>
+        <div class="emp-photo-col"><div class="emp-photo-rect"><img src="assets/team/photos/umar-warraich.jpg" alt="Mr. Muhammad Umar Ali Warraich"></div><div class="emp-photo-name">Mr. Muhammad Umar Ali Warraich</div></div>
         <div class="emp-info">
-          <div class="emp-name">Mr. Muhammad Umar Ali Warraich</div>
           <div class="emp-role">Head of Operations</div>
           <div class="emp-desc">
             <p>Mr. Muhammad Umar Ali Warraich leads the Operations function, coordinating day-to-day activities across departments to keep the Company running efficiently.</p>
@@ -556,9 +555,8 @@ footer{background:#123a1e;color:#dff0e2;margin-top:20px}
     <div class="team-dept reveal reveal-delay3">
       
       <div class="emp-row">
-        <div class="emp-photo-rect"><img src="assets/team/avatars/mubashir-akhtar.svg" alt="Mr. Mubashir Akhtar"></div>
+        <div class="emp-photo-col"><div class="emp-photo-rect"><img src="assets/team/photos/mubashir-akhtar.jpg" alt="Mr. Mubashir Akhtar"></div><div class="emp-photo-name">Mr. Mubashir Akhtar</div></div>
         <div class="emp-info">
-          <div class="emp-name">Mr. Mubashir Akhtar</div>
           <div class="emp-role">Head of Accounts &amp; Finance</div>
           <div class="emp-desc">
             <p>Mr. Mubashir Akhtar leads the Accounts &amp; Finance function with a strong focus on financial excellence, governance, strategic planning, and sustainable growth. He oversees financial management, internal controls, and financial planning, ensuring fiscal discipline and delivering insights that support informed business decisions and long-term value creation.</p>
@@ -572,9 +570,8 @@ footer{background:#123a1e;color:#dff0e2;margin-top:20px}
     <div class="team-dept reveal reveal-delay4">
       
       <div class="emp-row">
-        <div class="emp-photo-rect"><img src="assets/team/avatars/allah-nawaz.svg" alt="Mr. Allah Nawaz"></div>
+        <div class="emp-photo-col"><div class="emp-photo-rect"><img src="assets/team/photos/allah-nawaz.jpg" alt="Mr. Allah Nawaz"></div><div class="emp-photo-name">Mr. Allah Nawaz</div></div>
         <div class="emp-info">
-          <div class="emp-name">Mr. Allah Nawaz</div>
           <div class="emp-role">Head of Supply Chain</div>
           <div class="emp-desc">
             <p>Mr. Allah Nawaz leads the Company's Supply Chain function with a strong focus on ensuring timely, safe, and cost-effective product movement. He oversees supply coordination, logistics, and delivery operations, ensuring that products reach their intended destinations securely, efficiently, and within the required timelines.</p>
@@ -588,9 +585,8 @@ footer{background:#123a1e;color:#dff0e2;margin-top:20px}
     <div class="team-dept reveal reveal-delay5">
 
       <div class="emp-row">
-        <div class="emp-photo-rect"><img src="assets/team/avatars/usama-naveed.svg" alt="Mr. Usama Naveed"></div>
+        <div class="emp-photo-col"><div class="emp-photo-rect"><img src="assets/team/photos/usama-naveed.jpg" alt="Mr. Usama Naveed"></div><div class="emp-photo-name">Mr. Usama Naveed</div></div>
         <div class="emp-info">
-          <div class="emp-name">Mr. Usama Naveed</div>
           <div class="emp-role">Head of Quality Control</div>
           <div class="emp-desc">
             <p>Mr. Usama Naveed leads the Quality Control Department with an unwavering commitment to product excellence, regulatory compliance, and continuous improvement. He oversees quality assurance systems, rigorous testing protocols, and compliance standards, ensuring that every product meets the highest benchmarks of safety, reliability, and performance.</p>
@@ -604,9 +600,8 @@ footer{background:#123a1e;color:#dff0e2;margin-top:20px}
     <div class="team-dept reveal reveal-delay6">
       
       <div class="emp-row">
-        <div class="emp-photo-rect"><img src="assets/team/avatars/mustaqeem-rao.svg" alt="Mr. Mustaqeem Rao"></div>
+        <div class="emp-photo-col"><div class="emp-photo-rect"><img src="assets/team/photos/mustaqeem-rao.jpg" alt="Mr. Mustaqeem Rao"></div><div class="emp-photo-name">Mr. Mustaqeem Rao</div></div>
         <div class="emp-info">
-          <div class="emp-name">Mr. Mustaqeem Rao</div>
           <div class="emp-role">Head of Packing Department</div>
           <div class="emp-desc">
             <p>Mr. Mustaqeem Rao leads the Packing Department with a strong focus on operational excellence, precision, and product integrity. He ensures that packing operations consistently comply with relevant national and international standards while keeping pace with evolving packaging trends and best practices.</p>
@@ -620,9 +615,8 @@ footer{background:#123a1e;color:#dff0e2;margin-top:20px}
     <div class="team-dept reveal reveal-delay7">
       
       <div class="emp-row">
-        <div class="emp-photo-rect"><img src="assets/team/avatars/umer-hassan.svg" alt="Mr. Umer Hassan"></div>
+        <div class="emp-photo-col"><div class="emp-photo-rect"><img src="assets/team/photos/umer-hassan.jpg" alt="Mr. Umer Hassan"></div><div class="emp-photo-name">Mr. Umer Hassan</div></div>
         <div class="emp-info">
-          <div class="emp-name">Mr. Umer Hassan</div>
           <div class="emp-role">Head of Seed Department</div>
           <div class="emp-desc">
             <p>Mr. Umer Hassan provides leadership for the Company's Seed Department, overseeing seed production, processing, quality assurance, and innovation.</p>
