@@ -252,7 +252,7 @@ header{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08);position:sticky;top
 .mf-txt p{color:var(--txt2);font-size:13.5px;line-height:1.8;margin-bottom:10px}
 .mf-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .mf-tag{background:var(--g3);color:var(--g1);font-size:11px;font-weight:700;padding:6px 12px;border-radius:20px}
-@media(max-width:880px){.mf-wrap,.mf-wrap.rev{grid-template-columns:1fr}.mf-wrap.rev .mf-img,.mf-wrap.rev .mf-txt{order:0}}
+@media(max-width:880px){.mf-wrap,.mf-wrap.rev{grid-template-columns:1fr}.mf-wrap .mf-img,.mf-wrap.rev .mf-img{order:1}.mf-wrap .mf-txt,.mf-wrap.rev .mf-txt{order:2}}
 .qc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:22px}
 @media(max-width:880px){.qc-grid{grid-template-columns:repeat(2,1fr)}}
 
@@ -428,8 +428,8 @@ footer{background:#123a1e;color:#dff0e2;margin-top:20px}
 .seed-sec-head span.eyebrow{color:var(--o1);font-weight:800;font-size:12px;letter-spacing:1px;text-transform:uppercase}
 .seed-sec-head h2{font-size:26px;font-weight:900;color:var(--g1);margin:8px 0 10px}
 .seed-sec-head p{color:var(--txt2);font-size:13.5px;line-height:1.7}
-.seed-why-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
-@media(max-width:980px){.seed-why-grid{grid-template-columns:repeat(3,1fr)}}
+.seed-why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:980px){.seed-why-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){.seed-why-grid{grid-template-columns:repeat(2,1fr)}}
 .seed-commit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 @media(max-width:880px){.seed-commit-grid{grid-template-columns:1fr}}
@@ -565,7 +565,7 @@ footer{background:#123a1e;color:#dff0e2;margin-top:20px}
 <section class="sec reveal"><div class="container">
   <div class="seed-sec-head">
     <span class="eyebrow">Why Choose Bounty Seed</span>
-    <h2>Five Reasons Dealers and Farmers Trust the Name</h2>
+    <h2>Main Reasons Dealers and Farmers Trust the Name</h2>
     <p>Every Bounty Seed product is chosen for what it delivers in the field, not just on the shelf.</p>
   </div>
   <div class="seed-why-grid">
@@ -573,7 +573,6 @@ footer{background:#123a1e;color:#dff0e2;margin-top:20px}
     <div class="featc featc-photo" style="background-image:url('assets/seeds/seed-germination-soil.jpg')"><div class="fi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c3 3.6 6 7.6 6 11a6 6 0 1 1-12 0c0-3.4 3-7.4 6-11z"/></svg></div><h4>Strong Germination</h4><p>Selected for reliable, even emergence in the field.</p></div>
     <div class="featc featc-photo" style="background-image:url('assets/seeds/bounty-seed-gallery-3.jpg')"><div class="fi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6.2L4.5 17.5A2 2 0 0 0 6.3 20.5h11.4a2 2 0 0 0 1.8-3L15 8.2V2"/><path d="M9 2h6"/><path d="M8 15h8"/></svg></div><h4>Consistent Packing</h4><p>Accurate weights and secure, moisture-safe packaging.</p></div>
     <div class="featc featc-photo" style="background-image:url('assets/seeds/bounty-seed-gallery-5.jpg')"><div class="fi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.6-4.6"/><path d="M11 8.2v5.6M8.2 11h5.6"/></svg></div><h4>Field-Tested Varieties</h4><p>Bred and trialled for Pakistan's growing conditions.</p></div>
-    <div class="featc featc-photo" style="background-image:url('assets/stock2/farmland-wide-view.jpg')"><div class="fi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l5 3V10l5 3V10l5 3v8H3z"/><path d="M3 21h18"/></svg></div><h4>Backed by ECG</h4><p>Supported by Excel Crop Group's nationwide dealer network.</p></div>
   </div>
 </div></section>
 
