@@ -187,6 +187,7 @@ header{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08);position:sticky;top
 .lead-card:not(.lead-card-ceo) .lc-quote::before{content:'\201C';position:absolute;left:-4px;top:-8px;font-size:28px;font-weight:900;color:#ffd54f;font-family:Georgia,serif;line-height:1}
 .lead-card:not(.lead-card-ceo) .lc-quote::after{font-size:19px;font-weight:900}
 /* Mission panel: text-only, content starts at the top of the box (not vertically centered) */
+.lc-bg-slider{display:none}
 .lead-card-mission .lc-body{justify-content:flex-start}
 .side-mission{align-self:center}
 .side-mission .lead-card-mission{height:auto;animation:none}
@@ -195,7 +196,7 @@ header{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08);position:sticky;top
 .lc-body-mission .lc-quote{font-family:Georgia,'Times New Roman',serif;padding-left:16px;font-size:14px;font-weight:600;font-style:normal;color:#fff}
 .lc-body-mission .lc-quote::before{content:'\201C';position:absolute;left:-4px;top:-8px;font-size:28px;font-weight:900;color:#ffd54f;font-family:Georgia,serif;line-height:1}
 .lc-body-mission .lc-quote::after{font-size:19px;font-weight:900;color:#ffd54f}
-@media(max-width:980px){.shop-layout{grid-template-columns:1fr}.side-cats{order:2}.side-support{order:3}.hero-slide-inner{grid-template-columns:1fr}.sc,.sc-controls{grid-column:1}.lead-card-ceo .lc-photo-frame{height:212px}.hero-sec{min-height:0}.slider,.hero-controls-layer{bottom:auto;height:540px}.hero-cards-wrap{margin-top:540px}.hero-spacer{display:none}.hero-controls-layer .hero-slide-inner{padding-bottom:30px}.sc{padding:0 16px;text-align:center;margin:0 auto}.sc h2{font-size:26px}.sbtns{justify-content:center}.side-support .lead-card,.side-support .lead-card:hover{background:linear-gradient(135deg,var(--g1),var(--g2))}}
+@media(max-width:980px){.shop-layout{grid-template-columns:1fr}.side-cats{order:2}.side-support{order:3}.hero-slide-inner{grid-template-columns:1fr}.sc,.sc-controls{grid-column:1}.lead-card-ceo .lc-photo-frame{height:212px}.hero-sec{min-height:0}.slider,.hero-controls-layer{bottom:auto;height:540px}.hero-cards-wrap{margin-top:540px}.hero-spacer{display:none}.hero-controls-layer .hero-slide-inner{padding-bottom:30px}.sc{padding:0 16px;text-align:center;margin:0 auto}.sc h2{font-size:26px}.sbtns{justify-content:center}.side-support .lead-card,.side-support .lead-card:hover{background:linear-gradient(135deg,var(--g1),var(--g2))}.side-support .lc-bg-slider{display:block;position:absolute;inset:0;z-index:0;overflow:hidden;border-radius:20px}.side-support .lc-bg-slider::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,40,15,.32) 0%,rgba(6,40,15,.86) 100%);z-index:5}}
 @media(max-width:600px){.hdr .container{justify-content:center}.logo-a{order:1}.hdr-r{order:2;margin-left:0}.srch{order:3;flex-basis:100%;min-width:0}.hdr-name{text-align:left}}
 .mnav{position:relative}
 .mnav::after{content:'';position:absolute;top:0;right:0;bottom:0;width:28px;background:linear-gradient(90deg,rgba(45,138,45,0),var(--g2));pointer-events:none}
@@ -634,6 +635,7 @@ footer{background:#123a1e;color:#dff0e2;margin-top:20px}
       <aside class="side-support">
         <div class="lead-card lead-card-ceo reveal">
          
+          <div class="lc-bg-slider mini-slider" data-images="[&quot;assets/ecc-custom/header-slide-farm.jpg&quot;, &quot;assets/ecc-custom/header-slide-sprayer.jpg&quot;, &quot;assets/ecc-custom/header-slide-harvester.jpg&quot;, &quot;assets/ecc-custom/header-slide-partnership.jpg&quot;]" data-alt="Excel Crop Group"></div>
           <div class="lc-glow"></div>
           <div class="lc-photo-frame">
             <div class="lc-frame-ring"></div>
@@ -652,6 +654,7 @@ footer{background:#123a1e;color:#dff0e2;margin-top:20px}
 
       <aside class="side-support side-mission">
         <div class="lead-card lead-card-mission reveal">
+          <div class="lc-bg-slider mini-slider" data-images="[&quot;assets/ecc-custom/header-slide-partnership.jpg&quot;, &quot;assets/ecc-custom/header-slide-harvester.jpg&quot;, &quot;assets/ecc-custom/header-slide-sprayer.jpg&quot;, &quot;assets/ecc-custom/header-slide-farm.jpg&quot;]" data-alt="Excel Crop Group"></div>
           <div class="lc-glow"></div>
           <div class="lc-body lc-body-mission">
             <div class="lc-label lc-vision-title"><svg class="lc-ic" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>Our Mission Is</div>
