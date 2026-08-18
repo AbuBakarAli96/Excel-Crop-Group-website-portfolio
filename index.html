@@ -248,7 +248,7 @@ header{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08);position:sticky;top
 .vendor-fill-graphic{margin-top:18px;border-radius:var(--rad);overflow:hidden;flex:1;min-height:150px;box-shadow:var(--sh);background:linear-gradient(180deg,#eaf6ec 0%,#dcf0e0 100%);position:relative}
 .vendor-fill-graphic svg{position:absolute;inset:0;width:100%;height:100%;display:block}
 .vendor-fill-graphic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-@media(max-width:760px){.vendors-grid{grid-template-columns:1fr}.vendors-intro{text-align:left;margin:0 0 24px}}
+@media(max-width:760px){.vendors-grid{grid-template-columns:1fr}}
 .stitle{font-size:22px;font-weight:800;color:var(--g1);padding-left:14px;position:relative;line-height:1.2}
 .stitle::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:5px;height:24px;background:var(--o1);border-radius:2px}
 .stitle .su{display:block;font-size:13px;color:var(--o1);font-weight:600;margin-top:3px}
@@ -822,12 +822,23 @@ footer{background:#123a1e;color:#dff0e2;margin-top:20px}
   <div class="catgrid" id="catGrid"></div>
 </div></section>
 
+<!-- ============ FEATURED PRODUCTS (no price) ============ -->
+<section class="sec"><div class="container">
+  <div class="sch">
+    <h2 class="stitle">Popular Products<span class="su urdu">مقبول مصنوعات</span></h2>
+    <button class="vabtn" onclick="goToProducts('')">View All</button>
+  </div>
+  <div class="pgrid" id="hotGrid"></div>
+</div></section>
+
 <!-- ============ OUR VENDORS ============ -->
 <section class="sec alt" id="vendors"><div class="container">
   <div class="sch"><h2 class="stitle">Our Vendors<span class="su urdu">ہمارے وینڈرز</span></h2></div>
   <p class="vendors-intro">Excel Crop Care maintains a trusted network of local and international vendors to support the reliable sourcing and timely availability of quality agricultural products, packaging materials, and related supplies.</p>
   <div class="vendors-grid">
     <div class="vendor-col">
+      <div class="vendor-col-head"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 4 6 4 9s-1.5 6.4-4 9c-2.5-2.6-4-6-4-9s1.5-6.4 4-9z"/></svg>International Vendors</div>
+      <p class="vendor-col-sub">Connecting Excel Crop Care with established suppliers across global markets, supporting quality products, competitive sourcing and dependable international supply.</p>
       <ul class="vendor-list">
         <li><span>CAC Shanghai International Trading Co., Ltd.</span><em>China</em></li>
         <li><span>ISKY Hong Kong Co., Ltd.</span><em>Hong Kong</em></li>
@@ -843,6 +854,8 @@ footer{background:#123a1e;color:#dff0e2;margin-top:20px}
       </ul>
     </div>
     <div class="vendor-col">
+      <div class="vendor-col-head"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-8h6v8"/></svg>National Vendors</div>
+      <p class="vendor-col-sub">Complementing our international sourcing with responsive, economical and timely access to essential products, packaging and operational supplies.</p>
       <ul class="vendor-list">
         <li><span>Suncrop Pesticides</span><em>Multan, Pakistan</em></li>
         <li><span>NF Biotech (Pvt.) Ltd.</span><em>Pakistan</em></li>
@@ -853,15 +866,6 @@ footer{background:#123a1e;color:#dff0e2;margin-top:20px}
       <div class="vendor-fill-graphic"><img src="assets/ecc-custom/vendor-cornfield-sunset.jpg" alt="Green crop field at sunrise" loading="lazy"></div>
     </div>
   </div>
-</div></section>
-
-<!-- ============ FEATURED PRODUCTS (no price) ============ -->
-<section class="sec"><div class="container">
-  <div class="sch">
-    <h2 class="stitle">Popular Products<span class="su urdu">مقبول مصنوعات</span></h2>
-    <button class="vabtn" onclick="goToProducts('')">View All</button>
-  </div>
-  <div class="pgrid" id="hotGrid"></div>
 </div></section>
 
 <!-- ============ OUR STORY ============ -->
