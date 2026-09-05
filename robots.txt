@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://excelcropgroup.com.pk/sitemap.xml
